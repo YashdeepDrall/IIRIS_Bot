@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+pymongo
+python-dotenv
+requests
+numpy
+faiss-cpu
+streamlit

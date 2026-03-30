@@ -1,0 +1,284 @@
+import difflib
+import traceback
+from typing import Dict, List
+
+from dotenv import load_dotenv
+
+from analysis import analyze_response
+from database import QueryRequest, store_chat
+from gemini_api import GeminiClient
+from vector_store import GeminiVectorStore
+
+
+load_dotenv()
+
+
+CONDENSE_SYSTEM_PROMPT = """
+You rewrite follow-up user messages into clear standalone questions for knowledge-base search.
+
+Rules:
+- Use the chat history to resolve references like "it", "that", "them", or "yes".
+- If the user replies with "yes", "sure", "okay", or similar, convert it into the specific question implied by the assistant's last message.
+- Preserve the user's intent.
+- Output only the rewritten standalone question.
+""".strip()
+
+
+ANSWER_SYSTEM_PROMPT = """
+You are a professional consultant at IIRIS Consulting.
+
+Rules:
+- Answer strictly from the provided Knowledge Base Context.
+- Use only the information present in the context. Do not use outside knowledge.
+- If the context does not support the answer, say: "I do not have enough information in the available IIRIS knowledge base to answer that."
+- If the user asks something outside the available IIRIS knowledge base, say: "I can only answer questions based on the available IIRIS knowledge base."
+- Do not guess or hallucinate.
+- Do not mention internal chunk numbers, similarity scores, or implementation details.
+- Keep the response professional, practical, and well-formatted.
+""".strip()
+
+
+def is_greeting(question: str) -> bool:
+    greeting_words = [
+        "hello",
+        "hi",
+        "hey",
+        "greetings",
+        "good morning",
+        "good afternoon",
+        "good evening",
+    ]
+    cleaned_input = question.lower().strip("!.,? '\"")
+    if cleaned_input in greeting_words or any(cleaned_input.startswith(g + " ") for g in greeting_words):
+        return True
+    return bool(difflib.get_close_matches(cleaned_input, greeting_words, n=1, cutoff=0.8))
+
+
+def is_signoff(question: str) -> bool:
+    signoff_words = ["bye", "goodbye", "see you", "thank you", "thanks", "thankyou", "exit", "quit"]
+    cleaned_input = question.lower().strip("!.,? '\"")
+    if cleaned_input in signoff_words or any(cleaned_input.startswith(s + " ") for s in signoff_words):
+        return True
+    return bool(difflib.get_close_matches(cleaned_input, signoff_words, n=1, cutoff=0.8))
+
+
+def correct_typos(question: str) -> str:
+    known_terms = [
+        "IIRIS",
+        "IntelliRisk",
+        "IntelliFuture",
+        "IIRIS Knowledge",
+        "Consulting",
+        "Cybersecurity",
+        "Forensics",
+    ]
+    words = question.split()
+    corrected_words = []
+
+    for word in words:
+        clean_word = word.strip("!.,? '\"").lower()
+        if not clean_word:
+            corrected_words.append(word)
+            continue
+
+        matches = difflib.get_close_matches(
+            clean_word,
+            [term.lower() for term in known_terms],
+            n=1,
+            cutoff=0.8,
+        )
+        if not matches:
+            corrected_words.append(word)
+            continue
+
+        match = matches[0]
+        corrected_term = next(term for term in known_terms if term.lower() == match)
+        lower_word = word.lower()
+        start_index = lower_word.find(clean_word)
+
+        if start_index == -1:
+            corrected_words.append(corrected_term)
+            continue
+
+        prefix = word[:start_index]
+        suffix = word[start_index + len(clean_word) :]
+        corrected_words.append(prefix + corrected_term + suffix)
+
+    return " ".join(corrected_words)
+
+
+class RagSystem:
+    def __init__(self):
+        print("Initializing Gemini RAG system...")
+        self.client = GeminiClient()
+        self.vector_store = GeminiVectorStore(client=self.client)
+        summary = self.vector_store.sync()
+        print(
+            "Gemini RAG system ready. "
+            f"Chunks: {summary['total_chunks']}, "
+            f"Reused: {summary['reused_chunks']}, "
+            f"New: {summary['new_chunks']}."
+        )
+
+    @staticmethod
+    def _update_usage(total_usage: Dict[str, int], usage: Dict[str, int]) -> None:
+        total_usage["completion_tokens"] += usage.get("completion_tokens", 0)
+        total_usage["prompt_tokens"] += usage.get("prompt_tokens", 0)
+        total_usage["total_tokens"] += usage.get("total_tokens", 0)
+
+    @staticmethod
+    def _format_history(history: List[Dict[str, str]]) -> str:
+        formatted = []
+        for message in history:
+            role = "User" if message.get("role") == "user" else "Consultant"
+            formatted.append(f"{role}: {message.get('content', '')}")
+        return "\n".join(formatted)
+
+    def _rewrite_question(
+        self,
+        history_text: str,
+        question: str,
+        total_usage: Dict[str, int],
+    ) -> str:
+        if not history_text:
+            return question
+
+        prompt = (
+            f"Chat History:\n{history_text}\n\n"
+            f"Follow Up Input: {question}\n\n"
+            "Standalone Question:"
+        )
+        rewritten_question, usage = self.client.generate_text(
+            prompt=prompt,
+            system_instruction=CONDENSE_SYSTEM_PROMPT,
+            temperature=0.0,
+            max_tokens=128,
+        )
+        self._update_usage(total_usage, usage)
+        return rewritten_question.strip() or question
+
+    async def answer(self, request: QueryRequest):
+        try:
+            total_usage = {"completion_tokens": 0, "prompt_tokens": 0, "total_tokens": 0}
+            corrected_question = correct_typos(request.question)
+
+            if is_greeting(corrected_question) and len(corrected_question.split()) <= 3:
+                response = "Hello! How may I help you today?"
+                chat_id = store_chat(
+                    request.question,
+                    response,
+                    "",
+                    flags=["greeting"],
+                    token_usage=total_usage,
+                )
+                return {
+                    "answer": response,
+                    "context": "",
+                    "docs": [],
+                    "chat_id": chat_id,
+                    "usage": total_usage,
+                }
+
+            if is_signoff(corrected_question):
+                response = "Happy to help you! I am here for any assistance. Is there anything else I can help you with?"
+                chat_id = store_chat(
+                    request.question,
+                    response,
+                    "",
+                    flags=["signoff"],
+                    token_usage=total_usage,
+                )
+                return {
+                    "answer": response,
+                    "context": "",
+                    "docs": [],
+                    "chat_id": chat_id,
+                    "usage": total_usage,
+                }
+
+            self.vector_store.sync()
+
+            history_text = self._format_history(request.history)
+            search_query = self._rewrite_question(history_text, corrected_question, total_usage)
+            docs = self.vector_store.search(search_query, k=request.k)
+
+            if not docs or docs[0]["score"] < self.vector_store.score_threshold:
+                response = (
+                    "I do not have enough information in the available IIRIS knowledge base "
+                    "to answer that. Please ask about IIRIS, its services, leadership, "
+                    "locations, or related topics covered in the data."
+                )
+                flags = ["irrelevant_question"]
+                chat_id = store_chat(
+                    request.question,
+                    response,
+                    "",
+                    flags=flags,
+                    token_usage=total_usage,
+                )
+                return {
+                    "answer": response,
+                    "context": "",
+                    "docs": [],
+                    "chat_id": chat_id,
+                    "usage": total_usage,
+                }
+
+            context = "\n\n".join(
+                f"Source: {doc['metadata']['source']}\n{doc['page_content']}" for doc in docs
+            )
+            prompt = (
+                f"Chat History:\n{history_text or 'None'}\n\n"
+                f"Knowledge Base Context:\n{context}\n\n"
+                f"Client Question:\n{search_query}\n\n"
+                "Consultant Answer:"
+            )
+            response, usage = self.client.generate_text(
+                prompt=prompt,
+                system_instruction=ANSWER_SYSTEM_PROMPT,
+                temperature=request.temperature,
+                max_tokens=request.max_tokens,
+            )
+            self._update_usage(total_usage, usage)
+
+            flags = analyze_response(corrected_question, response)
+            if "irrelevant_question" not in flags and "greeting" not in flags and "signoff" not in flags:
+                if list(set(flags)):
+                    response += "\n\nFor further assistance, please contact support at: contactus@iirisconsulting.com"
+
+            serialized_docs = [
+                {
+                    "page_content": doc["page_content"],
+                    "metadata": doc["metadata"],
+                    "score": doc["score"],
+                }
+                for doc in docs
+            ]
+            chat_id = store_chat(
+                request.question,
+                response,
+                context,
+                flags=flags,
+                token_usage=total_usage,
+            )
+            return {
+                "answer": response,
+                "context": context,
+                "docs": serialized_docs,
+                "chat_id": chat_id,
+                "usage": total_usage,
+            }
+
+        except Exception as error:
+            print(f"Error in Gemini RAG handler: {error}\n{traceback.format_exc()}")
+            raise error
+
+
+_rag_system = None
+
+
+def get_rag_system():
+    global _rag_system
+    if _rag_system is None:
+        _rag_system = RagSystem()
+    return _rag_system

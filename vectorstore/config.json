@@ -1,0 +1,6 @@
+{
+  "embedding_model": "gemini-embedding-2-preview",
+  "chunk_size": 1000,
+  "chunk_overlap": 150,
+  "dimension": 3072
+}
