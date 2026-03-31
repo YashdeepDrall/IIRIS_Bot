@@ -110,15 +110,20 @@ def correct_typos(question: str) -> str:
 class RagSystem:
     def __init__(self):
         print("Initializing Gemini RAG system...")
-        self.client = GeminiClient()
-        self.vector_store = GeminiVectorStore(client=self.client)
-        summary = self.vector_store.sync()
-        print(
-            "Gemini RAG system ready. "
-            f"Chunks: {summary['total_chunks']}, "
-            f"Reused: {summary['reused_chunks']}, "
-            f"New: {summary['new_chunks']}."
-        )
+        self.client = None
+        self.vector_store = None
+
+    def _get_client(self) -> GeminiClient:
+        if self.client is None:
+            print("Initializing GeminiClient...")
+            self.client = GeminiClient()
+        return self.client
+
+    def _get_vector_store(self) -> GeminiVectorStore:
+        if self.vector_store is None:
+            print("Initializing GeminiVectorStore...")
+            self.vector_store = GeminiVectorStore(client=self._get_client())
+        return self.vector_store
 
     @staticmethod
     def _update_usage(total_usage: Dict[str, int], usage: Dict[str, int]) -> None:
@@ -148,7 +153,7 @@ class RagSystem:
             f"Follow Up Input: {question}\n\n"
             "Standalone Question:"
         )
-        rewritten_question, usage = self.client.generate_text(
+        rewritten_question, usage = self._get_client().generate_text(
             prompt=prompt,
             system_instruction=CONDENSE_SYSTEM_PROMPT,
             temperature=0.0,
@@ -196,13 +201,12 @@ class RagSystem:
                     "usage": total_usage,
                 }
 
-            self.vector_store.sync()
-
             history_text = self._format_history(request.history)
             search_query = self._rewrite_question(history_text, corrected_question, total_usage)
-            docs = self.vector_store.search(search_query, k=request.k)
+            vector_store = self._get_vector_store()
+            docs = vector_store.search(search_query, k=request.k)
 
-            if not docs or docs[0]["score"] < self.vector_store.score_threshold:
+            if not docs or docs[0]["score"] < vector_store.score_threshold:
                 response = (
                     "I do not have enough information in the available IIRIS knowledge base "
                     "to answer that. Please ask about IIRIS, its services, leadership, "
@@ -233,7 +237,7 @@ class RagSystem:
                 f"Client Question:\n{search_query}\n\n"
                 "Consultant Answer:"
             )
-            response, usage = self.client.generate_text(
+            response, usage = self._get_client().generate_text(
                 prompt=prompt,
                 system_instruction=ANSWER_SYSTEM_PROMPT,
                 temperature=request.temperature,
@@ -271,7 +275,7 @@ class RagSystem:
 
         except Exception as error:
             print(f"Error in Gemini RAG handler: {error}\n{traceback.format_exc()}")
-            raise error
+            raise
 
 
 _rag_system = None

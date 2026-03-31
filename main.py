@@ -1,4 +1,5 @@
 import os
+import traceback
 
 from dotenv import load_dotenv
 from fastapi import FastAPI
@@ -22,7 +23,7 @@ app = FastAPI(title="IIRIS Gemini RAG API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=get_allowed_origins(),
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -39,7 +40,8 @@ async def ask(request: QueryRequest):
         rag = get_rag_system()
         return await rag.answer(request)
     except Exception as error:
-        print(f"Ask route failed: {error}")
+        print(f"Ask route failed: {repr(error)}")
+        traceback.print_exc()
         return {
             "answer": "The assistant is temporarily unavailable. Please try again in a moment.",
             "context": "",
