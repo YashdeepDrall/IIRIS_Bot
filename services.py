@@ -1,4 +1,5 @@
 import difflib
+import re
 import traceback
 from typing import Dict, List
 
@@ -35,6 +36,9 @@ Rules:
 - Do not guess or hallucinate.
 - Do not mention internal chunk numbers, similarity scores, or implementation details.
 - Keep the response professional, practical, and well-formatted.
+- When including website links, format them as clickable Markdown links.
+- When including email addresses, format them as clickable Markdown mailto links.
+- When including phone numbers, format them as clickable Markdown tel links when appropriate.
 """.strip()
 
 
@@ -105,6 +109,45 @@ def correct_typos(question: str) -> str:
         corrected_words.append(prefix + corrected_term + suffix)
 
     return " ".join(corrected_words)
+
+
+def _linkify_url(match: re.Match[str]) -> str:
+    url = match.group(0)
+    return f"[{url}]({url})"
+
+
+def _linkify_email(match: re.Match[str]) -> str:
+    email = match.group(0)
+    return f"[{email}](mailto:{email})"
+
+
+def _linkify_phone(match: re.Match[str]) -> str:
+    raw_phone = match.group(0).strip()
+    digits_only = re.sub(r"[^\d+]", "", raw_phone)
+    digit_count = sum(character.isdigit() for character in digits_only)
+
+    if digit_count < 8:
+        return raw_phone
+
+    tel_value = re.sub(r"[^\d+]", "", raw_phone)
+    return f"[{raw_phone}](tel:{tel_value})"
+
+
+def format_clickable_links(text: str) -> str:
+    parts = re.split(r"(\[[^\]]+\]\([^)]+\))", text)
+    formatted_parts = []
+
+    for part in parts:
+        if re.fullmatch(r"\[[^\]]+\]\([^)]+\)", part):
+            formatted_parts.append(part)
+            continue
+
+        part = re.sub(r"https?://[^\s)]+", _linkify_url, part)
+        part = re.sub(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b", _linkify_email, part)
+        part = re.sub(r"(?<!\w)\+?\d[\d ()-]{7,}\d", _linkify_phone, part)
+        formatted_parts.append(part)
+
+    return "".join(formatted_parts)
 
 
 class RagSystem:
@@ -249,6 +292,8 @@ class RagSystem:
             if "irrelevant_question" not in flags and "greeting" not in flags and "signoff" not in flags:
                 if list(set(flags)):
                     response += "\n\nFor further assistance, please contact support at: contactus@iirisconsulting.com"
+
+            response = format_clickable_links(response)
 
             serialized_docs = [
                 {
