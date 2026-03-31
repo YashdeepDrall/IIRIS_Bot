@@ -36,9 +36,12 @@ Rules:
 - Do not guess or hallucinate.
 - Do not mention internal chunk numbers, similarity scores, or implementation details.
 - Keep the response professional, practical, and well-formatted.
+- Use only standard Markdown links in the form [label](url).
 - When including website links, format them as clickable Markdown links.
-- When including email addresses, format them as clickable Markdown mailto links.
-- When including phone numbers, format them as clickable Markdown tel links when appropriate.
+- When including email addresses, format them as clickable Markdown mailto links like [contactus@iirisconsulting.com](mailto:contactus@iirisconsulting.com).
+- When including phone numbers, format them as clickable Markdown tel links like [+91 9205595358](tel:+919205595358).
+- Never use custom link formats like [url|label].
+- Never return raw HTML anchor tags.
 """.strip()
 
 
@@ -133,7 +136,31 @@ def _linkify_phone(match: re.Match[str]) -> str:
     return f"[{raw_phone}](tel:{tel_value})"
 
 
+def _normalize_custom_link(match: re.Match[str]) -> str:
+    target = match.group(1).strip()
+    label = match.group(2).strip()
+    return f"[{label}]({target})"
+
+
+def _normalize_html_link(match: re.Match[str]) -> str:
+    href = match.group(1).strip()
+    label = re.sub(r"<[^>]+>", "", match.group(2)).strip() or href
+    return f"[{label}]({href})"
+
+
 def format_clickable_links(text: str) -> str:
+    text = re.sub(
+        r"\[(https?://[^\|\]]+|mailto:[^\|\]]+|tel:[^\|\]]+)\|([^\]]+)\]",
+        _normalize_custom_link,
+        text,
+    )
+    text = re.sub(
+        r"<a\s+[^>]*href=[\"']([^\"']+)[\"'][^>]*>(.*?)</a>",
+        _normalize_html_link,
+        text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+
     parts = re.split(r"(\[[^\]]+\]\([^)]+\))", text)
     formatted_parts = []
 
