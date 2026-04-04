@@ -232,6 +232,27 @@ class RagSystem:
         self._update_usage(total_usage, usage)
         return rewritten_question.strip() or question
 
+    @staticmethod
+    def _should_rewrite_question(history: List[Dict[str, str]], question: str) -> bool:
+        if not history:
+            return False
+
+        cleaned_question = question.strip().lower()
+        if not cleaned_question:
+            return False
+
+        follow_up_patterns = (
+            r"^(and|also|what about|how about|tell me more|more about|yes|yeah|yep|sure|okay|ok|then)\b",
+            r"^(he|she|it|they|them|that|this|those|these|him|her)\b",
+            r"^(is|are|was|were)\s+(he|she|it|they|that|this|those|these)\b",
+        )
+        if any(re.match(pattern, cleaned_question) for pattern in follow_up_patterns):
+            return True
+
+        tokens = re.findall(r"[a-z0-9]+", cleaned_question)
+        contextual_tokens = {"he", "she", "it", "they", "them", "that", "this", "those", "these"}
+        return bool(tokens) and len(tokens) <= 6 and any(token in contextual_tokens for token in tokens)
+
     async def answer(self, request: QueryRequest):
         try:
             total_usage = {"completion_tokens": 0, "prompt_tokens": 0, "total_tokens": 0}
@@ -272,7 +293,9 @@ class RagSystem:
                 }
 
             history_text = self._format_history(request.history)
-            search_query = self._rewrite_question(history_text, corrected_question, total_usage)
+            search_query = corrected_question
+            if self._should_rewrite_question(request.history, corrected_question):
+                search_query = self._rewrite_question(history_text, corrected_question, total_usage)
             vector_store = self._get_vector_store()
             docs = vector_store.search(search_query, k=request.k)
 

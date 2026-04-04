@@ -1,6 +1,9 @@
 import hashlib
 import json
+import math
 import os
+import re
+from collections import Counter
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Dict, List
@@ -13,6 +16,57 @@ from gemini_api import GeminiClient
 
 
 load_dotenv()
+
+
+STOPWORDS = {
+    "a",
+    "an",
+    "and",
+    "are",
+    "at",
+    "be",
+    "by",
+    "for",
+    "from",
+    "how",
+    "in",
+    "is",
+    "it",
+    "of",
+    "on",
+    "or",
+    "that",
+    "the",
+    "to",
+    "what",
+    "when",
+    "where",
+    "who",
+}
+
+TITLE_TOKENS = {
+    "advisory",
+    "advisor",
+    "avp",
+    "board",
+    "ceo",
+    "cfo",
+    "coo",
+    "cto",
+    "leader",
+    "leaders",
+    "leadership",
+    "president",
+    "team",
+    "vp",
+}
+
+LEADERSHIP_SOURCE_HINTS = (
+    "board_of_advisory",
+    "faq",
+    "leaders",
+    "teamfaq",
+)
 
 
 @dataclass
@@ -50,10 +104,89 @@ class GeminiVectorStore:
         self.index: faiss.Index | None = None
         self.records: List[Dict] = []
         self.vectors: np.ndarray | None = None
+        self._normalized_record_texts: List[str] = []
+        self._record_term_counts: List[Counter[str]] = []
+        self._record_terms: List[set[str]] = []
+        self._inverse_document_frequency: Dict[str, float] = {}
 
     @staticmethod
     def _hash_text(text: str) -> str:
         return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+    @staticmethod
+    def _normalize_text(text: str) -> str:
+        return " ".join(re.findall(r"[a-z0-9]+", text.lower()))
+
+    @staticmethod
+    def _tokenize(text: str) -> List[str]:
+        return [
+            token
+            for token in re.findall(r"[a-z0-9]+", text.lower())
+            if token and token not in STOPWORDS
+        ]
+
+    def _build_lexical_index(self) -> None:
+        self._normalized_record_texts = []
+        self._record_term_counts = []
+        self._record_terms = []
+
+        document_frequencies: Counter[str] = Counter()
+
+        for record in self.records:
+            source_text = str(record.get("source", "")).replace("_", " ").replace(".txt", " ")
+            search_text = f"{source_text} {record.get('text', '')}"
+            normalized_text = self._normalize_text(search_text)
+            term_counts = Counter(self._tokenize(search_text))
+
+            self._normalized_record_texts.append(normalized_text)
+            self._record_term_counts.append(term_counts)
+            self._record_terms.append(set(term_counts))
+            document_frequencies.update(set(term_counts))
+
+        total_records = max(len(self.records), 1)
+        self._inverse_document_frequency = {
+            token: math.log((total_records + 1) / (frequency + 1)) + 1.0
+            for token, frequency in document_frequencies.items()
+        }
+
+    def _lexical_score(
+        self,
+        query: str,
+        query_terms: set[str],
+        leadership_intent: bool,
+        record_index: int,
+    ) -> float:
+        if not query_terms:
+            return 0.0
+
+        record_terms = self._record_terms[record_index]
+        overlap = record_terms & query_terms
+        if not overlap:
+            return 0.0
+
+        total_weight = sum(self._inverse_document_frequency.get(term, 1.0) for term in query_terms) or 1.0
+        overlap_weight = sum(self._inverse_document_frequency.get(term, 1.0) for term in overlap)
+        coverage = overlap_weight / total_weight
+
+        term_frequency = sum(
+            min(self._record_term_counts[record_index].get(term, 0), 2)
+            for term in overlap
+        )
+        density = term_frequency / max(len(query_terms) * 2, 1)
+
+        normalized_query = self._normalize_text(query)
+        phrase_bonus = 0.35 if normalized_query and normalized_query in self._normalized_record_texts[record_index] else 0.0
+
+        title_overlap = overlap & TITLE_TOKENS
+        leadership_boost = 0.0
+        if leadership_intent and title_overlap:
+            leadership_boost += 0.15
+
+        source = str(self.records[record_index].get("source", "")).lower()
+        if leadership_intent and any(hint in source for hint in LEADERSHIP_SOURCE_HINTS):
+            leadership_boost += 0.05
+
+        return min(1.5, (0.75 * coverage) + (0.2 * density) + phrase_bonus + leadership_boost)
 
     def _chunk_text(self, text: str) -> List[str]:
         text = text.strip()
@@ -180,18 +313,12 @@ class GeminiVectorStore:
         self.index = index
         self.records = records
         self.vectors = vectors
+        self._build_lexical_index()
 
     def _ensure_loaded(self) -> None:
         if self.index is not None and self.records:
             return
-
-        if not self.index_path.exists() or not self.records_path.exists():
-            self.sync()
-            return
-
-        self.index = faiss.read_index(str(self.index_path))
-        self.records = json.loads(self.records_path.read_text(encoding="utf-8"))
-        self.vectors = np.load(self.vectors_path) if self.vectors_path.exists() else None
+        self.sync()
 
     def sync(self) -> Dict[str, int]:
         desired_records = self._collect_records()
@@ -205,6 +332,7 @@ class GeminiVectorStore:
                 self.records = stored_records
                 self.vectors = np.load(self.vectors_path)
                 self.index = faiss.read_index(str(self.index_path))
+                self._build_lexical_index()
                 return {
                     "total_chunks": len(stored_records),
                     "reused_chunks": len(stored_records),
@@ -253,16 +381,36 @@ class GeminiVectorStore:
         if not self.records or self.index is None:
             return []
 
+        query_terms = set(self._tokenize(query))
+        leadership_intent = bool(query_terms & TITLE_TOKENS)
         query_vector = np.asarray([self.client.embed_query(query)], dtype=np.float32)
         faiss.normalize_L2(query_vector)
 
-        top_k = max(1, min(k, len(self.records)))
-        scores, indices = self.index.search(query_vector, top_k)
+        dense_limit = max(1, min(max(k * 8, 50), len(self.records)))
+        scores, indices = self.index.search(query_vector, dense_limit)
+        dense_scores = {
+            int(index): float(score)
+            for score, index in zip(scores[0], indices[0])
+            if index >= 0
+        }
+
+        scored_results: List[tuple[float, float, float, int]] = []
+        for index, record in enumerate(self.records):
+            dense_score = dense_scores.get(index, 0.0)
+            lexical_score = self._lexical_score(query, query_terms, leadership_intent, index)
+            if dense_score <= 0 and lexical_score <= 0:
+                continue
+
+            hybrid_score = dense_score
+            if lexical_score > 0:
+                hybrid_score = max(dense_score, (0.35 * dense_score) + (0.85 * lexical_score))
+
+            scored_results.append((hybrid_score, lexical_score, dense_score, index))
+
+        scored_results.sort(key=lambda item: (item[0], item[1], item[2]), reverse=True)
 
         results: List[Dict] = []
-        for score, index in zip(scores[0], indices[0]):
-            if index < 0:
-                continue
+        for hybrid_score, _, _, index in scored_results[: max(1, min(k, len(scored_results)))]:
             record = self.records[index]
             results.append(
                 {
@@ -271,7 +419,7 @@ class GeminiVectorStore:
                         "source": record["source"],
                         "chunk_index": record["chunk_index"],
                     },
-                    "score": float(score),
+                    "score": float(hybrid_score),
                 }
             )
 
