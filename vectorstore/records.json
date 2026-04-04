@@ -40,6 +40,46 @@
     "file_hash": "c167af4aef634c4db7dfb24f6cfef45a6fafa4d8e2edd13c2920112cc5956750"
   },
   {
+    "chunk_id": "f81133809834617b364331961be51878595becaa32db30ae8d946c920664a84e",
+    "source": "iiris_blogs.txt",
+    "chunk_index": 0,
+    "text": "IIRIS BLOGS AND THOUGHT LEADERSHIP\n\nOfficial IIRIS blog page:\nhttps://iirisconsulting.com/blog/\n\nIf users ask for the latest blog, recent blog posts, blogs published this month, most popular blogs, blogs on a specific topic, case studies, or real-world examples, they should be directed to the official IIRIS Blogs page above. The latest, newest, current-month, and most popular blog listings can change over time, so the official blog page is the most reliable place to explore them.\n\nRecommended blog-related response style:\nFor that information, please check the IIRIS Blogs section at https://iirisconsulting.com/blog/ . You can explore the latest posts and topic-specific articles there.",
+    "text_hash": "0950d29b96461e0e54a2e8005b2070b70df491c3dc9080a4082009a848cf94e6",
+    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
+  },
+  {
+    "chunk_id": "1af75592b904c0cf0cc30a644b77606f2e47a145d16b6558a5f6b01dab9d5531",
+    "source": "iiris_blogs.txt",
+    "chunk_index": 1,
+    "text": "ation, please check the IIRIS Blogs section at https://iirisconsulting.com/blog/ . You can explore the latest posts and topic-specific articles there.\n\nTopics covered across IIRIS blog content include:\n- AI and AI at scale\n- Machine learning and emerging technology themes\n- Data privacy, data security, and the DPDP Act\n- Innovation, startups, and resilience\n- Brand protection in the digital era\n- Corporate investigations and detective agency selection\n- Geopolitical risk and strategic intelligence\n- Global trade, tariffs, and policy risk\n- Executive protection and prevention\n- Fraud detection, banking, and risk blind spots\n- Drones, defense, and public-private partnerships\n\nIf users ask for blogs on AI, machine learning, finance, fraud detection, banking, technology, data privacy, DPDP, executive protection, geopolitics, defense, or related risk topics, direct them to the IIRIS blog page and mention that IIRIS publishes articles across these themes.",
+    "text_hash": "8ba31eceabf6df6803628f5250f2227612516bb17cf96a0684438c747edaad8e",
+    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
+  },
+  {
+    "chunk_id": "69c28385a1f6846106f262c17c58add55e06ecb9b0b4ae793afef4546c3ceeba",
+    "source": "iiris_blogs.txt",
+    "chunk_index": 2,
+    "text": "ction, geopolitics, defense, or related risk topics, direct them to the IIRIS blog page and mention that IIRIS publishes articles across these themes.\n\nIf users ask for case studies or real-world examples, useful examples include:\n- What the PMC Bank Case Teaches Us About Risk Blind Spots\n- Executive Protection and the Power of Prevention\n- Brand Protection in India in the Digital Era - Challenges & Solutions\n\nIf users ask for beginner-friendly blogs or where to start, suitable starting points include:\n- Mastering The DPDP Act: A Practical Guide To Building Data Trust\n- Data Privacy != Data Security: Why Businesses Must Treat Them Differently\n- Choosing a Reliable Detective Agency in India: What You Should Know",
+    "text_hash": "d78367d2ee457c8b8ede43ae10c32540fa3b7ba2e6d6c65116e8bb15e1f5b5f1",
+    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
+  },
+  {
+    "chunk_id": "204bc03cd8ec0df8caf878924d1852cb62022f9e81775be77dc062b18d285aa0",
+    "source": "iiris_blogs.txt",
+    "chunk_index": 3,
+    "text": "rust\n- Data Privacy != Data Security: Why Businesses Must Treat Them Differently\n- Choosing a Reliable Detective Agency in India: What You Should Know\n\nRepresentative IIRIS blog titles include:\n1. IIRIS brings the Risk & Intelligence Lens to AI at Scale at the India AI Impact Expo 2026\n2. Data Privacy Week 2026: How DPDP Act Is Shifting Data Protection from IT Teams to the Boardroom\n3. National Startup Day 2026: How India Can Build The Next Decade Of Innovation With Resilience At The Core\n4. Brand Protection in India in the Digital Era - Challenges & Solutions\n5. Mastering The DPDP Act: A Practical Guide To Building Data Trust\n6. Guide to Selecting a Reliable Corporate Detective Agency in India\n7. Choosing a Reliable Detective Agency in India: What You Should Know\n8. Israel's Attack on Qatar and Its Geopolitical Repercussions: A Strategic Research Report\n9. Trump-Putin Alaska Summit: Global Geopolitics, Ukraine War Deadlock, and India's Strategic Dilemma",
+    "text_hash": "1d59efd706dbb663720a53a4a8831702c816ff2e3576567a62707dd2b1242225",
+    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
+  },
+  {
+    "chunk_id": "7658d7ea21b18f51d4e21ffa190a63cb2c5c456eb7d38adafc26fd2b94f910f7",
+    "source": "iiris_blogs.txt",
+    "chunk_index": 4,
+    "text": "tical Repercussions: A Strategic Research Report\n9. Trump-Putin Alaska Summit: Global Geopolitics, Ukraine War Deadlock, and India's Strategic Dilemma\n10. US-India Trade Talks Stumble Before August 1 Tariff Deadline: Strategic Issues and Road Ahead\n11. Executive Protection and the Power of Prevention\n12. Data Privacy != Data Security: Why Businesses Must Treat Them Differently\n13. What the PMC Bank Case Teaches Us About Risk Blind Spots\n14. Trained Pilots for Drone: Unlimited Potential for Defence in India\n15. Why Public-Private Partnerships are the Future of Surakshit Bharat\n\nImportant guidance for time-sensitive blog requests:\n- If a user asks for the latest blog, newest blog, most popular blogs, or blogs published this month, direct the user to the official IIRIS blog page because those rankings and listings can change over time.\n- Do not guess exact blog publishing order unless it is clearly available on the official blog page.",
+    "text_hash": "300c535f50319e0b1ddf7d7cbfd8616eca55a9f973b689921c8466207a599a13",
+    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
+  },
+  {
     "chunk_id": "f19c2b65f274511fa0f9424674dac2fd35dde6f68ac6417fbdc7ed180c063cda",
     "source": "iiris_board_of_advisory1.txt",
     "chunk_index": 0,
@@ -517,7 +557,7 @@
     "chunk_index": 0,
     "text": "1. IntelliRisk\n\nQ1. Who are the board members of IntelliRisk?\nCol Praveen Sharma (Retd) – AVP, IntelliRisk\nMaj Dhrubajit Das (Retd) – AVP, IntelliRisk\n\nQ2. Who are the senior leadership team members at IntelliRisk?\nMahesh Deshpande – Senior Manager, Security Risk & Design Consulting\nNaveendas K V – Senior Manager, Security & Risk Management\n\nQ3. Who are the military veterans in IntelliRisk leadership?\nCol Praveen Sharma (Retd) – AVP\nMaj Dhrubajit Das (Retd) – AVP\nMahesh Deshpande – Senior Manager (ex-Indian Air Force)\nNaveendas K V – Senior Manager (Indian Navy veteran)\n\nQ4. Who handles technology, legal, and cyber risk at IntelliRisk?\nAkash Wigh – AVP, legal advisory and IPR enforcement\nParamveer Singh – VP, Technology Risk Management\n\n2. IIRIS Knowledge\n\nQ5. Who are the board members of IIRIS Knowledge?\nPaul Devassy, CEO – IIRIS Knowledge\n\nQ6. What is the focus of IIRIS Knowledge?\nRisk awareness, resilience, soft skill development, and thought leadership across sectors.",
     "text_hash": "f368c27ccf25958b0d4082357beb83ef4272f1b710ba66d164c082709f1f01ce",
-    "file_hash": "54df4361cb25c450fbff4f4c73d20f12a5fbb2733d9fe8b2b652d3ceb3c6e878"
+    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
   },
   {
     "chunk_id": "1f07350e6a0204223d9c6eb368941304c1251a89da1524ccf46ba6c2d14aadf2",
@@ -525,7 +565,7 @@
     "chunk_index": 1,
     "text": "IIRIS Knowledge\n\nQ6. What is the focus of IIRIS Knowledge?\nRisk awareness, resilience, soft skill development, and thought leadership across sectors.\n\nQ7. Who are the team members or key contributors?\nPaul Devassy leads the innovation, coaching, and global speaking initiatives.\n\n3. IntelliFuture (assuming implied sub-branch for strategy or consultancy)\n\n(Based on available data, roles related to strategy, governance, and advisory could fall under IntelliFuture)\n\nQ8. Who are the board members or leaders of IntelliFuture?\nSatyagopal Bhanja – CEO, Africa & Gulf (regional strategy & governance)\nPramod Panda – Advisory Leader, Financial Regulation\nAsitav Sinha – VP, Strategy & Infrastructure\nPartha Roy Chowdhury – VP, Strategy & Marketing, Gulf & Africa\n\nQ9. Who handles cross-border strategy and M&A in IntelliFuture?\nAsitav Sinha, VP – Strategy & Infrastructure",
     "text_hash": "edf6080cba54fa3d75b3daad9c7f3bef47e2fde3bde42799fb04a6ae24075f10",
-    "file_hash": "54df4361cb25c450fbff4f4c73d20f12a5fbb2733d9fe8b2b652d3ceb3c6e878"
+    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
   },
   {
     "chunk_id": "9c88520646ed16b3b65fc3eb9bd4f0f3c357075d5711f0ba4434a3a90da67b03",
@@ -533,7 +573,7 @@
     "chunk_index": 2,
     "text": "VP, Strategy & Marketing, Gulf & Africa\n\nQ9. Who handles cross-border strategy and M&A in IntelliFuture?\nAsitav Sinha, VP – Strategy & Infrastructure\n\nQ10. Who leads regional business development and market expansion?\nPartha Roy Chowdhury, VP – Strategy & Marketing\nNurudeen Abubakar, VP – Nigeria, Business Development & Strategy\n\n4. IIRIS Main Operations (India & Gulf)\n\nQ11. Who are the board members of IIRIS India & Gulf?\nSagarika Chakraborty, CEO – India & Gulf\nKunal Bhogal, COO\n\nQ12. Who leads technology and infrastructure at IIRIS India & Gulf?\nAshok Kumar – CEO IntelliFuture, Technology Strategist, Enterprise Infrastructure & Automation\nKunal Bhogal – COO, Security Infrastructure & Technology\n\nQ13. Who leads investigations, compliance, and fraud detection at IIRIS India & Gulf?\nSagarika Chakraborty – CEO, legal and investigative oversight\nSunil Sood – AVP, Investigations & Compliance\n\nQ14. Who leads HR, talent, and people operations?\nVishakha Poras – HR Strategist, India & Gulf",
     "text_hash": "4a75057e15bf12dfbe9ac2970941b2d195e83725f4294af458675e43c2c1c0b5",
-    "file_hash": "54df4361cb25c450fbff4f4c73d20f12a5fbb2733d9fe8b2b652d3ceb3c6e878"
+    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
   },
   {
     "chunk_id": "a9122d8c1437ab1a1f033274a5440f018e53b071b46df09aecfc19433829dff9",
@@ -541,14 +581,14 @@
     "chunk_index": 3,
     "text": "versight\nSunil Sood – AVP, Investigations & Compliance\n\nQ14. Who leads HR, talent, and people operations?\nVishakha Poras – HR Strategist, India & Gulf\n\nQ15. Who is responsible for Quality & Compliance Governance?\nSangeeta Singh, Head – Quality & Compliance\n\nQ16. Who manages TVET, policy, and business development initiatives?\nGurpreet Singh, AVP – Strategy & Business Development\n\n5. Other Key Cross-Functional Leaders\n\nQ17. Who handles financial crime, AML, and blockchain compliance initiatives?\nRanjit Mallik, Senior Consultant – Business Development\n\nQ18. Who is responsible for central banking and financial regulation advisory?\nPramod Panda, Advisory Leader\n\nQ19. Who drives cybersecurity, SOC operations, and digital risk advisory?\nParamveer Singh, VP – Technology Risk Management\nNaveendas K V, Senior Manager – Security & Risk Management (SOC lead)",
     "text_hash": "db1cff40db13a9ef581ed67da873a983bd9e06c3261d2e818e12249d9b2a8ab9",
-    "file_hash": "54df4361cb25c450fbff4f4c73d20f12a5fbb2733d9fe8b2b652d3ceb3c6e878"
+    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
   },
   {
-    "chunk_id": "3e0e914acb2996593b4e760c473a263593cdd8814407c56eaaa9a86a14ad986e",
+    "chunk_id": "fcf329589f56547c1dd2c4595cd193a1d0a4751403b73605eb97d18231e7cf90",
     "source": "iiris_teamfaq.txt",
     "chunk_index": 4,
-    "text": "ons, and digital risk advisory?\nParamveer Singh, VP – Technology Risk Management\nNaveendas K V, Senior Manager – Security & Risk Management (SOC lead)\n\nQ20. Who are the thought leaders and policy contributors for women empowerment and youth leadership?\nSagarika Chakraborty, CEO – India & Gulf\n\nQ21. Who is the President of IIRIS ?\nGarry Singh, President, Strategic Risk & Intelligence   \n\nQ22. Who is Gurpawan Singh ? \nMainly known as Garry Singh, President, Strategic Risk & Intelligence\n20+ years in enterprise risk, intelligence, and compliance. Led high-threat operations, advisor to global organizations, Six Sigma Green Belt, anti-terror & anti-extortion specialist.",
-    "text_hash": "717b6a2c11c814cebe5f7b550419561975a06672d25d965b7f0ea000776ce9a3",
-    "file_hash": "54df4361cb25c450fbff4f4c73d20f12a5fbb2733d9fe8b2b652d3ceb3c6e878"
+    "text": "ons, and digital risk advisory?\nParamveer Singh, VP – Technology Risk Management\nNaveendas K V, Senior Manager – Security & Risk Management (SOC lead)\n\nQ20. Who are the thought leaders and policy contributors for women empowerment and youth leadership?\nSagarika Chakraborty, CEO – India & Gulf\n\nQ21. Who is the President of IIRIS ?\nGarry Singh, President of IIRIS, Strategic Risk & Intelligence   \n\nQ22. Who is Gurpawan Singh ? \nMainly known as Garry Singh, President, Strategic Risk & Intelligence\n20+ years in enterprise risk, intelligence, and compliance. Led high-threat operations, advisor to global organizations, Six Sigma Green Belt, anti-terror & anti-extortion specialist.",
+    "text_hash": "042b7cc603ca91361fcdd219e7bd35a1c3a3d6ed02b8335094394edf96588411",
+    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
   }
 ]
