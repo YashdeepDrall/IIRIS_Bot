@@ -424,3 +424,35 @@ class GeminiVectorStore:
             )
 
         return results
+
+    def get_chunks_by_source_hints(self, source_hints: List[str]) -> List[Dict]:
+        self._ensure_loaded()
+        if not self.records:
+            return []
+
+        normalized_hints = [hint.lower() for hint in source_hints if hint]
+        if not normalized_hints:
+            return []
+
+        matched_records: List[Dict] = []
+        for record in self.records:
+            source = str(record.get("source", "")).lower()
+            if any(hint in source for hint in normalized_hints):
+                matched_records.append(
+                    {
+                        "page_content": record["text"],
+                        "metadata": {
+                            "source": record["source"],
+                            "chunk_index": record["chunk_index"],
+                        },
+                        "score": 1.0,
+                    }
+                )
+
+        matched_records.sort(
+            key=lambda doc: (
+                doc["metadata"]["source"],
+                doc["metadata"]["chunk_index"],
+            )
+        )
+        return matched_records
