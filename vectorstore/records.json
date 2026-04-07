@@ -384,6 +384,118 @@
     "file_hash": "d1dde974bf2e06f0a790b98f9f022c8dc951bb35930c37fb2a3fa9a2c2212069"
   },
   {
+    "chunk_id": "b1112e1d02546d9dd7fa07826a0d22de85bf56d933be8a31444ed6664f9f1cef",
+    "source": "iiris_media.txt",
+    "chunk_index": 0,
+    "text": "IIRIS Media and Featured Coverage\n\nSource page: https://iirisconsulting.com/articles/\n\nArticles\nRecognized across leading platforms.\n\nFeatured Coverage\nTop media highlights and major mentions.\n\nBar & Bench | March 24, 2026\nTitle: What every legal counsel advising banks today must know about tracking cases and staying RBI FMR ready\nSummary: Financial fraud in India has moved far beyond the confines of a single organisation's internal affairs. Today, a single case of banking fraud could involve internal surveillance units, external forensic analysts, police departments, enforcement agencies, lawyers, and regulatory reporting requirements, all working in parallel. However, the systems that monitor these cases are still piecemeal.",
+    "text_hash": "3dc1c9603944787f78fd9f80d936686d354a2f824d507b0801a3a115ca891636",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "3a36cce4444753c26b12716b4e3596ccd6a07067cf274783e03b2cece0e2a77a",
+    "source": "iiris_media.txt",
+    "chunk_index": 1,
+    "text": "agencies, lawyers, and regulatory reporting requirements, all working in parallel. However, the systems that monitor these cases are still piecemeal.\n\nElets eGov | March 5, 2026\nTitle: Public-Private Partnership To Solve Crime And Speed Up Judicial Process - Gurgaon Creates An Iconic Model\nSummary: Out of 4.76 crore pending cases in Indian courts, 3.65 crore are criminal cases (as per National Judicial Data Grid dated 24 Dec 2025). It shows that more than 76% of cases are criminal in nature, requiring diligent forensic analysis and examination of evidence and witnesses. Conventional laboratories, although technically competent, often operate under heavy backlogs and sequential workflows, resulting in report timelines that stretch into months.",
+    "text_hash": "666e1078b89dac2a8345803bc7818eff624e11b31bbb45c0816905fb5dc95b3c",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "5dd24d1a0cfbea8ca10d355de0a315e66c0f84ed60381b000ce0c276452afcbe",
+    "source": "iiris_media.txt",
+    "chunk_index": 2,
+    "text": ", although technically competent, often operate under heavy backlogs and sequential workflows, resulting in report timelines that stretch into months.\n\nTimes Tech | March 3, 2026\nTitle: Garry Singh on Cyber Risks, 5G Security and Infrastructure Resilience\nSummary: In an interview with TimesTech, Garry Singh, President, IIRIS Consulting, speaks about the evolving landscape of cyber risk, infrastructure security, and emerging vulnerabilities in a hyper-connected world. He explains why boards must treat cyber threats as business-interruption risks rather than compliance obligations, while highlighting security challenges linked to 5G networks, Industrial IoT, satellite systems, and the growing convergence of digital infrastructure.",
+    "text_hash": "13044ea755b65403fa76d8d0ef947aae7690e85431ba279fb200db117e227414",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "8718fcb7b8e5ccc274b82624c5d1e960b0bf41e675c07c414a254e8b4f5daacb",
+    "source": "iiris_media.txt",
+    "chunk_index": 3,
+    "text": "hile highlighting security challenges linked to 5G networks, Industrial IoT, satellite systems, and the growing convergence of digital infrastructure.\n\nRestaurant India | Feb 27, 2026\nTitle: Rethinking Restaurant Security: Beyond Cameras and Compliance\nSummary: Restaurants are living, breathing operations. Every day, they manage the flow of people, money, food, and experiences, often at high speed and under unpredictable conditions. Yet, despite significant investment in security technology, the same recurring problems are seen across multiple establishments. Surveillance technology is installed in almost every restaurant, but it is often an afterthought.",
+    "text_hash": "75400bb2ce32fe6f0c67fd0db54d6b64e0d836d75c781a5ae7c0db5e6d524029",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "c46f849ad58df4f136035abe9a26ed2bb581320324cc151d3657b9130b902916",
+    "source": "iiris_media.txt",
+    "chunk_index": 4,
+    "text": "ng problems are seen across multiple establishments. Surveillance technology is installed in almost every restaurant, but it is often an afterthought.\n\nLokmat Times | Feb 25, 2026\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring & RBI Reporting for Banks\nSummary: IIRIS Consulting Pvt Ltd announced the official launch of IntelliTracker, a purpose-built monitoring platform designed to help banks and financial institutions manage fraud-related and law enforcement case lifecycles with structured visibility and RBI FMR 1-4-aligned reporting readiness.",
+    "text_hash": "d2f697c4b74b685d212a37145acb6ad0e77dd53f5d78185d72f3356ce8bdca33",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "0e318d2e9ab37d2640fb0e9a881ce1c5cd98b56c03a573e6d39a7707d4351004",
+    "source": "iiris_media.txt",
+    "chunk_index": 5,
+    "text": "inancial institutions manage fraud-related and law enforcement case lifecycles with structured visibility and RBI FMR 1-4-aligned reporting readiness.\n\nNewsVoir | Feb 25, 2026\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring & RBI Reporting for Banks\nSummary: IIRIS Consulting Pvt Ltd announced the official launch of IntelliTracker, a purpose-built monitoring platform designed to help banks and financial institutions manage fraud-related and law enforcement case lifecycles with structured visibility and RBI FMR 1-4-aligned reporting readiness.",
+    "text_hash": "4e8e7ef69bb8ab4da65c1ec305c3a82d449e5660657b9fadfb06b574178d01d1",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "65dc50af5abd361afc68ab058a395957ce06ef55250dcbeb9005516c5b552558",
+    "source": "iiris_media.txt",
+    "chunk_index": 6,
+    "text": "inancial institutions manage fraud-related and law enforcement case lifecycles with structured visibility and RBI FMR 1-4-aligned reporting readiness.\n\nANI | Feb 24, 2026\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: Leading global risk, security, and intelligence firm IIRIS signed a Memorandum of Understanding (MoU) with the National Law University, Jodhpur, formalising the establishment of the IIRIS Chair of Infosec and Forensic Society. First in India, this Chair intends to create a vibrant center of excellence that fosters a culture of research, innovation, and industry-academia collaboration in the fields of information security and forensic science.",
+    "text_hash": "72c256cc48a608c761d89208fb814f7ccf4a692dee2f86c7a86b9f1cfc2bd69f",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "deba2a3fe5de92fecb076c35e5a569e7829962bb7e5712125ab037c3a8aa75c1",
+    "source": "iiris_media.txt",
+    "chunk_index": 7,
+    "text": "llence that fosters a culture of research, innovation, and industry-academia collaboration in the fields of information security and forensic science.\n\nThePrint (ANI Press) | Feb 24, 2026\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: IIRIS and National Law University, Jodhpur, signed an MoU to establish India's first IIRIS Chair of Infosec and Forensic Society. This collaboration aims to foster research and industry-academia partnership in information security and forensic science.\n\nThe Tribune | Feb 24, 2026\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: Leading global risk, security, and intelligence firm IIRIS signed a Memorandum of Understanding (MoU) with the National Law University, Jodhpur, formalising the establishment of the IIRIS Chair of Infosec and Forensic Society.",
+    "text_hash": "51bec11e532215dd026ce43e25ebb17794be0ebbf680c01515f01d68a1e4dbe4",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "2ae03f8d6fb6d9b0c81888af2d5b65b61df4d422b3268a3101ae426e14be348f",
+    "source": "iiris_media.txt",
+    "chunk_index": 8,
+    "text": "um of Understanding (MoU) with the National Law University, Jodhpur, formalising the establishment of the IIRIS Chair of Infosec and Forensic Society.\n\nBusiness Standard | Feb 24, 2026\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: Leading global risk, security, and intelligence firm IIRIS signed a Memorandum of Understanding (MoU) with the National Law University, Jodhpur, formalising the establishment of the IIRIS Chair of Infosec and Forensic Society.\n\nTimes of India | Feb 23, 2026\nTitle: India AI Impact Summit: Indian AI startups showcase solutions for education, smart security and train safety\nSummary: At the India AI Impact Summit 2026, Indian AI startups showcased meaningful solutions with practical applications.",
+    "text_hash": "413daa481ff9445ad43e341acdb97540a5b4f3c1e3290488ec3c5e4b6bb58775",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "cdbe52b132b0a7454eaba76f5083be34dfd3de0d524eaeebe1ce3fe1dd402803",
+    "source": "iiris_media.txt",
+    "chunk_index": 9,
+    "text": "security and train safety\nSummary: At the India AI Impact Summit 2026, Indian AI startups showcased meaningful solutions with practical applications.\n\nPolicyCircle | Feb 20, 2026\nTitle: Crowd safety at places of worship: Why India needs a resilience-first shift\nSummary: India's places of worship are living institutions, repositories of belief, ritual, and collective memory. They are also among the most densely crowded public spaces anywhere. Of India's 44 UNESCO World Heritage Sites, 10 are classified as Religious Heritage. The country's temples, mosques, churches, gurudwaras, and shrines draw millions every year.\n\nThe Compliance Digest | Jan 08, 2026\nTitle: The Evolution of Compliance in Financial Crime: An Interview with Sagarika Chakraborty, Global Head of Investigations, IIRIS Consulting\nSummary: The interview explores why effective detection has become the critical factor in today's financial crime landscape, beyond traditional preventive compliance controls.",
+    "text_hash": "6f078c1122b821760c7c3173297e6ae88bdb0eed6b58848221faf459e740aed3",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "878e0853b0baa9c8e58d04d5cda53d186402d1d7a8c5bbf0d9a4e250c9297f21",
+    "source": "iiris_media.txt",
+    "chunk_index": 10,
+    "text": "plores why effective detection has become the critical factor in today's financial crime landscape, beyond traditional preventive compliance controls.\n\nBW Legal World | Dec 21, 2025\nTitle: Evolving Financial Crimes Demand Stronger Forensic, Legal Collaboration: Experts\nSummary: With fraud networks exploiting jurisdictional drift, cultural nuance, and increasingly human-like digital tactics, only a deeply integrated blend of cultural intelligence, HUMINT, and legal-investigative precision can protect global businesses, writes Garry Singh.\n\nETLegalWorld | Dec 12, 2025\nTitle: Expert's Take: Steering the Cross-Border Fraud: The Essential Strategic Playbook for 2026 & Beyond\nSummary: With fraud networks exploiting jurisdictional drift, cultural nuance, and increasingly human-like digital tactics, only a deeply integrated blend of cultural intelligence, HUMINT, and legal-investigative precision can protect global businesses, writes Garry Singh.",
+    "text_hash": "eee1cf6ca824055893666501fb73693829c4c40b12e6034a402e46e1c28c7dae",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "152d80755a2d5097d4e05aaa14b417dff63ffa5bb68b81ffc4ffde2fcd3429d3",
+    "source": "iiris_media.txt",
+    "chunk_index": 11,
+    "text": "only a deeply integrated blend of cultural intelligence, HUMINT, and legal-investigative precision can protect global businesses, writes Garry Singh.\n\nBar & Bench | Nov 25, 2025\nTitle: The two halves of trust: Why DPDP compliance is more than a legal puzzle\nSummary: The article explores the dual nature of data protection, the interplay between legal interpretation and operational execution, and why a holistic approach is the only path to building genuine data trust.\n\nTechAfricaNews | September 26, 2024\nTitle: IIRIS Launches Nigeria Office, Expands Security Solutions Across Africa\nSummary: IIRIS announced the launch of its Nigeria office with a grand opening ceremony at Hotel Lagos Continental, marking a significant expansion of its operations into Africa.",
+    "text_hash": "9e54665502686c3a9d69ab17bdecbf3768c74d596685a57b3777b180498e9ea8",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "eac34453fb7f34551fe99c703cae59a873af517810b7dd5f2ee7d69a7ea75c93",
+    "source": "iiris_media.txt",
+    "chunk_index": 12,
+    "text": "launch of its Nigeria office with a grand opening ceremony at Hotel Lagos Continental, marking a significant expansion of its operations into Africa.\n\nGuardian Nigeria | September 25, 2024\nTitle: IIRIS brings AI-powered risk mitigation solutions to Nigeria\nSummary: IIRIS officially launched operations in Nigeria. At the event, the company said the launch aimed to provide cutting-edge artificial intelligence solutions to help businesses and organizations identify, assess, and mitigate risks. The company described itself as having multiple offices across the globe and serving more than 200 countries.\n\nPublications\nAuthored magazine and editorial features.\n\nBW Businessworld\nTitle: TREATMENT FOR CYBERCRIME - INDIA'S NEW PANDEMIC\nAuthor: Garry Singh\nSummary: Garry Singh shared an article in BW Businessworld on cybercrime in India and how to address it with the right treatment.",
+    "text_hash": "d505124231b739d65de1cb8fcb104ad17f2c72ef83ea09914a79c08954c096dd",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
+    "chunk_id": "d14ad24f802f0b670723b679bf609d80660efd74799155b7521b2571042273a6",
+    "source": "iiris_media.txt",
+    "chunk_index": 13,
+    "text": "Author: Garry Singh\nSummary: Garry Singh shared an article in BW Businessworld on cybercrime in India and how to address it with the right treatment.\n\nThe Economic Times (Delhi, Mumbai, and Bengaluru editions)\nFeature: Secure India Summit 2025\nMention: Sagarika Chakraborty shared that the Secure India Summit 2025 was featured in The Economic Times.\n\nVideo Conversations\nInterviews, podcasts, and media appearances.\nThe media page also includes video conversations uploaded on the official IIRIS YouTube channel.\nOfficial YouTube channel: https://www.youtube.com/@iirisconsulting",
+    "text_hash": "a0c84c77159cbb1f17d7cccb0e788ef1a9e1decdbb276d49df78e27fdb23fb77",
+    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+  },
+  {
     "chunk_id": "69e1d2699e518845b421c81a558b284b7f5ac1775c3495be0eac9bb1fa2ceaf3",
     "source": "iiris_our_leaders1.txt",
     "chunk_index": 0,
@@ -438,6 +550,14 @@
     "text": "ople & Culture Leader\n15+ years, HR leadership, employee engagement, culture transformation, compliance, talent acquisition & L&D across India & Gulf.\n\n21. Sangeeta Singh – Quality & Compliance Management | Audit & Risk Assurance\n12+ years, ISO certification, internal/external audits, quality assurance, compliance governance, risk & security oversight.\n\n22. Mahesh Deshpande – Senior Manager – Security Risk & Design Consulting\n15+ years, physical security engineering, risk assessments, fire safety, ECS operations, corporate security consulting.\n\n23. Naveendas K V – Security & Risk Management Leader\n19+ years, Naval veteran, SOC operations, crisis management, physical security, enterprise risk governance, VIP & high-profile site security.\n\nCheck out on : https://iirisconsulting.com/team/",
     "text_hash": "c1684835be470ab85025865f12616c78e3d5ab0542cc4bfe7b23c4593c00a642",
     "file_hash": "90f334d1506550b85a45d5b6076243ca41fa52328286441a0b44a61f6f0d0af8"
+  },
+  {
+    "chunk_id": "1c9733b2f9e5b4420ce99c6c29d3505b9289c80332d3aba48cd7e47253d56f12",
+    "source": "iiris_press_release.txt",
+    "chunk_index": 0,
+    "text": "IIRIS Press Releases\n\nSource page: https://iirisconsulting.com/press-release/\n\nPress Release\nTitle: IIRIS Mourns the Passing of Veteran Strategic Affairs Expert Maroof Raza\nDate and location: Gurgaon, 26 February 2026\nSummary: IIRIS Consulting expressed profound sorrow at the passing of Mr. Maroof Raza, distinguished strategic affairs expert and national voice on defence and security issues.\n\nPress Release\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring & RBI Reporting for BFSI sector\nSummary: IIRIS announced the launch of IntelliTracker, a platform focused on strengthening police case monitoring and RBI reporting readiness for the BFSI sector.\n\nPress Release\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: IIRIS signed an MoU with National Law University, Jodhpur to establish the IIRIS Chair of Infosec and Forensic Society.",
+    "text_hash": "56679420291c650880534f4104dfce06846682cef721d5d8cf59e2669f9429c3",
+    "file_hash": "56679420291c650880534f4104dfce06846682cef721d5d8cf59e2669f9429c3"
   },
   {
     "chunk_id": "00eafb79d77d24e10e64a1043939f7a228e8603e65ec84425b04db84bfb6ccb3",
@@ -550,6 +670,14 @@
     "text": "te application, regulatory alignment, and long-term impact.\n\nWhy should organizations choose IIRIS for risk management, security design, and training?\n\nOrganizations choose IIRIS for its intelligence-driven approach, certified experts, and ability to integrate strategy, technology, and execution. With global experience, regulatory alignment, and hands-on delivery, IIRIS enables proactive risk mitigation, rapid incident response, secure environments, and skilled teams capable of leading confidently in complex and evolving risk landscapes.",
     "text_hash": "a4a75670bc12188cd2c58bcb62edccb6331210aca03b05abe5ca5e9023caee00",
     "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
+  },
+  {
+    "chunk_id": "c410816b61af9750a8bdaee2a376334746514f14d54d7061e0ab57796db486b4",
+    "source": "iiris_socials.txt",
+    "chunk_index": 0,
+    "text": "IIRIS Official Social Media Channels\n\nFacebook\nhttps://www.facebook.com/iirisconsulting/\n\nX\nhttps://x.com/ConsultingIiris\n\nInstagram\nhttps://www.instagram.com/iirisconsulting/\n\nLinkedIn\nhttps://www.linkedin.com/company/iirisconsultingindia/posts/?feedView=all\n\nYouTube\nhttps://www.youtube.com/@iirisconsulting",
+    "text_hash": "4da7dcd5b3ed61cf19268853a6743ec5b38a7db11bd99494e1d1186129642958",
+    "file_hash": "4da7dcd5b3ed61cf19268853a6743ec5b38a7db11bd99494e1d1186129642958"
   },
   {
     "chunk_id": "5e5769a97f468c3e9044f8423c6285622e65811059d07db4c9735b487f9bb3be",
