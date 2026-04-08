@@ -1,0 +1,148 @@
+{
+  "title": "IIRIS Media and Featured Coverage",
+  "source_page": "https://iirisconsulting.com/articles/",
+  "youtube_channel": "https://www.youtube.com/@iirisconsulting",
+  "records": [
+    {
+      "category": "Featured Coverage",
+      "outlet": "Bar and Bench",
+      "date": "2026-03-24",
+      "title": "What every legal counsel advising banks today must know about tracking cases and staying RBI FMR ready",
+      "summary": "The article discusses the growing complexity of fraud-case tracking and the need for better operational visibility across investigative, legal, and regulatory stakeholders."
+    },
+    {
+      "category": "Featured Coverage",
+      "outlet": "Elets eGov",
+      "date": "2026-03-05",
+      "title": "Public-Private Partnership To Solve Crime And Speed Up Judicial Process - Gurgaon Creates An Iconic Model",
+      "summary": "The coverage highlights the role of forensic capability and public-private collaboration in reducing investigative delays and improving criminal justice responsiveness."
+    },
+    {
+      "category": "Media Interview",
+      "outlet": "Times Tech",
+      "date": "2026-03-03",
+      "title": "Garry Singh on Cyber Risks, 5G Security and Infrastructure Resilience",
+      "people": [
+        "Garry Singh"
+      ],
+      "summary": "In this interview, Garry Singh discusses cyber risk, infrastructure security, 5G-related vulnerabilities, industrial IoT exposure, and the need to treat cyber threats as business-interruption risks."
+    },
+    {
+      "category": "Featured Coverage",
+      "outlet": "Restaurant India",
+      "date": "2026-02-27",
+      "title": "Rethinking Restaurant Security: Beyond Cameras and Compliance",
+      "summary": "The article explores operational security gaps in restaurants and the limitations of surveillance-first approaches without broader risk design."
+    },
+    {
+      "category": "Product Launch Coverage",
+      "outlet": "Lokmat Times",
+      "date": "2026-02-25",
+      "title": "IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring and RBI Reporting for Banks",
+      "summary": "Coverage of the IntelliTracker launch focused on structured case lifecycle visibility and reporting readiness for banks and financial institutions."
+    },
+    {
+      "category": "Product Launch Coverage",
+      "outlet": "NewsVoir",
+      "date": "2026-02-25",
+      "title": "IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring and RBI Reporting for Banks",
+      "summary": "NewsVoir reported on the launch of IntelliTracker and its use in fraud-related monitoring and regulatory reporting readiness."
+    },
+    {
+      "category": "Academic Collaboration Coverage",
+      "outlet": "ANI and syndicated platforms",
+      "date": "2026-02-24",
+      "title": "IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society",
+      "summary": "The coverage highlights IIRIS's collaboration with National Law University, Jodhpur to promote research, innovation, and industry-academia engagement in information security and forensic science."
+    },
+    {
+      "category": "Featured Coverage",
+      "outlet": "Times of India",
+      "date": "2026-02-23",
+      "title": "India AI Impact Summit: Indian AI startups showcase solutions for education, smart security and train safety",
+      "summary": "The article mentions AI-led solutions and showcases relevant innovation themes associated with smart security and practical applications."
+    },
+    {
+      "category": "Thought Leadership",
+      "outlet": "PolicyCircle",
+      "date": "2026-02-20",
+      "title": "Crowd safety at places of worship: Why India needs a resilience-first shift",
+      "summary": "The piece argues for a resilience-first approach to crowd safety in highly sensitive and densely populated religious environments."
+    },
+    {
+      "category": "Media Interview",
+      "outlet": "The Compliance Digest",
+      "date": "2026-01-08",
+      "title": "The Evolution of Compliance in Financial Crime: An Interview with Sagarika Chakraborty, Global Head of Investigations, IIRIS Consulting",
+      "people": [
+        "Sagarika Chakraborty"
+      ],
+      "summary": "The interview discusses why effective detection has become central to modern financial crime programs beyond traditional preventive compliance controls."
+    },
+    {
+      "category": "Thought Leadership",
+      "outlet": "BW Legal World",
+      "date": "2025-12-21",
+      "title": "Evolving Financial Crimes Demand Stronger Forensic, Legal Collaboration: Experts",
+      "people": [
+        "Garry Singh"
+      ],
+      "summary": "Garry Singh writes about the need for integrated cultural intelligence, HUMINT, and legal-investigative precision to respond to complex fraud networks."
+    },
+    {
+      "category": "Thought Leadership",
+      "outlet": "ETLegalWorld",
+      "date": "2025-12-12",
+      "title": "Expert's Take: Steering the Cross-Border Fraud: The Essential Strategic Playbook for 2026 and Beyond",
+      "people": [
+        "Garry Singh"
+      ],
+      "summary": "The article focuses on strategic approaches to cross-border fraud and the importance of coordinated legal, intelligence, and compliance responses."
+    },
+    {
+      "category": "Thought Leadership",
+      "outlet": "Bar and Bench",
+      "date": "2025-11-25",
+      "title": "The two halves of trust: Why DPDP compliance is more than a legal puzzle",
+      "summary": "The article examines the relationship between legal interpretation and operational execution in building meaningful data trust."
+    },
+    {
+      "category": "Expansion Coverage",
+      "outlet": "TechAfricaNews",
+      "date": "2024-09-26",
+      "title": "IIRIS Launches Nigeria Office, Expands Security Solutions Across Africa",
+      "summary": "TechAfricaNews covered the Nigeria office launch and IIRIS's broader African expansion in risk management and security solutions."
+    },
+    {
+      "category": "Expansion Coverage",
+      "outlet": "Guardian Nigeria",
+      "date": "2024-09-25",
+      "title": "IIRIS brings AI-powered risk mitigation solutions to Nigeria",
+      "summary": "The article highlights the Nigeria launch, AI-powered risk mitigation positioning, and IIRIS's global operating footprint."
+    },
+    {
+      "category": "Publication",
+      "outlet": "BW Businessworld",
+      "title": "TREATMENT FOR CYBERCRIME - INDIA'S NEW PANDEMIC",
+      "people": [
+        "Garry Singh"
+      ],
+      "summary": "Garry Singh authored a piece on cybercrime in India and the need for practical systemic treatment."
+    },
+    {
+      "category": "Media Mention",
+      "outlet": "The Economic Times",
+      "title": "Secure India Summit 2025 featured coverage",
+      "people": [
+        "Sagarika Chakraborty"
+      ],
+      "summary": "Sagarika Chakraborty shared that the Secure India Summit 2025 was featured in The Economic Times."
+    },
+    {
+      "category": "Video Conversations",
+      "outlet": "IIRIS YouTube",
+      "title": "Official IIRIS video conversations, interviews, podcasts, and media appearances",
+      "summary": "The official IIRIS YouTube channel hosts video conversations, interviews, podcasts, and media appearances."
+    }
+  ]
+}

@@ -1,722 +1,802 @@
 [
   {
-    "chunk_id": "902303ddecdeb283dcab63971dd08f0f6908fdb3170fd2f2bf7925a7485a0548",
-    "source": "iiris_about_page_context.txt",
+    "chunk_id": "56be3da3b3f637b29d192667cfd18933a33093c9d2d2c1dd29f7c4368a408bbe",
+    "source": "about.md",
     "chunk_index": 0,
-    "text": "What is IIRIS and what does it stand for?\n\nIIRIS is a trusted risk, security, and intelligence consulting firm that partners with organizations to turn uncertainty into opportunity. For over a decade, IIRIS has delivered end-to-end, technology-driven solutions that help businesses navigate complexity with clarity, confidence, and resilience.\n\nWhat approach does IIRIS take toward risk and security?\n\nIIRIS goes beyond conventional risk consulting by combining cutting-edge analytics with deep on-ground intelligence and operational excellence. The firm focuses not only on mitigating risk but also on unlocking critical business value and enabling smarter, sustainable decision-making.\n\nWhat sets IIRIS apart from other risk consulting firms?",
-    "text_hash": "631bb1f14374f5c2cf18a91df234ea58ad3bbf84aacb87a2e815d278d2d188c5",
-    "file_hash": "c167af4aef634c4db7dfb24f6cfef45a6fafa4d8e2edd13c2920112cc5956750"
+    "text": "# IIRIS Overview\n\n## What is IIRIS?\n\nIIRIS is a technology-driven risk, security, and intelligence consulting company born in India and trusted globally. The company helps organizations protect people, assets, reputation, and operations while navigating uncertainty with clarity, confidence, and resilience.\n\n## What does IIRIS do?\n\nIIRIS delivers end-to-end solutions across risk advisory, forensic investigations, security design, digital innovation, business continuity, command center strategy, specialized training, and resilience-building programs. The firm's approach combines advanced analytics, deep on-ground intelligence, and operational execution.\n\n## What makes IIRIS different?",
+    "text_hash": "905b75917b55775cfd7de89e8696d16c0fa15cd68f723cb66d05acc6bab40852",
+    "file_hash": "4c17a567a957d7f9db2b204c44d5e0fb9737d752e38875b86986c923dc3278f5"
   },
   {
-    "chunk_id": "4a9b077b75cd1a411aa335ab52524a0cbabf36104aef67cce7625113d844b951",
-    "source": "iiris_about_page_context.txt",
+    "chunk_id": "21c97143128318b0414eb3ff4fc5c90248b2e39cf935a59e600639d43114b296",
+    "source": "about.md",
     "chunk_index": 1,
-    "text": "also on unlocking critical business value and enabling smarter, sustainable decision-making.\n\nWhat sets IIRIS apart from other risk consulting firms?\n\nIIRIS stands out through its intelligence-led approach, global presence across more than 10 countries, experienced leadership, and commitment to operational excellence. Its solutions are designed to be practical, integrated, and tailored to real-world business challenges.\n\nWhat is the philosophy behind the IIRIS logo?\n\nThe IIRIS logo symbolizes its core philosophy through two elements. The “Eye” represents risk, vigilance, focus, and sharp observation essential for security and risk management. The “Petal,” inspired by the Blue Iris flower, represents intelligence, wisdom, integrity, and ethical intelligence gathering rooted in respect for people, organizations, and the law.\n\nWhat is the vision of IIRIS?",
-    "text_hash": "28ac640d7b95221cbab83e46d69b6fef86a4c1656b66031aa5cf998cd70d1312",
-    "file_hash": "c167af4aef634c4db7dfb24f6cfef45a6fafa4d8e2edd13c2920112cc5956750"
+    "text": "ing programs. The firm's approach combines advanced analytics, deep on-ground intelligence, and operational execution.\n\n## What makes IIRIS different?\n\nIIRIS goes beyond conventional consulting by combining intelligence-led assessments, customized technology-driven solutions, and practical execution support. The focus is not only on mitigating risk, but also on enabling faster decision-making, operational continuity, regulatory readiness, and long-term resilience.\n\n## What sectors does IIRIS support?\n\nIIRIS works with corporates, multinational companies, regulated industries, government entities, and sectors such as BFSI, healthcare, infrastructure, retail, manufacturing, technology, hospitality, and professional services.\n\n## What makes IIRIS credible and trusted?",
+    "text_hash": "0617bbc7e77e1b3675c5ae2a8db5653a068f048fc47447e9ab687e2d89aa4982",
+    "file_hash": "4c17a567a957d7f9db2b204c44d5e0fb9737d752e38875b86986c923dc3278f5"
   },
   {
-    "chunk_id": "fecd68e8978faf3172672d9f76844adce080be9d50cf0743dc003104e65e0394",
-    "source": "iiris_about_page_context.txt",
+    "chunk_id": "28456577c4756dc8978acfc85b26b3d041c3a1b71444bca95f9cc938b9be1148",
+    "source": "about.md",
     "chunk_index": 2,
-    "text": "ligence, wisdom, integrity, and ethical intelligence gathering rooted in respect for people, organizations, and the law.\n\nWhat is the vision of IIRIS?\n\nIIRIS envisions redefining how organizations perceive and manage risk by transforming it into a strategic advantage. The company aims to be a trusted growth partner, delivering intelligence-driven solutions that build resilience, enable confident decisions, and create long-term business value.\n\nWhat is the mission of IIRIS?\n\nIIRIS’s mission is to seamlessly integrate security into business strategy so that risk management becomes a catalyst for growth. The firm focuses on delivering tangible outcomes through sustainable risk mitigation, operational improvements, and a culture of innovation, integrity, and impact.\n\nWhy should organizations choose IIRIS as their risk and intelligence partner?",
-    "text_hash": "c159b482cd52618730ea7d2c64c6542e68a7081fbfbc70ed0cec4b6a6a0dbcca",
-    "file_hash": "c167af4aef634c4db7dfb24f6cfef45a6fafa4d8e2edd13c2920112cc5956750"
+    "text": "FSI, healthcare, infrastructure, retail, manufacturing, technology, hospitality, and professional services.\n\n## What makes IIRIS credible and trusted?\n\nIIRIS is recognized through strong execution, a global operating footprint, respected industry associations, multiple certifications, and high client satisfaction. The company is known for practical, intelligence-led consulting that can be adapted to local realities across regions.\n\n## Where does IIRIS operate?\n\nIIRIS operates across India, the Middle East, Africa, Southeast Asia, and partner-supported international markets. The company supports clients through regional offices, local expertise, and a wider global partner network.\n\n## How can someone connect with IIRIS?\n\nOrganizations and individuals can connect with IIRIS through business enquiry channels, official social platforms, and the contact form on the IIRIS website.",
+    "text_hash": "6afcd055d76bf648416211f0f82298254cad1f7c3c21c841b962077f315a9020",
+    "file_hash": "4c17a567a957d7f9db2b204c44d5e0fb9737d752e38875b86986c923dc3278f5"
   },
   {
-    "chunk_id": "976148214f54b14bfb3dc08f6dab4336c2572c9b866033682c6c2ce259d1fc39",
-    "source": "iiris_about_page_context.txt",
+    "chunk_id": "9b1b6744bdd93be9999394cca935633efcab336bf096f6c8d756170dc1c135a5",
+    "source": "advisory.json",
+    "chunk_index": 0,
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/",
+    "text_hash": "e81f2cfc6c377f087c57623e53d03cbdc0b935931ffbbb86b4a5199fd0c6dfe3",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
+  },
+  {
+    "chunk_id": "4e66c687cc1f5a80b1702deb0e1f6662a556227a78554cdbae968656339407fb",
+    "source": "advisory.json",
+    "chunk_index": 1,
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Dr. Vikram Singh\nRole: Former DGP, Uttar Pradesh | National Security Expert\nGroup: Board of Advisory\nSummary: Veteran IPS officer, former DGP of Uttar Pradesh, and expert in national security, tech-enabled policing, and counter-extremism strategy.",
+    "text_hash": "1b2752b7e7a327c03e5ffa3fb7538982d902b7a3f8f2afc75459a045b552e6b9",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
+  },
+  {
+    "chunk_id": "34cccaaca6b9493d181314d1ebe8fe98a636abdf245b6fb0f1ecf3e4dfdefa39",
+    "source": "advisory.json",
+    "chunk_index": 2,
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Lt. Gen. (Dr.) Rajesh Pant\nRole: Cybersecurity Leader\nGroup: Board of Advisory\nSummary: Former National Cyber Security Coordinator with extensive military and cyber resilience experience.",
+    "text_hash": "d6816a669629f01f59ff7bdf83dc7ea578f82902c8a86ae11f0d8d2138309fbe",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
+  },
+  {
+    "chunk_id": "20292e1fd9e8ec96802657a7a3a0c3caca1be7e1f8432d6a24beee076351a33d",
+    "source": "advisory.json",
     "chunk_index": 3,
-    "text": "ional improvements, and a culture of innovation, integrity, and impact.\n\nWhy should organizations choose IIRIS as their risk and intelligence partner?\n\nOrganizations choose IIRIS for its proven expertise in forensics, intelligence, and investigations, its one-stop approach to security and risk management, and its ability to deliver actionable insights in high-stakes scenarios. IIRIS provides accurate, reliable, and strategically relevant solutions.\n\nWhat is IIRIS’s Build-Operate-Transfer (BOT) model?\n\nThe Build-Operate-Transfer model allows IIRIS to design, implement, operate, and eventually hand over secure systems to clients. This approach ensures end-to-end execution, operational stability, and long-term self-sufficiency for organizations.\n\nHow does IIRIS support clients during security incidents?",
-    "text_hash": "4561c10a1eb4be811dfe7640c5a94e283ca99a986b5bd7be7e9dec9c28415379",
-    "file_hash": "c167af4aef634c4db7dfb24f6cfef45a6fafa4d8e2edd13c2920112cc5956750"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Maroof Raza\nRole: Strategic Affairs Expert\nGroup: Board of Advisory\nSummary: Former Indian Army officer, defense analyst, commentator, and strategic risk advisor.",
+    "text_hash": "7daa115361cc8bb280f351510a39fd993c08e25ec2757d8a66183153f1f0433f",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "d7c01e0b98ffd0bb920713e5f364fc5feba19f3ba53d0d5a4617ecc7806e8ec5",
-    "source": "iiris_about_page_context.txt",
+    "chunk_id": "e8f8da9c0c27b90e5978c59e46f513bcff3bff0094e43f01ba48756e864fa0c2",
+    "source": "advisory.json",
     "chunk_index": 4,
-    "text": "-to-end execution, operational stability, and long-term self-sufficiency for organizations.\n\nHow does IIRIS support clients during security incidents?\n\nIIRIS provides 24x7 expert support through certified and trained professionals. Its teams are always prepared to respond swiftly and effectively to security challenges, ensuring continuity, protection, and peace of mind when threats arise.\n\nHow does IIRIS use intelligence and analytics?\n\nIIRIS combines real-time ground-level intelligence with advanced data analytics to identify patterns, predict risks, and inform strategic decisions. This hybrid approach ensures insights are timely, actionable, and impact-driven.\n\nHow strong is IIRIS’s leadership and global network?\n\nIIRIS is led by experienced industry veterans and supported by a strong global partner network. With operations in over 10 countries, the firm brings cultural awareness, geopolitical insight, and scalable delivery capabilities to every engagement.",
-    "text_hash": "80c528acda65c12f4add685f3a2787841c21d0b248c601cd236ce7cee4f845d5",
-    "file_hash": "c167af4aef634c4db7dfb24f6cfef45a6fafa4d8e2edd13c2920112cc5956750"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Ambassador Gurjit Singh\nRole: Diplomat and Geo-Economic Expert\nGroup: Board of Advisory\nSummary: Former ambassador with expertise in strategic diplomacy, trade, investment, and bilateral partnerships.",
+    "text_hash": "efdc62931d52839304de54e59a1d42785801b07f9eba1d74e054f0e24f1de5a8",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "f81133809834617b364331961be51878595becaa32db30ae8d946c920664a84e",
-    "source": "iiris_blogs.txt",
-    "chunk_index": 0,
-    "text": "IIRIS BLOGS AND THOUGHT LEADERSHIP\n\nOfficial IIRIS blog page:\nhttps://iirisconsulting.com/blog/\n\nIf users ask for the latest blog, recent blog posts, blogs published this month, most popular blogs, blogs on a specific topic, case studies, or real-world examples, they should be directed to the official IIRIS Blogs page above. The latest, newest, current-month, and most popular blog listings can change over time, so the official blog page is the most reliable place to explore them.\n\nRecommended blog-related response style:\nFor that information, please check the IIRIS Blogs section at https://iirisconsulting.com/blog/ . You can explore the latest posts and topic-specific articles there.",
-    "text_hash": "0950d29b96461e0e54a2e8005b2070b70df491c3dc9080a4082009a848cf94e6",
-    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
-  },
-  {
-    "chunk_id": "1af75592b904c0cf0cc30a644b77606f2e47a145d16b6558a5f6b01dab9d5531",
-    "source": "iiris_blogs.txt",
-    "chunk_index": 1,
-    "text": "ation, please check the IIRIS Blogs section at https://iirisconsulting.com/blog/ . You can explore the latest posts and topic-specific articles there.\n\nTopics covered across IIRIS blog content include:\n- AI and AI at scale\n- Machine learning and emerging technology themes\n- Data privacy, data security, and the DPDP Act\n- Innovation, startups, and resilience\n- Brand protection in the digital era\n- Corporate investigations and detective agency selection\n- Geopolitical risk and strategic intelligence\n- Global trade, tariffs, and policy risk\n- Executive protection and prevention\n- Fraud detection, banking, and risk blind spots\n- Drones, defense, and public-private partnerships\n\nIf users ask for blogs on AI, machine learning, finance, fraud detection, banking, technology, data privacy, DPDP, executive protection, geopolitics, defense, or related risk topics, direct them to the IIRIS blog page and mention that IIRIS publishes articles across these themes.",
-    "text_hash": "8ba31eceabf6df6803628f5250f2227612516bb17cf96a0684438c747edaad8e",
-    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
-  },
-  {
-    "chunk_id": "69c28385a1f6846106f262c17c58add55e06ecb9b0b4ae793afef4546c3ceeba",
-    "source": "iiris_blogs.txt",
-    "chunk_index": 2,
-    "text": "ction, geopolitics, defense, or related risk topics, direct them to the IIRIS blog page and mention that IIRIS publishes articles across these themes.\n\nIf users ask for case studies or real-world examples, useful examples include:\n- What the PMC Bank Case Teaches Us About Risk Blind Spots\n- Executive Protection and the Power of Prevention\n- Brand Protection in India in the Digital Era - Challenges & Solutions\n\nIf users ask for beginner-friendly blogs or where to start, suitable starting points include:\n- Mastering The DPDP Act: A Practical Guide To Building Data Trust\n- Data Privacy != Data Security: Why Businesses Must Treat Them Differently\n- Choosing a Reliable Detective Agency in India: What You Should Know",
-    "text_hash": "d78367d2ee457c8b8ede43ae10c32540fa3b7ba2e6d6c65116e8bb15e1f5b5f1",
-    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
-  },
-  {
-    "chunk_id": "204bc03cd8ec0df8caf878924d1852cb62022f9e81775be77dc062b18d285aa0",
-    "source": "iiris_blogs.txt",
-    "chunk_index": 3,
-    "text": "rust\n- Data Privacy != Data Security: Why Businesses Must Treat Them Differently\n- Choosing a Reliable Detective Agency in India: What You Should Know\n\nRepresentative IIRIS blog titles include:\n1. IIRIS brings the Risk & Intelligence Lens to AI at Scale at the India AI Impact Expo 2026\n2. Data Privacy Week 2026: How DPDP Act Is Shifting Data Protection from IT Teams to the Boardroom\n3. National Startup Day 2026: How India Can Build The Next Decade Of Innovation With Resilience At The Core\n4. Brand Protection in India in the Digital Era - Challenges & Solutions\n5. Mastering The DPDP Act: A Practical Guide To Building Data Trust\n6. Guide to Selecting a Reliable Corporate Detective Agency in India\n7. Choosing a Reliable Detective Agency in India: What You Should Know\n8. Israel's Attack on Qatar and Its Geopolitical Repercussions: A Strategic Research Report\n9. Trump-Putin Alaska Summit: Global Geopolitics, Ukraine War Deadlock, and India's Strategic Dilemma",
-    "text_hash": "1d59efd706dbb663720a53a4a8831702c816ff2e3576567a62707dd2b1242225",
-    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
-  },
-  {
-    "chunk_id": "7658d7ea21b18f51d4e21ffa190a63cb2c5c456eb7d38adafc26fd2b94f910f7",
-    "source": "iiris_blogs.txt",
-    "chunk_index": 4,
-    "text": "tical Repercussions: A Strategic Research Report\n9. Trump-Putin Alaska Summit: Global Geopolitics, Ukraine War Deadlock, and India's Strategic Dilemma\n10. US-India Trade Talks Stumble Before August 1 Tariff Deadline: Strategic Issues and Road Ahead\n11. Executive Protection and the Power of Prevention\n12. Data Privacy != Data Security: Why Businesses Must Treat Them Differently\n13. What the PMC Bank Case Teaches Us About Risk Blind Spots\n14. Trained Pilots for Drone: Unlimited Potential for Defence in India\n15. Why Public-Private Partnerships are the Future of Surakshit Bharat\n\nImportant guidance for time-sensitive blog requests:\n- If a user asks for the latest blog, newest blog, most popular blogs, or blogs published this month, direct the user to the official IIRIS blog page because those rankings and listings can change over time.\n- Do not guess exact blog publishing order unless it is clearly available on the official blog page.",
-    "text_hash": "300c535f50319e0b1ddf7d7cbfd8616eca55a9f973b689921c8466207a599a13",
-    "file_hash": "38e29dc8d57c916e624e5b8779d8cb7834559ab6cf0987a9c31e5d24e700d462"
-  },
-  {
-    "chunk_id": "f19c2b65f274511fa0f9424674dac2fd35dde6f68ac6417fbdc7ed180c063cda",
-    "source": "iiris_board_of_advisory1.txt",
-    "chunk_index": 0,
-    "text": "BOARD OF ADVISORY\n\n1. Dr. Vikram Singh – Former DGP, UP | National Security Expert\nVeteran IPS officer (1974 batch), former DGP of Uttar Pradesh, and first chief of UP STF. Pioneer in tech-enabled policing and cybersecurity (CISF Cyber Cell). Decorated multiple times for gallantry and service. Advisor on national security, counter-extremism, and law enforcement strategy.\n\n2. Lt. Gen. (Dr.) Rajesh Pant – Cybersecurity Leader\nEx-National Cyber Security Coordinator, PMO, boosting India’s cybersecurity ranking from 47→10 (UN Index). 41-year Army Signals Corps veteran, PhD in Info Security Metrics, advisor to governments and global forums on cyber resilience.\n\n3. Maroof Raza – Strategic Affairs Expert\nFormer Indian Army officer, defence analyst, media commentator, and Strategic Risk Advisor at IIRIS. Consulting Editor at TIMES NOW, author, and lecturer at NDA, NDC, and international think tanks. Expertise in military strategy, global threats, and policy advocacy.",
-    "text_hash": "e6b4d5a827a3c8e7bcb625732cdc0d6160e52891065605375a50c8f6d1c91108",
-    "file_hash": "1d17ca280dfa396f8321b332aff75ee0cadc9f8fbd566fa04f35c8bbbf4a557a"
-  },
-  {
-    "chunk_id": "0b185b7e8bd5e57aec619a8e05ffe5d1a5d6b2c9e1cca3593cfe8f91951afe40",
-    "source": "iiris_board_of_advisory1.txt",
-    "chunk_index": 1,
-    "text": "or at TIMES NOW, author, and lecturer at NDA, NDC, and international think tanks. Expertise in military strategy, global threats, and policy advocacy.\n\n4. Ambassador Gurjit Singh – Diplomat & Geo-Economic Expert\n37-year IFS veteran, ex-Ambassador to Germany, Indonesia, Ethiopia, and AU. Specialist in strategic diplomacy, trade, and economic partnerships. Author of multiple books and advisor on bilateral trade and investment strategy.\n\n5. Anuj Bharadwaj – Counter-Terrorism & Intelligence Expert\nEx-Parachute Regiment officer, counter-terror and intelligence strategist with 40+ years of military and NTRO experience. Expert in technical intelligence, SOP design, and paramilitary training for anti-terror operations.",
-    "text_hash": "0ca054c3cf16934266d4d4b3c2ece40ca14abbdec40ce8ea92699c7913ab5715",
-    "file_hash": "1d17ca280dfa396f8321b332aff75ee0cadc9f8fbd566fa04f35c8bbbf4a557a"
-  },
-  {
-    "chunk_id": "cb53f807b174a1e6ba0ec41d671d5785c84eb4e82b23d3d00e3c6836259df7c6",
-    "source": "iiris_board_of_advisory1.txt",
-    "chunk_index": 2,
-    "text": "st with 40+ years of military and NTRO experience. Expert in technical intelligence, SOP design, and paramilitary training for anti-terror operations.\n\n6. Sanjay Dwivedi – Forensic Accounting & Risk Expert\nUK-qualified Chartered Accountant (FCCA) and Certified Info Security Advisor. Specialist in forensic investigations, corporate risk, IPO audits, and global financial compliance. Advisor, trainer, and adjunct faculty at IIM-B, Christ University, and ICAI.\n\n7. Rodney D. Ryder – Cyber Law & Digital Forensics Expert\nPartner at Scriboard, legal advisor to MeitY, NIXI, and global tech/IP initiatives. Authority on cyber law, digital forensics, data privacy, and IP strategy. Author and recognized thought leader cited in Supreme Court rulings and international legal directories.\n\nCheck out on : https://iirisconsulting.com/team/",
-    "text_hash": "2a61b0ca852c74224a0c640bac897d4fb3fc50f3143b942d163863e556cc79d4",
-    "file_hash": "1d17ca280dfa396f8321b332aff75ee0cadc9f8fbd566fa04f35c8bbbf4a557a"
-  },
-  {
-    "chunk_id": "4463b51717282026faa7a73b80f02e7cc4794c19f7b74233af619aca6a6d9b61",
-    "source": "iiris_board_of_advisory2.txt",
-    "chunk_index": 0,
-    "text": "BOARD OF ADVISORY\n\n8. D. K. Rustagi – Infrastructure & Design Strategist\n40+ years in project management, sustainable architecture, and infrastructure delivery. Expert in cross-functional execution, resource-efficient designs, and climate-smart built environments. Advisor on large-scale, multi-disciplinary projects.\n\n9. Barry Wilkins – Global Supply Chain & Security Strategist\nSpecialist in HR, physical, and supply chain security, with experience at IBM, Pinkerton, and Homeland Security initiatives (C-TPAT, Operation Safe Commerce). Advisor on global risk frameworks and supply chain resilience.\n\n10. Stephen Peter Swain – CBRNE & Counter-Terror Strategy Expert\nEx-Metropolitan Police Chief Superintendent, head of Diplomatic Protection Group, UK. Expert in CBRNE, counter-terrorism, and protective security; lectures globally and leads threat research initiatives.",
-    "text_hash": "95e8e4a442fd8566b30b1193d62392a612a881af298d94f62e3c00e5f12820a0",
-    "file_hash": "a9f9fd3879df468e9b73edc1deafec1fb0b01431513d151cffb4a3a28806f84e"
-  },
-  {
-    "chunk_id": "a3685ffb2373ab506f9cfc93b79fd773290c470d4ac243d81c8aecf15f438653",
-    "source": "iiris_board_of_advisory2.txt",
-    "chunk_index": 1,
-    "text": "Diplomatic Protection Group, UK. Expert in CBRNE, counter-terrorism, and protective security; lectures globally and leads threat research initiatives.\n\n11. Col. Kavil Mohan – Special Forces Veteran & UN Programme Director\nDecorated Indian Army Special Forces officer with 28 years of service, UN peace and reintegration programme leader, ex-Security Head at Accenture and WIPRO. Recipient of Vir Chakra and Afghanistan’s highest civilian honour.\n\n12. Ajay Goyal – IRS Officer & Digital Transformation Expert\nRetired IRS officer (1990 batch) with 34+ years in tax administration, policy, and IT-driven governance. Key contributor to PAN digitization, transfer pricing, and blockchain initiatives; legal and financial advisory expert.",
-    "text_hash": "d760025302ec60bd418d455bafbfcc8524e21c47fb8ec82166d519df4d04ac2d",
-    "file_hash": "a9f9fd3879df468e9b73edc1deafec1fb0b01431513d151cffb4a3a28806f84e"
-  },
-  {
-    "chunk_id": "11e18f3b7314188a41dcfce0abf59a4858ae410b55ea373078cbbea972a87507",
-    "source": "iiris_board_of_advisory2.txt",
-    "chunk_index": 2,
-    "text": "icy, and IT-driven governance. Key contributor to PAN digitization, transfer pricing, and blockchain initiatives; legal and financial advisory expert.\n\n13. Nikhilesh Balgi – Risk Management & Financial Services Expert\n27+ years in risk, compliance, and governance across BFSI, including banking, insurance, and asset management. Senior leadership roles at Citigroup, Standard Chartered, Deutsche Bank; expert in ESG, analytics, and risk frameworks.\n\n14. Maj. General Salihu Z. Uba – Peace & Security Operations Expert\nRetired Nigerian General, ex-Force Commander, UN Mission Liberia. Expert in peacekeeping, strategic operations, and leadership training; decorated and Fellow of multiple institutions.\n\n15. Dr. Willie Aziegbe Eselebor – Negotiation & Border Governance Expert\nExperienced in mediation, international border governance, and institutional consulting. Worked with UN, EU, AU; founder of Menawill Academy and Universal Research & Training Institute.",
-    "text_hash": "89e8b11bfb5a38c875d5c84c6e06f640b94a7b321d57190ee0f1a0a814657a97",
-    "file_hash": "a9f9fd3879df468e9b73edc1deafec1fb0b01431513d151cffb4a3a28806f84e"
-  },
-  {
-    "chunk_id": "4a0476d0cc66fc03156527078d6716a26b7fbb2bd1c475ddd9c83e6cefa034c2",
-    "source": "iiris_board_of_advisory2.txt",
-    "chunk_index": 3,
-    "text": "onal border governance, and institutional consulting. Worked with UN, EU, AU; founder of Menawill Academy and Universal Research & Training Institute.\n\n16. Segun H. Olugbile, Amb(Hon.) – Cybersecurity Policy Advisor\nNigeria-based cybersecurity and data protection expert with 22+ years’ experience. Advisor to UN and national councils, pioneer in Nigeria’s Cybercrime Advisory Council, pursuing Ph.D. in cybersecurity.\n\nCheck out on : https://iirisconsulting.com/team/",
-    "text_hash": "055c03139717c845f93ef0cd4bce27106d3f522e7223334045b22417fcfee648",
-    "file_hash": "a9f9fd3879df468e9b73edc1deafec1fb0b01431513d151cffb4a3a28806f84e"
-  },
-  {
-    "chunk_id": "2f5a35c05784ba44805bb558572afd32723d30527a230d9a2f68c5d1abb8cc24",
-    "source": "iiris_contactus.txt",
-    "chunk_index": 0,
-    "text": "Contact IIRIS Consulting\n\nIIRIS Consulting is committed to staying accessible and responsive to clients, partners, and stakeholders worldwide. Whether you are seeking business advisory support, risk and security solutions, HR coordination, or partnerships, our teams are available to assist you through multiple touchpoints, including phone, email, physical offices, and an online contact form.\n\nHead Office\n\nThe Head Office of IIRIS Consulting is located in Gurugram, Haryana, serving as the central hub for strategic leadership, coordination, and national operations.\nAddress: Unit No. 1105 & 1106, Tower B, Unitech Cyber Park, Sector 39, Gurugram, Haryana – 122003\n\nBusiness Enquiries\n\nFor consultations, service discussions, proposals, and general business-related queries, IIRIS provides a dedicated business contact channel.\nPhone: +91 9205595358\nEmail: contactus@iirisconsulting.com\n\nHR Queries & Partnership Opportunities",
-    "text_hash": "b64d7fb587fbdb75d7cbbef4ca64f2de681774df6042a194ec88b00169c83aab",
-    "file_hash": "e3bc3ca4c062e2523d9da05f1a07857ef73991555f2e7aa58733a6c3e5cc1dac"
-  },
-  {
-    "chunk_id": "e00a25fd5314114ea376307bd766eb60a123958993f657ebf003d9c30c0fe042",
-    "source": "iiris_contactus.txt",
-    "chunk_index": 1,
-    "text": "IRIS provides a dedicated business contact channel.\nPhone: +91 9205595358\nEmail: contactus@iirisconsulting.com\n\nHR Queries & Partnership Opportunities\n\nFor recruitment-related queries, career opportunities, vendor associations, and strategic partnerships, IIRIS maintains a separate HR and partnerships contact point.\nPhone: +91 7065051900\nEmail: hr@iirisconsulting.com\n\nIndia Office Locations\n\nIIRIS maintains a strong presence across major Indian business hubs to ensure proximity, faster response, and localized support.\n\nGurgaon (NCR):\nUnit No. 1105–1106, 11th Floor, Tower-B, Unitech Cyber Park, Sector-39, Gurgaon, Haryana – 122001\nPhone: +91 9205595358\n\nMumbai:\nB-310, Andheri–Kurla Road, Chakala, Andheri East, Mumbai, Maharashtra – 400093\nPhone: +91 84486 54927\n\nBangalore:\nIndiqube Edge, Khata No. 571/630/6/4, SY No. 6/4, Ambalipura Village, Outer Ring Road, Varthur Hobli, Bengaluru – 560103\nPhone: +91 93195 34072\n\nInternational Office Locations",
-    "text_hash": "2131b5cc6abee7230676c48a492e6fb2d3a4699933b33fd0c2b3ed04f86043f8",
-    "file_hash": "e3bc3ca4c062e2523d9da05f1a07857ef73991555f2e7aa58733a6c3e5cc1dac"
-  },
-  {
-    "chunk_id": "983178fd7bf6333269b89452843aa78b0a409dacf8ae2e9335aea3a7aa9e4dd0",
-    "source": "iiris_contactus.txt",
-    "chunk_index": 2,
-    "text": "571/630/6/4, SY No. 6/4, Ambalipura Village, Outer Ring Road, Varthur Hobli, Bengaluru – 560103\nPhone: +91 93195 34072\n\nInternational Office Locations\n\nWith offices across the Middle East, Southeast Asia, and Africa, IIRIS supports global operations with regional expertise and international standards.\n\nSingapore:\n36 Robinson Road, #20-01, City House, Singapore – 068877\nPhone: +971 58 671 9284\n\nDubai, UAE:\nUnit No. 4618, DMCC Business Centre, Level 1, Jewellery & Gemplex 3, Dubai, UAE\nPhone: +971 58 671 9284\n\nNigeria:\n7th Floor, Mulliner Towers,\n39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria\nPhone: +234 8070990921\n\nGlobal Accessibility\n\nIIRIS operates across India, the Middle East, Southeast Asia, and Africa, ensuring clients are supported wherever they operate. Even where a physical office is not present, IIRIS’s intelligence, risk, and consulting capabilities transcend borders through global teams and partner networks.",
-    "text_hash": "417f5fa51f84344a2c67f147493c53bd4e5d656d6dd6bae026b151d12fb764d9",
-    "file_hash": "e3bc3ca4c062e2523d9da05f1a07857ef73991555f2e7aa58733a6c3e5cc1dac"
-  },
-  {
-    "chunk_id": "d4176dc89440b59a02bdbc52dfbe7e418f05cd9492c01cacb4e533e2f76bce86",
-    "source": "iiris_contactus.txt",
-    "chunk_index": 3,
-    "text": "a physical office is not present, IIRIS’s intelligence, risk, and consulting capabilities transcend borders through global teams and partner networks.\n\nContact Us Form\nIt is on https://iirisconsulting.com/contact/\nIn addition to direct phone and email communication, IIRIS also offers an online Contact Us form on its website. This enables clients, partners, and stakeholders to submit enquiries conveniently, ensuring timely follow-up by the relevant team.",
-    "text_hash": "a785c607eb1b0215eb26ed3a9a91ec19203251ad812b50cbb0935644a33658a6",
-    "file_hash": "e3bc3ca4c062e2523d9da05f1a07857ef73991555f2e7aa58733a6c3e5cc1dac"
-  },
-  {
-    "chunk_id": "11b20f9f6f9fe7f8ab6533c9040a62d0550c911272cb3317469f5d088eba03ad",
-    "source": "iiris_csr.txt",
-    "chunk_index": 0,
-    "text": "IIRIS CSR – Overview and Focus\n\nIIRIS CSR represents the organisation’s commitment to creating meaningful impact beyond business operations. The initiative focuses on community welfare, education, mental health, senior care, environmental sustainability, and social resilience. Guided by empathy and responsibility, IIRIS CSR aims to build a safer, more equitable society while remaining aligned with the company’s core values and corporate ethos. Through structured and long-term initiatives, IIRIS integrates social responsibility into its identity, ensuring that growth is inclusive, ethical, and purpose-driven.\n\nSupport for Senior Citizens and Vulnerable Communities",
-    "text_hash": "c8dfeef3bacc6ed83e0e6d13bab61f7ea603635dc68219ea9d08bb8e3faf3b2b",
-    "file_hash": "fb66125fc37e09633e2a6f69d63addcd296d4716318df53cc2e5f68eb40a2b4c"
-  },
-  {
-    "chunk_id": "df14db97989c442baa3ef0364c0cefdfd4d9c9df108f998915d963b422d71880",
-    "source": "iiris_csr.txt",
-    "chunk_index": 1,
-    "text": "ponsibility into its identity, ensuring that growth is inclusive, ethical, and purpose-driven.\n\nSupport for Senior Citizens and Vulnerable Communities\n\nIIRIS actively supports senior citizens and vulnerable populations through partnerships with credible charitable institutions. As an associated member of Sab Ka Rakha, a senior living initiative based in Nawanshahr, Punjab, IIRIS contributes to providing free and dignified living for nearly 250 senior citizens. The facility integrates modern technology to monitor medical, nutritional, and administrative needs, while fostering a mentally stimulating and socially engaging environment.",
-    "text_hash": "b52c310fc4e45b9adb667573474e49d808a536a1247a27d5f638f8af9cf7670f",
-    "file_hash": "fb66125fc37e09633e2a6f69d63addcd296d4716318df53cc2e5f68eb40a2b4c"
-  },
-  {
-    "chunk_id": "957f19d7879003e3dc38b5e8e4e990ec4fe526beb90b4ed2f3da8b8f225c8a74",
-    "source": "iiris_csr.txt",
-    "chunk_index": 2,
-    "text": "modern technology to monitor medical, nutritional, and administrative needs, while fostering a mentally stimulating and socially engaging environment.\nIn addition, IIRIS supports The Earth Saviours Foundation, an organisation dedicated to sheltering abandoned elders, mentally disabled individuals, and survivors of abuse. This support helps ensure access to safe housing, medical care, rehabilitation, and long-term social inclusion, reinforcing the belief that caring for the vulnerable is a shared societal responsibility.\n\nSocial Welfare and Humanitarian Relief Initiatives",
-    "text_hash": "0a57b413070be034f9dd1d7eeb25521942a5e41e5556e42b98527e7b42156713",
-    "file_hash": "fb66125fc37e09633e2a6f69d63addcd296d4716318df53cc2e5f68eb40a2b4c"
-  },
-  {
-    "chunk_id": "90efe78926b9dc36f85c32d2985bcb355055327d5ba06f2aeaef16b8c9367a7d",
-    "source": "iiris_csr.txt",
-    "chunk_index": 3,
-    "text": "lusion, reinforcing the belief that caring for the vulnerable is a shared societal responsibility.\n\nSocial Welfare and Humanitarian Relief Initiatives\n\nIIRIS undertakes multiple social welfare and humanitarian relief initiatives aimed at supporting underprivileged communities and responding to emergencies. Through its annual giving initiative, IIRIS has contributed significant financial support, including donations of ₹10 lakhs each to The Earth Saviours Foundation and the Dream Girl Foundation. These contributions support initiatives focused on community upliftment, environmental protection, and social development.",
-    "text_hash": "1e6a1dee35f2e6aab30e3a873afbea0863e483204349806a0a9432fa3f25294f",
-    "file_hash": "fb66125fc37e09633e2a6f69d63addcd296d4716318df53cc2e5f68eb40a2b4c"
-  },
-  {
-    "chunk_id": "a2405b85e014f5f513f44cb941b79c892387e37ffa790dc619468f515f11e840",
-    "source": "iiris_csr.txt",
-    "chunk_index": 4,
-    "text": "the Dream Girl Foundation. These contributions support initiatives focused on community upliftment, environmental protection, and social development.\nDuring extreme winter conditions in the Delhi NCR region, IIRIS partnered with Asha Bhawan NGO to conduct an emergency cold-wave relief drive. Employees contributed woollen clothing, which was distributed to vulnerable individuals through the NGO’s on-ground network. This initiative highlights the organisation’s commitment to collective action and timely humanitarian response.\n\nMental Health, Youth, and Education Support",
-    "text_hash": "c81abc4c9fa58e48bee2e3454512628d96b96953ed8c8deccc9c3ab34fcdad2d",
-    "file_hash": "fb66125fc37e09633e2a6f69d63addcd296d4716318df53cc2e5f68eb40a2b4c"
-  },
-  {
-    "chunk_id": "9f8ce9f31810b429fb51c454be463fd3f4022ad445f3c4e0c6cfb6626975cfa1",
-    "source": "iiris_csr.txt",
+    "chunk_id": "93ce482a4926a68b2585baed665e1016010b08b47c5f6778a2253055cb8af7e8",
+    "source": "advisory.json",
     "chunk_index": 5,
-    "text": "nitiative highlights the organisation’s commitment to collective action and timely humanitarian response.\n\nMental Health, Youth, and Education Support\n\nIIRIS places strong emphasis on mental health, youth development, and education as essential pillars of societal well-being. The organisation supports adolescent mental health by creating safe and supportive spaces where teenagers can express themselves openly. Access to professional counselling and peer support programs helps young individuals build emotional resilience and coping skills.\nIIRIS also encourages youth engagement in community service, involving children from the IIRIS family in volunteering activities at local NGOs. Rooted in the principle of Seva Bhav, these experiences promote empathy, responsibility, and intergenerational connection. School interactions and educational engagement further reinforce social awareness and ethical values among young minds.\n\nCSR Philosophy and Importance",
-    "text_hash": "0020a80ee9e275f73fde4adabe9b94866a766f25ccc9d9b59a88f120c55a441e",
-    "file_hash": "fb66125fc37e09633e2a6f69d63addcd296d4716318df53cc2e5f68eb40a2b4c"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Anuj Bharadwaj\nRole: Counter-Terrorism and Intelligence Expert\nGroup: Board of Advisory\nSummary: Former Parachute Regiment officer with deep experience in intelligence, SOP design, and anti-terror strategy.",
+    "text_hash": "4b7ba7f92da5f6844d8461284e0a4130292d672d40f06687da9dbb0e0dc3fb9f",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "f24f00a871787aa31a5e633161058871036f5b4a62aa03379e405a1563cf08d9",
-    "source": "iiris_csr.txt",
+    "chunk_id": "7dcaf216552e6c854185b0ad1aa98205389a9601f1c0f9b0e4e717f09a93aa19",
+    "source": "advisory.json",
     "chunk_index": 6,
-    "text": "School interactions and educational engagement further reinforce social awareness and ethical values among young minds.\n\nCSR Philosophy and Importance\n\nIIRIS believes that a truly secure and progressive society is built by caring for people beyond business outcomes. CSR is viewed not as an act of charity, but as a moral and social obligation toward elders, youth, vulnerable communities, and the environment. Through sustained partnerships, employee participation, and purpose-driven initiatives, IIRIS aims to create long-term, meaningful change. This philosophy reflects the organisation’s commitment to dignity, gratitude, humanity, and shared growth, ensuring that business success contributes positively to society as a whole.\n\nCheck out on : https://iirisconsulting.com/csr/",
-    "text_hash": "55679549d7b5e8a987a27a34118ad7cb79efa88f92b2e60a56afa2aa0e2c9e0e",
-    "file_hash": "fb66125fc37e09633e2a6f69d63addcd296d4716318df53cc2e5f68eb40a2b4c"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Sanjay Dwivedi\nRole: Forensic Accounting and Risk Expert\nGroup: Board of Advisory\nSummary: Forensic accounting and compliance specialist with experience in investigations, corporate risk, and financial governance.",
+    "text_hash": "e1c4b7698c2cbe7f4c976b96b83ac0e6519c3746df19a26779e44cf5634e95e3",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "f2a053e8ae080e76f80a276518147817942a0575ef4a3983a7ff63caa00295c2",
-    "source": "iiris_faq.txt",
-    "chunk_index": 0,
-    "text": "1. What is IIRIS Consulting?\n\nIIRIS Consulting is a global risk, security, and intelligence consulting firm that helps organisations protect people, assets, reputation, and operations. IIRIS works across strategic advisory, risk management, investigations, business continuity, security design, training, and crisis response, enabling clients to operate confidently in uncertain environments.\n\n2. What kind of companies does IIRIS work with?\n\nIIRIS works with corporates, multinational companies, regulated industries, government bodies, and high-risk sectors such as BFSI, healthcare, manufacturing, infrastructure, retail, technology, and professional services. Its solutions are tailored to each organisation’s industry, risk profile, and regulatory environment.\n\n3. What services does IIRIS provide?",
-    "text_hash": "3e9622a1efedabf3782f831902fa8a7a86284385e8ce0dea490913ac643ed513",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
-  },
-  {
-    "chunk_id": "f51f54cb77e6711da39026d820f841064d8b7bc44eab7ada0b8e9de8b428e335",
-    "source": "iiris_faq.txt",
-    "chunk_index": 1,
-    "text": "services. Its solutions are tailored to each organisation’s industry, risk profile, and regulatory environment.\n\n3. What services does IIRIS provide?\n\nIIRIS offers a comprehensive suite of services including Advisory & Consultation, Brand Protection, Business Continuity Management Systems (BCMS), Emergency Response Services, Forensics & Diligence, Resource & Skills Provisioning, Risk Management, Security Design & Solutions, and specialised Training Programs. These services are designed to work independently or as an integrated risk and resilience ecosystem.\n\n4. How is IIRIS different from traditional consulting or security firms?\n\nIIRIS goes beyond off-the-shelf consulting. Its approach is intelligence-led, compliance-aligned, and execution-focused. With certified experts, ex-defence professionals, forensic specialists, and global partners, IIRIS not only advises but also works alongside client teams to implement, test, and sustain real-world solutions.",
-    "text_hash": "5e48ed940ad6933971d0e06943c4bb9b90f95170f086fa93b2b42cbbf7b8ba41",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
-  },
-  {
-    "chunk_id": "c31bc1bb7f70d5d855f441be0aca6ff0cf210bb581a5bfa0524c9cd1d347c75f",
-    "source": "iiris_faq.txt",
-    "chunk_index": 2,
-    "text": "c specialists, and global partners, IIRIS not only advises but also works alongside client teams to implement, test, and sustain real-world solutions.\n\n5. Does IIRIS operate only in India?\n\nNo. IIRIS has a strong global presence with offices in India, Singapore, UAE, Oman, Bahrain, and Nigeria. Through its international teams and partner network, IIRIS supports clients across Asia, the Middle East, Africa, and beyond.\n\n6. What kind of risks does IIRIS help manage?\n\nIIRIS helps organisations manage a wide spectrum of risks including physical security threats, fraud and misconduct, cyber and digital risks, regulatory and compliance exposure, crisis situations, executive and travel risks, fire and life safety, workplace misconduct, mental health emergencies, and reputational threats.\n\n7. Does IIRIS help during emergencies or crises?",
-    "text_hash": "f95d140ac9f6a846f736f93584bca00e3b27bc1f79c41e958cfcabf3243f7038",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
-  },
-  {
-    "chunk_id": "5956e611c03188d39bdf0549ca33985de581e2ec29393134ed0fb5a156d97fc6",
-    "source": "iiris_faq.txt",
-    "chunk_index": 3,
-    "text": "ks, fire and life safety, workplace misconduct, mental health emergencies, and reputational threats.\n\n7. Does IIRIS help during emergencies or crises?\n\nYes. IIRIS provides 24/7 Emergency Response Services, including quick response team deployment, medical emergency coordination, legal and ethical incident handling, whistleblower management, and crisis coordination with authorities. The focus is on rapid stabilisation, minimal disruption, and continuity of operations.\n\n8. What is Business Continuity Management at IIRIS?\n\nIIRIS designs and implements ISO 22301–aligned Business Continuity Management Systems that help organisations prepare for disruptions, recover faster, and maintain operations. This includes business impact analysis, threat assessments, continuity and disaster recovery planning, crisis simulations, audits, and employee training.\n\n9. Does IIRIS handle investigations and forensic work?",
-    "text_hash": "49801cdd816cb2f830b2863a6a7627368d713ed6de9669678bbbc012ae7c780b",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
-  },
-  {
-    "chunk_id": "6eeec021c761fa01a46e1964dc566df8053af1efc640425e8d74dad91d95bf37",
-    "source": "iiris_faq.txt",
-    "chunk_index": 4,
-    "text": "continuity and disaster recovery planning, crisis simulations, audits, and employee training.\n\n9. Does IIRIS handle investigations and forensic work?\n\nYes. IIRIS has a dedicated Forensics & Diligence practice covering white-collar crime investigations, forensic audits, due diligence, asset tracing, skip tracing, digital forensics, background verification, and structured investigative interviews using globally recognised techniques such as the Reid Method.\n\n10. Can IIRIS help protect my brand and intellectual property?\n\nAbsolutely. IIRIS provides Brand Protection services to safeguard trademarks, patents, copyrights, and brand reputation. This includes counterfeit detection, market surveillance, enforcement actions, litigation support, trend intelligence, and AI-driven monitoring to combat brand misuse and IP violations.\n\n11. Does IIRIS provide security system design and technology solutions?",
-    "text_hash": "885a80aa3a65dc76a840ee744d5b82dc568cbfe425de0a70242277df53b2dad6",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
-  },
-  {
-    "chunk_id": "40c1bd225ce432b05b7e885c6d93dcbd357fe3caf6e5d293d6125cb2eff10f53",
-    "source": "iiris_faq.txt",
-    "chunk_index": 5,
-    "text": "elligence, and AI-driven monitoring to combat brand misuse and IP violations.\n\n11. Does IIRIS provide security system design and technology solutions?\n\nYes. IIRIS designs integrated security solutions including access control systems, surveillance and CCTV with AI analytics, intrusion detection, command and control centres, and unified security communication platforms. These solutions are built to be scalable, resilient, and aligned with business continuity goals.\n\n12. Does IIRIS offer training programs?\n\nIIRIS offers specialised training programs in leadership, corporate security, risk management, cybersecurity, POSH compliance, investigations, and industry-specific risk. It also offers advanced certifications such as the Certified Risk Leader program and the globally recognised REID Investigative Interviewing Certification.\n\n13. Can IIRIS help with staffing and workforce needs?",
-    "text_hash": "b32dbfb2f2776ba609ccc799f4c277e294ad186bbcb4ee12d8ac13aba62a652f",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
-  },
-  {
-    "chunk_id": "cd7a6bfba98972bceef4757bea4121e53bf7d29e6bb5157056ebc32813562b00",
-    "source": "iiris_faq.txt",
-    "chunk_index": 6,
-    "text": "Risk Leader program and the globally recognised REID Investigative Interviewing Certification.\n\n13. Can IIRIS help with staffing and workforce needs?\n\nYes. Through Resource & Skills Provisioning, IIRIS supports contractual staffing, permanent hiring, industry-specific staffing, training, payroll support, and HR administrative services. All resources are pre-vetted, compliance-ready, and aligned with operational requirements.\n\n14. Does IIRIS support ethical practices and whistleblowing?\n\nYes. IIRIS operates an independent whistleblower service that ensures secure, anonymous, and compliant reporting. It provides impartial case management, protection against retaliation, and support for internal investigations, helping organisations uphold ethics and trust.\n\n15. Is IIRIS involved in social responsibility initiatives?",
-    "text_hash": "5f471ae0b73cfee4d1e9a21e1003b4265c1aba8aded945bd5419f836ad42d602",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
-  },
-  {
-    "chunk_id": "93df599d9086dd1dd95d12955543bad5c59a45cd7cbb8a9aa3769742baecf6e8",
-    "source": "iiris_faq.txt",
+    "chunk_id": "de318a084fdf00c181cd52378f5ad286d2a21f7975f2b62b7961a7a863ee8875",
+    "source": "advisory.json",
     "chunk_index": 7,
-    "text": ", and support for internal investigations, helping organisations uphold ethics and trust.\n\n15. Is IIRIS involved in social responsibility initiatives?\n\nYes. Through IIRIS CSR, the organisation actively supports senior care, mental health, education, humanitarian relief, environmental causes, and community development. CSR is viewed as a responsibility rooted in empathy, dignity, and long-term social impact—not charity.\n\n16. Where is IIRIS headquartered?\n\nIIRIS’s head office is located in Gurugram, Haryana, India, with multiple offices across major Indian cities and international locations to support global operations.\n\n17. How can I contact IIRIS?\n\n18. Who are the key leaders at IIRIS?\n\nIIRIS is led by a team of industry veterans:\n- Garry Singh/Gurpawan Singh: President, Strategic Risk & Intelligence\n- Sagarika Chakraborty: CEO (India & Gulf)\n- Kunal Bhogal: COO (Security Infrastructure & Technology)\n- Paul Devassy: CEO (IIRIS Knowledge)\n- Ashok Kumar: CEO (IntelliFuture)",
-    "text_hash": "4c72375799e2c766e2d5ee033a7c4765e7462c9ea5a1763f83b0856994e7ff97",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Rodney D. Ryder\nRole: Cyber Law and Digital Forensics Expert\nGroup: Board of Advisory\nSummary: Recognized authority on cyber law, digital forensics, data privacy, and IP strategy.",
+    "text_hash": "ba9a11f838f45643baaa317ad76bf81acfb4807e12235f62f2a43758250c1f7f",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "a0e59068e59b656ea03cead7a555fbb00cb51d456ebfdf0633a3aa866da8b64f",
-    "source": "iiris_faq.txt",
+    "chunk_id": "cdfe8f8a06ce52b584716f1412d1c4a78de2bd1957e8d0be59403c1bc914c93d",
+    "source": "advisory.json",
     "chunk_index": 8,
-    "text": "EO (India & Gulf)\n- Kunal Bhogal: COO (Security Infrastructure & Technology)\n- Paul Devassy: CEO (IIRIS Knowledge)\n- Ashok Kumar: CEO (IntelliFuture)\n\n\nHow to Contact IIRIS Consulting\n\nIIRIS Consulting offers multiple contact channels to ensure easy and direct communication for business enquiries, partnerships, and support needs. Whether you prefer phone, email, or online interaction, the team is accessible across regions.\n\nHead Office\n\nAddress:\nUnit No. 1105 & 1106, Tower B, Unitech Cyber Park,\nSector 39, Gurugram, Haryana – 122003, India\n\nBusiness Enquiries\n\nFor consulting services, risk advisory, security solutions, and general business discussions:\nPhone: +91 92055 95358\nEmail: contactus@iirisconsulting.com\n\nHR Queries & Partnership Opportunities\n\nFor careers, staffing, and strategic partnerships:\nPhone: +91 70650 51900\nEmail: hr@iirisconsulting.com\n\nIndia Office Locations",
-    "text_hash": "bc5420510961013772443188b7aebe78f78f837a1e9c90cda75af26b131081b0",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: D. K. Rustagi\nRole: Infrastructure and Design Strategist\nGroup: Board of Advisory\nSummary: Experienced in project management, sustainable architecture, and large-scale infrastructure delivery.",
+    "text_hash": "c88b7366d3d9be189db958a7badeb382da0c6e03876449b3a6ead22c20b0b6d3",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "e790e6c600446aad400e2ae970daff7bd25bc4a90519da9243d1c56010fd082d",
-    "source": "iiris_faq.txt",
+    "chunk_id": "50058f14821b1ebb54c786a30cd799e7eeb3e0b41d511e44ed61d579b10fd129",
+    "source": "advisory.json",
     "chunk_index": 9,
-    "text": "nership Opportunities\n\nFor careers, staffing, and strategic partnerships:\nPhone: +91 70650 51900\nEmail: hr@iirisconsulting.com\n\nIndia Office Locations\n\nGurgaon:\nUnit No. 1105–1106, 11th Floor, Tower-B, Unitech Cyber Park, Sector-39, Gurugram, Haryana – 122001\nPhone: +91 92055 95358\n\nMumbai:\nB-310, Andheri–Kurla Road, Chakala, Andheri East, Mumbai, Maharashtra – 400093\nPhone: +91 84486 54927\n\nBangalore:\nIndiqube Edge, Khata No. 571/630/6/4, SY No. 6/4, Ambalipura Village, Outer Ring Road,\nVarthur Hobli, Bengaluru – 560103\nPhone: +91 93195 34072\n\nInternational Offices\n\nSingapore:\n36 Robinson Road, #20-01, City House, Singapore – 068877\nPhone: +971 58 671 9284\n\nDubai, UAE:\nUnit No. 4618, DMCC Business Centre, Level 1, Jewellery & Gemplex 3, Dubai\nPhone: +971 58 671 9284\n\nNigeria:\n7th Floor, Mulliner Towers,\n39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria\nPhone: +234 807 099 0921\n\nOnline Contact",
-    "text_hash": "ec48c54e883d28997032505d41e391c981c19524596c95f930f8604507a044ce",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Barry Wilkins\nRole: Global Supply Chain and Security Strategist\nGroup: Board of Advisory\nSummary: Brings cross-functional expertise in HR, physical security, supply chain security, and resilience frameworks.",
+    "text_hash": "ecfbd9e268b359ea47111d90d6682f527ad56d72a55742f2ae0060eddb9b6e6d",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "e99f3fd9bd13e74f8d6b436658483428e4ac33456f7041e2c9935e3592c222ea",
-    "source": "iiris_faq.txt",
+    "chunk_id": "b741714eb8ae0faff0a067a7ec35dbb953b70142acb5f2ea9bd0d77204e58f8e",
+    "source": "advisory.json",
     "chunk_index": 10,
-    "text": "ai\nPhone: +971 58 671 9284\n\nNigeria:\n7th Floor, Mulliner Towers,\n39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria\nPhone: +234 807 099 0921\n\nOnline Contact\n\nIIRIS also provides a Contact Us form on its website, allowing visitors to submit enquiries by selecting the relevant service or enquiry type. This ensures queries are routed to the appropriate team for a timely response.\n\nThrough its global offices, dedicated contact channels, and online form, IIRIS ensures responsive and reliable communication for clients and partners worldwide.\n\n19. How can this chatbot help me?\n\nThis chatbot is designed to help you quickly understand IIRIS services, identify the right solutions for your needs, guide you to the correct team, and answer common questions about risk, security, investigations, continuity, and consulting—anytime, anywhere.\n\n20. What services does IIRIS offer in the UAE and Gulf region?",
-    "text_hash": "091f691cd52695856735a602ddc16f737dff44a1ac6cd320c8264e252db20794",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Stephen Peter Swain\nRole: CBRNE and Counter-Terror Strategy Expert\nGroup: Board of Advisory\nSummary: Former Metropolitan Police Chief Superintendent and specialist in protective security and counter-terror strategy.",
+    "text_hash": "482f42ac15773b1cbbb85bbe9a2646a31c79caa8d77bb7c50d1a75bda54ff023",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "cb1309da99baa972c82c75a96dfd7412e69e50742e66966c7fef4b49ee93a906",
-    "source": "iiris_faq.txt",
+    "chunk_id": "3137753ea511dcadc551b2bea713fb6085a80e3419813202b2cbbcd1896d83f8",
+    "source": "advisory.json",
     "chunk_index": 11,
-    "text": "ns about risk, security, investigations, continuity, and consulting—anytime, anywhere.\n\n20. What services does IIRIS offer in the UAE and Gulf region?\n\nIIRIS provides its full suite of services in the UAE and Gulf region, operating primarily through its Dubai office. These services include Risk Advisory, Security Design, Forensics, Business Continuity Management, and specialized Training. The UAE team ensures localized delivery of global risk management standards for clients across the Middle East.\n\n21. What is the full form of IIRIS ? \n\nIIRIS stands for Indus IntelliRisk & IntelliSense Services.",
-    "text_hash": "4b711d7eda26963345dd36eb46012ea5541bb7c963069c1a3792901a1e80c474",
-    "file_hash": "2fa1d58596f96f53c551bd82370af83058cf5721a36a3e23d2100a7d9aca2e7c"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Col. Kavil Mohan\nRole: Special Forces Veteran and UN Programme Director\nGroup: Board of Advisory\nSummary: Decorated Special Forces veteran with experience in reintegration programs, corporate security, and leadership training.",
+    "text_hash": "83e57dca3d10c45191510d12f7ae9059e41eced103cb3c215972124793aa9220",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "e9bfe4a430863feaa180b5a19354fa32a652f84b80506f9415f418cd4fefddd0",
-    "source": "iiris_globalpresence.txt",
-    "chunk_index": 0,
-    "text": "Global Presence\n\nIIRIS Consulting operates through a strong global footprint with offices in Singapore, Nigeria, Oman, UAE, and Bahrain. This international presence enables IIRIS to deliver globally aligned, locally relevant risk, security, and intelligence solutions. With teams embedded across key regions, IIRIS combines international best practices with deep regional insight to support organisations operating in complex and high-risk environments.\n\nIIRIS Singapore – Southeast Asia Hub\n\nIIRIS Singapore serves as a strategic hub for Southeast Asia, delivering advanced security and risk management consulting tailored to the region’s dynamic regulatory and threat landscape. The team provides intelligence-led security risk consulting, corporate and forensic investigations, due diligence, crisis management, and business continuity planning. By leveraging regional expertise and global standards, IIRIS Singapore helps organisations protect assets, maintain compliance, and strengthen",
-    "text_hash": "c760cf55a88b19e7565378f28d106c11a715f1208f02019db134e2444124f87b",
-    "file_hash": "1c0c61b5a68af40fd4d50f98a3a629a00c2b666398fe92067ca87ea8f46a1df8"
-  },
-  {
-    "chunk_id": "879ac2b98f331b01631f2877647a5a2f38578b1c762735cabf99132b6c8c8c4b",
-    "source": "iiris_globalpresence.txt",
-    "chunk_index": 1,
-    "text": "anning. By leveraging regional expertise and global standards, IIRIS Singapore helps organisations protect assets, maintain compliance, and strengthen operational resilience in fast-evolving markets.\n\nIIRIS Nigeria – Africa Operations\n\nIIRIS Nigeria supports businesses operating across Nigeria and the African continent with specialised risk, security, and investigative services. The office focuses on security risk consulting, corporate investigations, forensic and fraud analysis, due diligence, and crisis management. With an intelligence-driven and confidentiality-first approach, IIRIS Nigeria delivers solutions aligned with global benchmarks while addressing region-specific security, regulatory, and operational challenges.\n\nIIRIS Oman – Strategic Middle East Presence",
-    "text_hash": "dfafd93246692e87ab91021d4b191d6bec487f7ffe919274fd4c007d98753cad",
-    "file_hash": "1c0c61b5a68af40fd4d50f98a3a629a00c2b666398fe92067ca87ea8f46a1df8"
-  },
-  {
-    "chunk_id": "a9a739a5f11871ce0ee388bb728a6bf978993822bf9c12794de1ed3d3ee88f3c",
-    "source": "iiris_globalpresence.txt",
-    "chunk_index": 2,
-    "text": "with global benchmarks while addressing region-specific security, regulatory, and operational challenges.\n\nIIRIS Oman – Strategic Middle East Presence\n\nIIRIS Oman provides tailored risk and security consulting for organisations operating in Oman and the surrounding region. The office offers comprehensive services including security risk assessments, corporate investigations, forensic analysis, due diligence, crisis response, and business continuity solutions. Backed by experienced professionals, IIRIS Oman helps organisations navigate geopolitical, operational, and regulatory risks with confidence and control.\n\nIIRIS UAE – Middle East Regional Hub",
-    "text_hash": "05723befea9f684a76615aea91d3a389c58c1bd9f8aef5804e9e972630b9f0a1",
-    "file_hash": "1c0c61b5a68af40fd4d50f98a3a629a00c2b666398fe92067ca87ea8f46a1df8"
-  },
-  {
-    "chunk_id": "cdaff1cc8388de6f35b85f967d4eafa3ccda14d3bf1a89d3f80d88719bcc097b",
-    "source": "iiris_globalpresence.txt",
-    "chunk_index": 3,
-    "text": "S Oman helps organisations navigate geopolitical, operational, and regulatory risks with confidence and control.\n\nIIRIS UAE – Middle East Regional Hub\n\nIIRIS UAE acts as a key regional hub for the Middle East, supporting enterprises with integrated security, intelligence, and risk management solutions. Services span security risk consulting, corporate and forensic investigations, due diligence, crisis management, and business continuity planning. With deep understanding of regional business environments and compliance requirements, IIRIS UAE enables organisations to operate securely while safeguarding reputation and continuity.\n\nIIRIS Bahrain – Gulf Market Expertise",
-    "text_hash": "0e20d266d430fbee8be215c7b6fac263429b2bc67ec83c1a26b6fc197d41f0f1",
-    "file_hash": "1c0c61b5a68af40fd4d50f98a3a629a00c2b666398fe92067ca87ea8f46a1df8"
-  },
-  {
-    "chunk_id": "39f308fc1d6d303c10cc4b739d6e07419a16e594e896914cb95ba75a57ef4247",
-    "source": "iiris_globalpresence.txt",
-    "chunk_index": 4,
-    "text": "requirements, IIRIS UAE enables organisations to operate securely while safeguarding reputation and continuity.\n\nIIRIS Bahrain – Gulf Market Expertise\n\nIIRIS Bahrain delivers strategic risk and security consulting tailored to organisations operating in Bahrain and the wider Gulf region. The office provides security assessments, investigations, forensic and fraud intelligence, background screening, and crisis and continuity solutions. By combining local insight with global expertise, IIRIS Bahrain helps clients proactively manage risks and build resilient, future-ready operations.\n\nUnified Global Capability\n\nAcross all global offices, IIRIS maintains a consistent service philosophy rooted in confidentiality, intelligence-led decision-making, and operational excellence. This unified yet regionally adaptive model allows IIRIS to support multinational clients seamlessly across borders while addressing local risks with precision and cultural understanding.",
-    "text_hash": "95b7eed83433eaed9195ca5ec09e4ec3591f7a6d552cf00729ece71a3044f6e9",
-    "file_hash": "1c0c61b5a68af40fd4d50f98a3a629a00c2b666398fe92067ca87ea8f46a1df8"
-  },
-  {
-    "chunk_id": "d5cfdd7a9fcebde70c56422b9feb47faf0424fabe227d658dc929a21691826b2",
-    "source": "iiris_homepage_context.txt",
-    "chunk_index": 0,
-    "text": "What is IIRIS and what does it do?\n\nIIRIS is a technology-driven risk, security, and intelligence consulting company born in India and trusted globally. It delivers end-to-end solutions across risk advisory, forensic investigations, security design, digital innovation, and specialized training. By combining deep on-ground intelligence with advanced analytics, IIRIS helps organizations mitigate risks, ensure operational continuity, and make informed decisions across industries and geographies.\n\nWhat services does IIRIS offer?\n\nIIRIS offers a comprehensive range of services including risk assessment and advisory, forensic investigations and due diligence, security and command center design, digital transformation, business continuity management, emergency response, brand protection, and specialized training programs. These services are tailored to align with business objectives and evolving risk environments.\n\nWhere does IIRIS operate?",
-    "text_hash": "dcc2abd15c2fa6a4bf7087f29cb6a93aea806ec873ff3c281f0729d9c447afb2",
-    "file_hash": "d1dde974bf2e06f0a790b98f9f022c8dc951bb35930c37fb2a3fa9a2c2212069"
-  },
-  {
-    "chunk_id": "609fcf53afc8a75eb34a1b6fe66167333f45d87d99c181f96a1e31626c684d1b",
-    "source": "iiris_homepage_context.txt",
-    "chunk_index": 1,
-    "text": "pecialized training programs. These services are tailored to align with business objectives and evolving risk environments.\n\nWhere does IIRIS operate?\n\nIIRIS operates globally with offices across India, the Middle East, Africa, the USA, the UK, Australia, Singapore, and other regions. Through its trusted partner network in over 150 locations worldwide, IIRIS delivers seamless global risk and security support.\n\nWhy should an organization choose IIRIS?\n\nOrganizations choose IIRIS for its 10+ years of expertise, strong global presence, intelligence-led approach, and proven track record of high-impact outcomes. IIRIS designs customized, technology-driven solutions that enable faster decision-making, effective risk mitigation, and long-term resilience.\n\nWhat makes IIRIS credible and trusted?",
-    "text_hash": "89ab854110f23382c96967feb884b27db4461f8991adf587c318711b5a0522f9",
-    "file_hash": "d1dde974bf2e06f0a790b98f9f022c8dc951bb35930c37fb2a3fa9a2c2212069"
-  },
-  {
-    "chunk_id": "d751a681a17c600eb7765bce0893d2f9fef0ed9737e90e353a49e9e90e9c5cbd",
-    "source": "iiris_homepage_context.txt",
-    "chunk_index": 2,
-    "text": "logy-driven solutions that enable faster decision-making, effective risk mitigation, and long-term resilience.\n\nWhat makes IIRIS credible and trusted?\n\nIIRIS is recognized through multiple industry certifications, respected global associations, and national awards. It has served over 4,250 clients across 150+ regions and maintains a 98% client satisfaction rate, reinforcing its credibility, trust, and commitment to excellence.\n\nHow can someone connect with IIRIS?\n\nOrganizations and individuals can connect with IIRIS by filling out the Contact Us form on the website, selecting the relevant enquiry type, and submitting their details to schedule a consultation with the IIRIS team.",
-    "text_hash": "17f7a6af8c71de17a4f8c0b647d8893473f18a0747216afd7d37c84ac09441c4",
-    "file_hash": "d1dde974bf2e06f0a790b98f9f022c8dc951bb35930c37fb2a3fa9a2c2212069"
-  },
-  {
-    "chunk_id": "b1112e1d02546d9dd7fa07826a0d22de85bf56d933be8a31444ed6664f9f1cef",
-    "source": "iiris_media.txt",
-    "chunk_index": 0,
-    "text": "IIRIS Media and Featured Coverage\n\nSource page: https://iirisconsulting.com/articles/\n\nArticles\nRecognized across leading platforms.\n\nFeatured Coverage\nTop media highlights and major mentions.\n\nBar & Bench | March 24, 2026\nTitle: What every legal counsel advising banks today must know about tracking cases and staying RBI FMR ready\nSummary: Financial fraud in India has moved far beyond the confines of a single organisation's internal affairs. Today, a single case of banking fraud could involve internal surveillance units, external forensic analysts, police departments, enforcement agencies, lawyers, and regulatory reporting requirements, all working in parallel. However, the systems that monitor these cases are still piecemeal.",
-    "text_hash": "3dc1c9603944787f78fd9f80d936686d354a2f824d507b0801a3a115ca891636",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "3a36cce4444753c26b12716b4e3596ccd6a07067cf274783e03b2cece0e2a77a",
-    "source": "iiris_media.txt",
-    "chunk_index": 1,
-    "text": "agencies, lawyers, and regulatory reporting requirements, all working in parallel. However, the systems that monitor these cases are still piecemeal.\n\nElets eGov | March 5, 2026\nTitle: Public-Private Partnership To Solve Crime And Speed Up Judicial Process - Gurgaon Creates An Iconic Model\nSummary: Out of 4.76 crore pending cases in Indian courts, 3.65 crore are criminal cases (as per National Judicial Data Grid dated 24 Dec 2025). It shows that more than 76% of cases are criminal in nature, requiring diligent forensic analysis and examination of evidence and witnesses. Conventional laboratories, although technically competent, often operate under heavy backlogs and sequential workflows, resulting in report timelines that stretch into months.",
-    "text_hash": "666e1078b89dac2a8345803bc7818eff624e11b31bbb45c0816905fb5dc95b3c",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "5dd24d1a0cfbea8ca10d355de0a315e66c0f84ed60381b000ce0c276452afcbe",
-    "source": "iiris_media.txt",
-    "chunk_index": 2,
-    "text": ", although technically competent, often operate under heavy backlogs and sequential workflows, resulting in report timelines that stretch into months.\n\nTimes Tech | March 3, 2026\nTitle: Garry Singh on Cyber Risks, 5G Security and Infrastructure Resilience\nSummary: In an interview with TimesTech, Garry Singh, President, IIRIS Consulting, speaks about the evolving landscape of cyber risk, infrastructure security, and emerging vulnerabilities in a hyper-connected world. He explains why boards must treat cyber threats as business-interruption risks rather than compliance obligations, while highlighting security challenges linked to 5G networks, Industrial IoT, satellite systems, and the growing convergence of digital infrastructure.",
-    "text_hash": "13044ea755b65403fa76d8d0ef947aae7690e85431ba279fb200db117e227414",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "8718fcb7b8e5ccc274b82624c5d1e960b0bf41e675c07c414a254e8b4f5daacb",
-    "source": "iiris_media.txt",
-    "chunk_index": 3,
-    "text": "hile highlighting security challenges linked to 5G networks, Industrial IoT, satellite systems, and the growing convergence of digital infrastructure.\n\nRestaurant India | Feb 27, 2026\nTitle: Rethinking Restaurant Security: Beyond Cameras and Compliance\nSummary: Restaurants are living, breathing operations. Every day, they manage the flow of people, money, food, and experiences, often at high speed and under unpredictable conditions. Yet, despite significant investment in security technology, the same recurring problems are seen across multiple establishments. Surveillance technology is installed in almost every restaurant, but it is often an afterthought.",
-    "text_hash": "75400bb2ce32fe6f0c67fd0db54d6b64e0d836d75c781a5ae7c0db5e6d524029",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "c46f849ad58df4f136035abe9a26ed2bb581320324cc151d3657b9130b902916",
-    "source": "iiris_media.txt",
-    "chunk_index": 4,
-    "text": "ng problems are seen across multiple establishments. Surveillance technology is installed in almost every restaurant, but it is often an afterthought.\n\nLokmat Times | Feb 25, 2026\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring & RBI Reporting for Banks\nSummary: IIRIS Consulting Pvt Ltd announced the official launch of IntelliTracker, a purpose-built monitoring platform designed to help banks and financial institutions manage fraud-related and law enforcement case lifecycles with structured visibility and RBI FMR 1-4-aligned reporting readiness.",
-    "text_hash": "d2f697c4b74b685d212a37145acb6ad0e77dd53f5d78185d72f3356ce8bdca33",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "0e318d2e9ab37d2640fb0e9a881ce1c5cd98b56c03a573e6d39a7707d4351004",
-    "source": "iiris_media.txt",
-    "chunk_index": 5,
-    "text": "inancial institutions manage fraud-related and law enforcement case lifecycles with structured visibility and RBI FMR 1-4-aligned reporting readiness.\n\nNewsVoir | Feb 25, 2026\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring & RBI Reporting for Banks\nSummary: IIRIS Consulting Pvt Ltd announced the official launch of IntelliTracker, a purpose-built monitoring platform designed to help banks and financial institutions manage fraud-related and law enforcement case lifecycles with structured visibility and RBI FMR 1-4-aligned reporting readiness.",
-    "text_hash": "4e8e7ef69bb8ab4da65c1ec305c3a82d449e5660657b9fadfb06b574178d01d1",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "65dc50af5abd361afc68ab058a395957ce06ef55250dcbeb9005516c5b552558",
-    "source": "iiris_media.txt",
-    "chunk_index": 6,
-    "text": "inancial institutions manage fraud-related and law enforcement case lifecycles with structured visibility and RBI FMR 1-4-aligned reporting readiness.\n\nANI | Feb 24, 2026\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: Leading global risk, security, and intelligence firm IIRIS signed a Memorandum of Understanding (MoU) with the National Law University, Jodhpur, formalising the establishment of the IIRIS Chair of Infosec and Forensic Society. First in India, this Chair intends to create a vibrant center of excellence that fosters a culture of research, innovation, and industry-academia collaboration in the fields of information security and forensic science.",
-    "text_hash": "72c256cc48a608c761d89208fb814f7ccf4a692dee2f86c7a86b9f1cfc2bd69f",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "deba2a3fe5de92fecb076c35e5a569e7829962bb7e5712125ab037c3a8aa75c1",
-    "source": "iiris_media.txt",
-    "chunk_index": 7,
-    "text": "llence that fosters a culture of research, innovation, and industry-academia collaboration in the fields of information security and forensic science.\n\nThePrint (ANI Press) | Feb 24, 2026\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: IIRIS and National Law University, Jodhpur, signed an MoU to establish India's first IIRIS Chair of Infosec and Forensic Society. This collaboration aims to foster research and industry-academia partnership in information security and forensic science.\n\nThe Tribune | Feb 24, 2026\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: Leading global risk, security, and intelligence firm IIRIS signed a Memorandum of Understanding (MoU) with the National Law University, Jodhpur, formalising the establishment of the IIRIS Chair of Infosec and Forensic Society.",
-    "text_hash": "51bec11e532215dd026ce43e25ebb17794be0ebbf680c01515f01d68a1e4dbe4",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "2ae03f8d6fb6d9b0c81888af2d5b65b61df4d422b3268a3101ae426e14be348f",
-    "source": "iiris_media.txt",
-    "chunk_index": 8,
-    "text": "um of Understanding (MoU) with the National Law University, Jodhpur, formalising the establishment of the IIRIS Chair of Infosec and Forensic Society.\n\nBusiness Standard | Feb 24, 2026\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: Leading global risk, security, and intelligence firm IIRIS signed a Memorandum of Understanding (MoU) with the National Law University, Jodhpur, formalising the establishment of the IIRIS Chair of Infosec and Forensic Society.\n\nTimes of India | Feb 23, 2026\nTitle: India AI Impact Summit: Indian AI startups showcase solutions for education, smart security and train safety\nSummary: At the India AI Impact Summit 2026, Indian AI startups showcased meaningful solutions with practical applications.",
-    "text_hash": "413daa481ff9445ad43e341acdb97540a5b4f3c1e3290488ec3c5e4b6bb58775",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "cdbe52b132b0a7454eaba76f5083be34dfd3de0d524eaeebe1ce3fe1dd402803",
-    "source": "iiris_media.txt",
-    "chunk_index": 9,
-    "text": "security and train safety\nSummary: At the India AI Impact Summit 2026, Indian AI startups showcased meaningful solutions with practical applications.\n\nPolicyCircle | Feb 20, 2026\nTitle: Crowd safety at places of worship: Why India needs a resilience-first shift\nSummary: India's places of worship are living institutions, repositories of belief, ritual, and collective memory. They are also among the most densely crowded public spaces anywhere. Of India's 44 UNESCO World Heritage Sites, 10 are classified as Religious Heritage. The country's temples, mosques, churches, gurudwaras, and shrines draw millions every year.\n\nThe Compliance Digest | Jan 08, 2026\nTitle: The Evolution of Compliance in Financial Crime: An Interview with Sagarika Chakraborty, Global Head of Investigations, IIRIS Consulting\nSummary: The interview explores why effective detection has become the critical factor in today's financial crime landscape, beyond traditional preventive compliance controls.",
-    "text_hash": "6f078c1122b821760c7c3173297e6ae88bdb0eed6b58848221faf459e740aed3",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "878e0853b0baa9c8e58d04d5cda53d186402d1d7a8c5bbf0d9a4e250c9297f21",
-    "source": "iiris_media.txt",
-    "chunk_index": 10,
-    "text": "plores why effective detection has become the critical factor in today's financial crime landscape, beyond traditional preventive compliance controls.\n\nBW Legal World | Dec 21, 2025\nTitle: Evolving Financial Crimes Demand Stronger Forensic, Legal Collaboration: Experts\nSummary: With fraud networks exploiting jurisdictional drift, cultural nuance, and increasingly human-like digital tactics, only a deeply integrated blend of cultural intelligence, HUMINT, and legal-investigative precision can protect global businesses, writes Garry Singh.\n\nETLegalWorld | Dec 12, 2025\nTitle: Expert's Take: Steering the Cross-Border Fraud: The Essential Strategic Playbook for 2026 & Beyond\nSummary: With fraud networks exploiting jurisdictional drift, cultural nuance, and increasingly human-like digital tactics, only a deeply integrated blend of cultural intelligence, HUMINT, and legal-investigative precision can protect global businesses, writes Garry Singh.",
-    "text_hash": "eee1cf6ca824055893666501fb73693829c4c40b12e6034a402e46e1c28c7dae",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "152d80755a2d5097d4e05aaa14b417dff63ffa5bb68b81ffc4ffde2fcd3429d3",
-    "source": "iiris_media.txt",
-    "chunk_index": 11,
-    "text": "only a deeply integrated blend of cultural intelligence, HUMINT, and legal-investigative precision can protect global businesses, writes Garry Singh.\n\nBar & Bench | Nov 25, 2025\nTitle: The two halves of trust: Why DPDP compliance is more than a legal puzzle\nSummary: The article explores the dual nature of data protection, the interplay between legal interpretation and operational execution, and why a holistic approach is the only path to building genuine data trust.\n\nTechAfricaNews | September 26, 2024\nTitle: IIRIS Launches Nigeria Office, Expands Security Solutions Across Africa\nSummary: IIRIS announced the launch of its Nigeria office with a grand opening ceremony at Hotel Lagos Continental, marking a significant expansion of its operations into Africa.",
-    "text_hash": "9e54665502686c3a9d69ab17bdecbf3768c74d596685a57b3777b180498e9ea8",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
-  },
-  {
-    "chunk_id": "eac34453fb7f34551fe99c703cae59a873af517810b7dd5f2ee7d69a7ea75c93",
-    "source": "iiris_media.txt",
+    "chunk_id": "d0440ddd8934898a32cfde7abe7548b492d4fca5397ee6b7f3c39b516e17c047",
+    "source": "advisory.json",
     "chunk_index": 12,
-    "text": "launch of its Nigeria office with a grand opening ceremony at Hotel Lagos Continental, marking a significant expansion of its operations into Africa.\n\nGuardian Nigeria | September 25, 2024\nTitle: IIRIS brings AI-powered risk mitigation solutions to Nigeria\nSummary: IIRIS officially launched operations in Nigeria. At the event, the company said the launch aimed to provide cutting-edge artificial intelligence solutions to help businesses and organizations identify, assess, and mitigate risks. The company described itself as having multiple offices across the globe and serving more than 200 countries.\n\nPublications\nAuthored magazine and editorial features.\n\nBW Businessworld\nTitle: TREATMENT FOR CYBERCRIME - INDIA'S NEW PANDEMIC\nAuthor: Garry Singh\nSummary: Garry Singh shared an article in BW Businessworld on cybercrime in India and how to address it with the right treatment.",
-    "text_hash": "d505124231b739d65de1cb8fcb104ad17f2c72ef83ea09914a79c08954c096dd",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Ajay Goyal\nRole: IRS Officer and Digital Transformation Expert\nGroup: Board of Advisory\nSummary: Retired IRS officer with expertise in tax administration, digitization, policy, and legal-financial advisory.",
+    "text_hash": "5e48e7bcfe6dc09dae8ec405b8f3de77399ff1f8377212bbd40179cdc23e618c",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "d14ad24f802f0b670723b679bf609d80660efd74799155b7521b2571042273a6",
-    "source": "iiris_media.txt",
+    "chunk_id": "c6a4d48080d71f06ec59c5a722d437920637d6540780c4e3e3875e93f0f53525",
+    "source": "advisory.json",
     "chunk_index": 13,
-    "text": "Author: Garry Singh\nSummary: Garry Singh shared an article in BW Businessworld on cybercrime in India and how to address it with the right treatment.\n\nThe Economic Times (Delhi, Mumbai, and Bengaluru editions)\nFeature: Secure India Summit 2025\nMention: Sagarika Chakraborty shared that the Secure India Summit 2025 was featured in The Economic Times.\n\nVideo Conversations\nInterviews, podcasts, and media appearances.\nThe media page also includes video conversations uploaded on the official IIRIS YouTube channel.\nOfficial YouTube channel: https://www.youtube.com/@iirisconsulting",
-    "text_hash": "a0c84c77159cbb1f17d7cccb0e788ef1a9e1decdbb276d49df78e27fdb23fb77",
-    "file_hash": "f060dc2ccd04e134bb9cf0179ae3654c7e33d7d957d5fb54fd17c4f5df297caf"
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Nikhilesh Balgi\nRole: Risk Management and Financial Services Expert\nGroup: Board of Advisory\nSummary: Senior risk and compliance leader with experience across banking, insurance, analytics, ESG, and governance.",
+    "text_hash": "808bd4ba5e2dbccb31b35980074b569e684bd876f8ae0e741638a024d1fc00ac",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
   },
   {
-    "chunk_id": "69e1d2699e518845b421c81a558b284b7f5ac1775c3495be0eac9bb1fa2ceaf3",
-    "source": "iiris_our_leaders1.txt",
+    "chunk_id": "f41108cdb119fbfe870f6a31e05f9a54ea137fe2d23e856f817c00849ed733c6",
+    "source": "advisory.json",
+    "chunk_index": 14,
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Maj. General Salihu Z. Uba\nRole: Peace and Security Operations Expert\nGroup: Board of Advisory\nSummary: Retired Nigerian General with experience in UN missions, strategic operations, and leadership development.",
+    "text_hash": "a276d556efbbab241e3a269ff4c3564bcaa7c862aab01e459e821b063fe83eb5",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
+  },
+  {
+    "chunk_id": "5aacb3ef5f217ff9cd8b68cd84f571a7cfde7ed58c20b53b950c9478085fa196",
+    "source": "advisory.json",
+    "chunk_index": 15,
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Dr. Willie Aziegbe Eselebor\nRole: Negotiation and Border Governance Expert\nGroup: Board of Advisory\nSummary: Known for mediation, international border governance, and institutional consulting work.",
+    "text_hash": "420ea8740b26b3b111b726d07f4830dcb340106d8421291dcc4c7285e82269aa",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
+  },
+  {
+    "chunk_id": "ba12d791461f5527ef29e092329d84a3a9855579f98f18cc44a3676a957a6114",
+    "source": "advisory.json",
+    "chunk_index": 16,
+    "text": "IIRIS Board of Advisory\nSource Page: https://iirisconsulting.com/team/\n\nName: Segun H. Olugbile\nAliases: Amb. (Hon.) Segun H. Olugbile\nRole: Cybersecurity Policy Advisor\nGroup: Board of Advisory\nSummary: Cybersecurity and data protection expert known for advisory work with national councils and international institutions.",
+    "text_hash": "9b9e60eaa945ccea7ec59e5ef435570c225396244a631827839822d1f9596d22",
+    "file_hash": "38b28342c939a95b64c0636816b35626238d04db2dc1cef828ca46f70d496184"
+  },
+  {
+    "chunk_id": "7f82362b1b3f1797da9d88b77ae4cc9113f45cb419f7fbdc2a26cb17455ea953",
+    "source": "blogs.md",
     "chunk_index": 0,
-    "text": "1. Garry Singh or Gurpawan Singh – President, Strategic Risk & Intelligence\n20+ years in enterprise risk, intelligence, and compliance. Led high-threat operations, advisor to global organizations, Six Sigma Green Belt, anti-terror & anti-extortion specialist.\n\n2. Sagarika Chakraborty – CEO – India & Gulf | Legal & Investigations Expert\nLaw & business strategist, forensic investigations, NPA management, insider threat analysis. Trained 500+ banking officers, UNESCO speaker, policy contributor.\n\n3. Kunal Bhogal – COO | Security Infrastructure & Technology Strategist\n20+ years in risk-based design, digital transformation, and command center security. Led FIFA stadiums & airport projects, SABRE-certified, global trainer.\n\n4. Ashok Kumar – Technology Strategist | Enterprise Infrastructure Leader\nCEO of IntelliFuture, 20+ years in digital transformation, automation, and multicloud infrastructure. Experience at HSBC & Barclays; focuses on DevOps, service resilience, and compliance.",
-    "text_hash": "9e7a291a4de890e37c475bb69ca28c4d40ee5dfb62e2410f8220cbf8b79b5cfa",
-    "file_hash": "0407b4dd98742e1792181f55d4420cafdc0a8211c89b01d9081aeb0cc69f8f0a"
+    "text": "# IIRIS Blogs and Thought Leadership\n\nOfficial IIRIS blog page:\n[https://iirisconsulting.com/blog/](https://iirisconsulting.com/blog/)\n\nThe official blog page is the most reliable place to explore the latest IIRIS thought leadership, topic-based articles, and current blog posts because the newest and most popular listings can change over time.\n\n## Topics covered across IIRIS blog content\n\n- AI and AI at scale\n- Machine learning and emerging technology\n- Data privacy, data security, and the DPDP Act\n- Risk, resilience, and continuity\n- Brand protection and investigations\n- Geopolitical risk and strategic intelligence\n- Global trade, tariffs, and policy risk\n- Executive protection and prevention\n- Fraud detection, banking, and compliance\n- Drones, defense, and public-private partnerships\n\nIf a user asks for the latest blog posts, newest articles, or current topic-specific blog coverage, direct them to the official blog page.",
+    "text_hash": "4da7d2e97d9340a7338683d699fdf120a830e0583f81f4bf61c961baa17cd63d",
+    "file_hash": "4da7d2e97d9340a7338683d699fdf120a830e0583f81f4bf61c961baa17cd63d"
   },
   {
-    "chunk_id": "5c004ad7485b27f1a47bdccb1becb82c91af9a352f26e5a9ec20026f41876fc6",
-    "source": "iiris_our_leaders1.txt",
+    "chunk_id": "22ab8585944fa2289f7242ddd16cb90a5ed8f624aa93f8e186f7e237ec9f6622",
+    "source": "contacts.json",
+    "chunk_index": 0,
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/",
+    "text_hash": "44b8b1a3040ceb76240055921003359250a9adf09db2fbb94fc6689bbbb4673c",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
+  },
+  {
+    "chunk_id": "20dfbf81a31afc5ca05362ee2dfe64fa3233fe28e016509323369e6fc0a3006b",
+    "source": "contacts.json",
     "chunk_index": 1,
-    "text": "gital transformation, automation, and multicloud infrastructure. Experience at HSBC & Barclays; focuses on DevOps, service resilience, and compliance.\n\n5. Prashant Nayak – Corporate Security Strategist | Crisis & Risk Intelligence\n30+ years in corporate security, VP – Global Security APAC at Disney. Expert in crisis management, emergency preparedness, intelligence-led security.\n\n6. Satyagopal Bhanja – CEO – Africa | Risk & Governance Leader\n20+ years in risk management, internal audit, and corporate governance across manufacturing, hospitality, and oil & gas sectors.\n\n7. Paul Devasssy – CEO – IIRIS Knowledge | Risk & Resilience Expert\nDecorated military veteran, 30+ years across hospitality, e-commerce, banking, ITES. Focus on strategic risk, leadership coaching, and global forums (ASIS APAC, ACSG).",
-    "text_hash": "0640b53ddb04b0026a20d22278e781c267821649bf005a949168c3d052da9174",
-    "file_hash": "0407b4dd98742e1792181f55d4420cafdc0a8211c89b01d9081aeb0cc69f8f0a"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: Head Office\nCity: Gurugram\nCountry: India\nAddress: Unit No. 1105 & 1106, Tower B, Unitech Cyber Park, Sector 39, Gurugram, Haryana - 122003",
+    "text_hash": "2e3d759c751255077f2bb54e6a7627e2c2b7d4bb17f8c32ec7012fefff8b2da0",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "0e024aa33087f4daada1e5550cb98a3e3f8c386c77ec46a36531ce4ba0f5dfd5",
-    "source": "iiris_our_leaders1.txt",
+    "chunk_id": "d3ee90bef2dbfcb2edcaa03c6eb3bf4a3486d88d15f805d8644576785c26e73a",
+    "source": "contacts.json",
     "chunk_index": 2,
-    "text": "y veteran, 30+ years across hospitality, e-commerce, banking, ITES. Focus on strategic risk, leadership coaching, and global forums (ASIS APAC, ACSG).\n\n8. Asitav Sinha – VP – Strategy | Cross-Border Business & M&A Expert\nStrategic consulting and infrastructure specialist. Former AT&T/Easylink India head; expertise in M&A, joint ventures, corporate governance, and global market entry.\n\n9. Rajeev Sharad – VP – Sales | Infrastructure & Automation Security Expert\n30+ years in AI-driven surveillance, smart cities, traffic automation, and police modernization projects. Consultant and visiting faculty for transport and security.\n\n10. Ranjit Mallik – Senior Consultant – Business Development | Finance & Compliance Expert\n35 years in global banking and AML/financial crime compliance. Leadership roles in World-Check, ACAMS, and blockchain compliance programs.",
-    "text_hash": "7390836b10c037943669cafea143da2f6be5967572cc0a6329640788d862ddfa",
-    "file_hash": "0407b4dd98742e1792181f55d4420cafdc0a8211c89b01d9081aeb0cc69f8f0a"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: Business Enquiries\nPhone: +91 9205595358\nEmail: contactus@iirisconsulting.com\nPurpose: Consultations, service discussions, proposals, and general business-related queries.",
+    "text_hash": "3c850d9d654ec7fcc4114c1417ffbb140824d85386bcca00a44f0edee0a37abb",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "8905ab7ed2f00f7f571ce523e335af42526f1798fb19d24dc951712561434c4c",
-    "source": "iiris_our_leaders1.txt",
+    "chunk_id": "c92e91be3151f9a759dca03591a45853e43006d425a058a84660f59d06d3bb12",
+    "source": "contacts.json",
     "chunk_index": 3,
-    "text": "ance Expert\n35 years in global banking and AML/financial crime compliance. Leadership roles in World-Check, ACAMS, and blockchain compliance programs.\n\n11. Partha Roy Chowdhury – VP – Strategy & Marketing (Gulf & Africa) | Brand & Growth Leader\n30+ years across Middle East and India in branding, EdTech, recruitment, and multi-sector growth strategy. Board member and strategic advisor in UAE & UK.\n\n12. Nurudeen Abubakar – VP – Business Development & Strategy, Nigeria\n25+ years in corporate affairs, media consultancy, strategic communications, and regulatory governance. Board advisor across energy, hospitality, and extractive industries.\n\nCheck out on : https://iirisconsulting.com/team/",
-    "text_hash": "df5cd4236b941adb8ebb1806787847d259646177d0071685630c3ceb23fc9ba3",
-    "file_hash": "0407b4dd98742e1792181f55d4420cafdc0a8211c89b01d9081aeb0cc69f8f0a"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: HR Queries and Partnership Opportunities\nPhone: +91 7065051900\nEmail: hr@iirisconsulting.com\nPurpose: Recruitment-related queries, career opportunities, vendor associations, and strategic partnerships.",
+    "text_hash": "361b2d514232ed7031dd38013a0d7c6b0d3d0eaf7fe56cc6134bdd1e367923db",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "e4d70f97c241336223015c59a6226b6e4367967a132578fa28c1e2c6e0707eee",
-    "source": "iiris_our_leaders2.txt",
-    "chunk_index": 0,
-    "text": "13. Praveen Sharma – AVP – IntelliRisk | Security Intelligence & Business Continuity\n20+ years, ex-Indian Army, Gallantry awardee, risk management, crisis response, cybersecurity, forensic investigations, regulatory compliance.\n\n14. Maj Dhrubajit Das (Retd.) – AVP – IntelliRisk | Security & Business Continuity Expert\n15+ years, ex-Army, frontline and corporate security, threat assessment, crisis management, information security, business continuity.\n\n15. Sunil Sood – AVP IntelliSense – Investigations & Compliance | Corporate Fraud Specialist\n20+ years, fraud investigations, AML/KYC, regulatory compliance, forensic audits, certified Insolvency Professional & Six Sigma Green Belt.\n\n16. Gurpreet Singh – AVP – Strategy & Business Development | TVET & Policy Expert\n12+ years, skills development, education reform, policy advocacy, UN/UNESCO collaborations, PMKVY & STARS programs, government liaison.",
-    "text_hash": "9fafe70e3987331b8e416c51c456d1de00e41a9377779eb1505cf7206c9c7456",
-    "file_hash": "90f334d1506550b85a45d5b6076243ca41fa52328286441a0b44a61f6f0d0af8"
-  },
-  {
-    "chunk_id": "d6fb4f52ef5eabc0074f6ff5c0fbd8d88528be8a1cdf2ae6018eae8f6fe7f56d",
-    "source": "iiris_our_leaders2.txt",
-    "chunk_index": 1,
-    "text": "Policy Expert\n12+ years, skills development, education reform, policy advocacy, UN/UNESCO collaborations, PMKVY & STARS programs, government liaison.\n\n17. Akash Wigh – AVP – IntelliRisk | Legal & IPR Specialist\n9+ years, IPR enforcement, brand protection, legal advisory, cyber law, law enforcement coordination.\n\n18. Paramveer Singh – VP – Technology Risk Management | Cybersecurity Leader\n20+ years, cybersecurity, SOC operations, cyber governance, regulatory compliance, digital resilience, enterprise security architecture.\n\n19. Pramod Panda – Financial Regulation Strategist | Central Banking & Governance\nDecades of experience, RBI leadership, IMF advisor, financial regulation, fraud monitoring, compliance & governance frameworks.\n\n20. Vishakha Poras – HR Strategist | People & Culture Leader\n15+ years, HR leadership, employee engagement, culture transformation, compliance, talent acquisition & L&D across India & Gulf.",
-    "text_hash": "608d1f1107af5f8b25abffc3f9a2650b47444bb48af7e426df59af21dc2f7ebd",
-    "file_hash": "90f334d1506550b85a45d5b6076243ca41fa52328286441a0b44a61f6f0d0af8"
-  },
-  {
-    "chunk_id": "57cd8008580a469017c9d080fcc5c3d6eb928e2cae90955e901d5442253a8bf4",
-    "source": "iiris_our_leaders2.txt",
-    "chunk_index": 2,
-    "text": "ople & Culture Leader\n15+ years, HR leadership, employee engagement, culture transformation, compliance, talent acquisition & L&D across India & Gulf.\n\n21. Sangeeta Singh – Quality & Compliance Management | Audit & Risk Assurance\n12+ years, ISO certification, internal/external audits, quality assurance, compliance governance, risk & security oversight.\n\n22. Mahesh Deshpande – Senior Manager – Security Risk & Design Consulting\n15+ years, physical security engineering, risk assessments, fire safety, ECS operations, corporate security consulting.\n\n23. Naveendas K V – Security & Risk Management Leader\n19+ years, Naval veteran, SOC operations, crisis management, physical security, enterprise risk governance, VIP & high-profile site security.\n\nCheck out on : https://iirisconsulting.com/team/",
-    "text_hash": "c1684835be470ab85025865f12616c78e3d5ab0542cc4bfe7b23c4593c00a642",
-    "file_hash": "90f334d1506550b85a45d5b6076243ca41fa52328286441a0b44a61f6f0d0af8"
-  },
-  {
-    "chunk_id": "1c9733b2f9e5b4420ce99c6c29d3505b9289c80332d3aba48cd7e47253d56f12",
-    "source": "iiris_press_release.txt",
-    "chunk_index": 0,
-    "text": "IIRIS Press Releases\n\nSource page: https://iirisconsulting.com/press-release/\n\nPress Release\nTitle: IIRIS Mourns the Passing of Veteran Strategic Affairs Expert Maroof Raza\nDate and location: Gurgaon, 26 February 2026\nSummary: IIRIS Consulting expressed profound sorrow at the passing of Mr. Maroof Raza, distinguished strategic affairs expert and national voice on defence and security issues.\n\nPress Release\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring & RBI Reporting for BFSI sector\nSummary: IIRIS announced the launch of IntelliTracker, a platform focused on strengthening police case monitoring and RBI reporting readiness for the BFSI sector.\n\nPress Release\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: IIRIS signed an MoU with National Law University, Jodhpur to establish the IIRIS Chair of Infosec and Forensic Society.",
-    "text_hash": "56679420291c650880534f4104dfce06846682cef721d5d8cf59e2669f9429c3",
-    "file_hash": "56679420291c650880534f4104dfce06846682cef721d5d8cf59e2669f9429c3"
-  },
-  {
-    "chunk_id": "00eafb79d77d24e10e64a1043939f7a228e8603e65ec84425b04db84bfb6ccb3",
-    "source": "iiris_services.txt",
-    "chunk_index": 0,
-    "text": "What services does IIRIS provide?\n\nIIRIS provides a comprehensive suite of risk, security, and intelligence services including Advisory & Consultation, Brand Protection, Business Continuity Management Systems, Emergency Response Services, Forensics & Diligence, Resource & Skills Provisioning, Risk Management, Security Design & Solutions, and Training Programs. These services are designed to help organizations manage uncertainty, protect assets, ensure compliance, and build long-term resilience across industries and geographies.\n\nWhat is included in Advisory & Consultation services at IIRIS?",
-    "text_hash": "c261abce26f4c37aadf4c34bf6c06d499dc315dadf4fff24811851733ffe25b0",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
-  },
-  {
-    "chunk_id": "4296963b110ec9027ea390d25dd5d40640990cc0ff097aec88d92d4dd3a7811f",
-    "source": "iiris_services.txt",
-    "chunk_index": 1,
-    "text": ", ensure compliance, and build long-term resilience across industries and geographies.\n\nWhat is included in Advisory & Consultation services at IIRIS?\n\nIIRIS’s Advisory & Consultation services deliver tailored, intelligence-driven guidance aligned with an organization’s risk profile, regulatory environment, and operational realities. The services integrate strategy, governance, and execution support to enable confident decision-making. This includes Enterprise Risk Management advisory, crisis management and emergency response planning, Governance Risk & Compliance support across SEBI, RBI, IRDAI, and ISO frameworks, and end-to-end security strategy and architecture for physical, digital, and operational environments.\n\nWhat does Brand Protection at IIRIS cover?",
-    "text_hash": "7ffd33d8a458d9fcae581ec350c66ef710528bb36fdd1b911ed2bf667f810742",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
-  },
-  {
-    "chunk_id": "416b9a3ccaf8ca5c30ea34e48acb6a927b3a8fdbf76e8af83761de7a97edba65",
-    "source": "iiris_services.txt",
-    "chunk_index": 2,
-    "text": "ks, and end-to-end security strategy and architecture for physical, digital, and operational environments.\n\nWhat does Brand Protection at IIRIS cover?\n\nBrand Protection at IIRIS focuses on safeguarding intellectual property, brand identity, and reputation from counterfeiting, infringement, fraud, and illegal trade. IIRIS combines intelligence-led investigations, market surveillance, digital and on-ground threat monitoring, and advanced forensic tools to detect counterfeit networks and brand misuse. The service includes end-to-end enforcement support, litigation assistance, and strategic trend reporting to reduce losses, strengthen brand trust, and protect innovation across global markets.\n\nWhat is Brand Management ?\n\nBrand Management is the strategic process of building, maintaining, and enhancing a brand’s identity, perception, and value over time.",
-    "text_hash": "2b4d54a585df8243458af68c1399241f0dc4bf27a79e2721c2c21195f05df376",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
-  },
-  {
-    "chunk_id": "b0099185a4b764d381ec4bb8d51e6d61e07d8e564df986ef8d5d6ca7ea3dfec1",
-    "source": "iiris_services.txt",
-    "chunk_index": 3,
-    "text": "d Management ?\n\nBrand Management is the strategic process of building, maintaining, and enhancing a brand’s identity, perception, and value over time.\n\nIt focuses on how a brand is presented and experienced by customers, including brand positioning, messaging, visual identity, customer experience, reputation management, and consistency across all touchpoints. Brand management aims to create trust, loyalty, and emotional connection with audiences, ensuring the brand remains relevant and competitive in the market.\n\nIn simple terms:\n\nBrand management = shaping and growing the brand’s image and value\n\nBrand protection = defending the brand from misuse, fraud, and infringement\nWhy should organizations choose IIRIS for risk, advisory, and brand protection services?",
-    "text_hash": "00e8ac6008e997eb0ed1fa79d2bce3018294e4b994fa271d063fcf90eff53b10",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
-  },
-  {
-    "chunk_id": "e430f54f6f0b11c19eabee5c7b63fff77e6211897a34d0a1ccc0c4f7d66f4e54",
-    "source": "iiris_services.txt",
+    "chunk_id": "610760d94744051e1308b32d07440a63a3e66b2da88dc54a03a4c97e595fe587",
+    "source": "contacts.json",
     "chunk_index": 4,
-    "text": "on = defending the brand from misuse, fraud, and infringement\nWhy should organizations choose IIRIS for risk, advisory, and brand protection services?\n\nOrganizations choose IIRIS for its multidisciplinary expertise across risk, forensic, legal, and security domains; its tailored, compliance-first approach; and its ability to deliver actionable intelligence through advanced analytics and ground-level intelligence. With experienced leadership, global reach supported by local execution, and a proven track record in high-stakes scenarios, IIRIS delivers integrated solutions that create measurable impact, operational continuity, and risk-resilient growth.\n\n\nWhat is Business Continuity Management System (BCMS) at IIRIS?",
-    "text_hash": "aa6244c1ae7cf02c0c78061d8d7902ffcd78a196e483d42553e6fb3dd2f184a0",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: India Office\nOffice: Gurgaon (NCR)\nAddress: Unit No. 1105-1106, 11th Floor, Tower-B, Unitech Cyber Park, Sector-39, Gurgaon, Haryana - 122001\nPhone: +91 9205595358",
+    "text_hash": "8d2d5523509306999c72691a8de98ec7a0f63ed3158f18c75f1293150d7f33c5",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "87818716ea7e3f86fd976cf698a7d3895d461678745c9b57952fbb3e5caa8e7e",
-    "source": "iiris_services.txt",
+    "chunk_id": "0b9c28deafec6d65c5a708b3f3a693553dd534ebcbe9edc0a2a3e302f60ec732",
+    "source": "contacts.json",
     "chunk_index": 5,
-    "text": "ons that create measurable impact, operational continuity, and risk-resilient growth.\n\n\nWhat is Business Continuity Management System (BCMS) at IIRIS?\n\nIIRIS designs intelligent, industry-specific Business Continuity Management Systems that help organizations withstand disruption and recover swiftly. Aligned with ISO 22301, IIRIS’s BCMS services include business impact analysis, threat and risk assessments, recovery planning, governance design, audits, training, and crisis simulations. These systems ensure regulatory compliance, operational resilience, and seamless continuity across sectors such as BFSI, healthcare, retail, and manufacturing.\n\nWhat Emergency Response Services does IIRIS provide?",
-    "text_hash": "17de935e9232dedd95ba7dfce17b269300e8428f469afb09bf2d73534b5daaf3",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: India Office\nOffice: Mumbai\nAddress: B-310, Andheri-Kurla Road, Chakala, Andheri East, Mumbai, Maharashtra - 400093\nPhone: +91 8448654927",
+    "text_hash": "7ddd5915e45ed3d9b3aad37df6e8553d6c911d581e08ec5bcb81383600ce4fa7",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "cafaac53f7a4306744f4adab903560592a5bd9ceb1be8cc7f38d2941fb978e6f",
-    "source": "iiris_services.txt",
+    "chunk_id": "021c29755d4e29fc10d487bdddfccee36141059c822e3f84eec322e24656c85e",
+    "source": "contacts.json",
     "chunk_index": 6,
-    "text": "nce, and seamless continuity across sectors such as BFSI, healthcare, retail, and manufacturing.\n\nWhat Emergency Response Services does IIRIS provide?\n\nIIRIS offers 24/7 Emergency Response Services with rapid deployment of trained quick response teams to manage critical incidents. The services cover medical emergencies, legal and ethical incident handling, whistleblower management, crisis response, and coordination with law enforcement and stakeholders. Supported by integrated communication systems and post-incident analysis, IIRIS ensures fast containment, accountability, and long-term resilience during high-impact situations.\n\nWhat does Forensics & Diligence at IIRIS include?",
-    "text_hash": "268947f36496c2ed1d77262732fee7a97e21ec4849b1c1caacf125c8faa28729",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: India Office\nOffice: Bangalore\nAddress: Indiqube Edge, Khata No. 571/630/6/4, SY No. 6/4, Ambalipura Village, Outer Ring Road, Varthur Hobli, Bengaluru - 560103\nPhone: +91 9319534072",
+    "text_hash": "1ac891c1b3b684a3180bdfd1ff2e412e009457d121f20be66bf2f49b76b84066",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "e08ed4b1797846db16ca7f70052770818134b23e1f16638d13f76cfe96d8bc86",
-    "source": "iiris_services.txt",
+    "chunk_id": "d11ecf911d1946170ea40829ab3c2473b9cd91af33c8a8f266e08946d1dfd8c7",
+    "source": "contacts.json",
     "chunk_index": 7,
-    "text": "S ensures fast containment, accountability, and long-term resilience during high-impact situations.\n\nWhat does Forensics & Diligence at IIRIS include?\n\nIIRIS’s Forensics & Diligence practice combines investigative intelligence, digital forensics, and due diligence to uncover hidden risks and misconduct. Services include white-collar crime investigations, forensic audits, integrity and financial due diligence, asset tracing and recovery, skip tracing, background verification, digital forensics, and structured Reid interviews. This intelligence-led approach helps organizations protect assets, meet regulatory expectations, and make confident, legally defensible decisions.\n\nWhat Resource & Skills Provisioning solutions does IIRIS offer?",
-    "text_hash": "d43236a58f5e4e79f15a4ec1cd5bac83000ea6119a786851fadae7441fef3d81",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: International Office\nOffice: Singapore\nAddress: 36 Robinson Road, #20-01, City House, Singapore - 068877\nPhone: +971 586719284",
+    "text_hash": "8fa532d0c1bb304090544e4a996b8c6f17dea5c04bb38383c0992e90d32408bd",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "bcf3430852b67280c65afe51cbcd014a8ba8803ce018e83c7537aca01b1ca5f8",
-    "source": "iiris_services.txt",
+    "chunk_id": "4266ef68d59f25d8935f3e6ff12e85a9ab2aaeb08b72ce299b20354b24ab7aed",
+    "source": "contacts.json",
     "chunk_index": 8,
-    "text": "sets, meet regulatory expectations, and make confident, legally defensible decisions.\n\nWhat Resource & Skills Provisioning solutions does IIRIS offer?\n\nIIRIS provides end-to-end Resource & Skills Provisioning solutions designed to deliver the right talent with speed, flexibility, and compliance. Services include contractual and permanent staffing, industry-specific hiring across regulated sectors, workforce training, payroll support, and HR administrative services. Backed by a rigorously vetted talent network and domain expertise, IIRIS helps organizations scale efficiently, maintain continuity, and build high-performing, compliant teams.\n\nWhy should organizations choose IIRIS for these services?",
-    "text_hash": "19300de21ba7014d633727368efc32b808dc1b33da3a23dabfcedaf7e4e1c38b",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: International Office\nOffice: Dubai, UAE\nAddress: Unit No. 4618, DMCC Business Centre, Level 1, Jewellery and Gemplex 3, Dubai, UAE\nPhone: +971 586719284",
+    "text_hash": "473a02cff08317434b54d708aa08408b439df42eb32fb14ac6b565c0e7c33991",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "80859bbe4eb5f25a44da86d3418cc086370254b3eef467995d8792673dcaae37",
-    "source": "iiris_services.txt",
+    "chunk_id": "3261ec71dbdd7790f67ddd1e4ecf3c36d7c72258447fab8a8a1d471acacac058",
+    "source": "contacts.json",
     "chunk_index": 9,
-    "text": "zations scale efficiently, maintain continuity, and build high-performing, compliant teams.\n\nWhy should organizations choose IIRIS for these services?\n\nOrganizations choose IIRIS for its integrated, execution-focused approach that combines strategy, intelligence, technology, and on-ground expertise. With certified professionals, global reach, regulatory alignment, and proven delivery in high-stakes environments, IIRIS enables resilience, rapid response, compliance, and sustainable business growth across the entire risk and security lifecycle.\n\n\nWhat Risk Management services does IIRIS provide?",
-    "text_hash": "378d83e86990160d48f3efccb5353fa36c25464db46e9272785f6eca3e0d8fd2",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: International Office\nOffice: Nigeria\nAddress: 7th Floor, Mulliner Towers, 39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria\nPhone: +234 8070990921",
+    "text_hash": "08f0c3f4e7f9940d065530803b030eaf042881bc99f057cb364f2ed4bb51db7c",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "bc0e5e405701c7a206c511c0cdaa76e0100f7a69388c46a2d9bdd3092551bee4",
-    "source": "iiris_services.txt",
+    "chunk_id": "8eac260943c3adb8add406f6f941017d09be14b5e1baa972400129e99610ed58",
+    "source": "contacts.json",
     "chunk_index": 10,
-    "text": "sponse, compliance, and sustainable business growth across the entire risk and security lifecycle.\n\n\nWhat Risk Management services does IIRIS provide?\n\nIIRIS delivers tailored risk management solutions designed to protect people, assets, and operations in uncertain environments. The services cover governance, risk and compliance frameworks, fire safety audits, crisis management, security risk assessments, executive protection, alert and advisory services, and technical surveillance countermeasures. Through intelligence-led assessments, custom response frameworks, and expert support, IIRIS enables organizations to anticipate threats, respond decisively to incidents, and build resilient, risk-ready operations.\n\nWhat is included in Security Design & Solutions at IIRIS?",
-    "text_hash": "203d11d993a3d132fd87e0ea55a54af35f5cf536c48372b7fc2fe7847b87256e",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
+    "text": "IIRIS Contact Information\nSource Page: https://iirisconsulting.com/contact/\n\nCategory: Contact Form\nUrl: https://iirisconsulting.com/contact/\nPurpose: Online enquiry submission for clients, partners, and stakeholders.",
+    "text_hash": "495bcc350f5e2f454af7c7063c2bd1b5c7dc9bbc1ef85a52b70635cd27b50d4b",
+    "file_hash": "87ab9ff1e75d70c334a637d5eca4dd027d48a79b01251517e5f826abceb40904"
   },
   {
-    "chunk_id": "b8780e78f9a7c3fafbf5526501452060dfe26c79b4160957304d2f811ff8ee57",
-    "source": "iiris_services.txt",
-    "chunk_index": 11,
-    "text": "ipate threats, respond decisively to incidents, and build resilient, risk-ready operations.\n\nWhat is included in Security Design & Solutions at IIRIS?\n\nIIRIS provides integrated, purpose-led security design solutions that help organizations detect threats early, respond quickly, and manage crises effectively. Services include security assessments and risk analysis, access control systems, intrusion detection systems, advanced surveillance solutions, command and control center design, and integrated security management with communications. These layered, future-ready systems combine physical security, intelligent technology, and automated workflows to support business continuity, stakeholder trust, and long-term growth.\n\nWhat Training Programs does IIRIS offer?",
-    "text_hash": "99015461b60e4ab2a06d893392d36fa60c977aa58bcdf35ca38230c28f02070b",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
-  },
-  {
-    "chunk_id": "6c1d3000ef4814e1ea54b8532bb36cc338b63de388e0ee9fc24d3e9da92e1d77",
-    "source": "iiris_services.txt",
-    "chunk_index": 12,
-    "text": "technology, and automated workflows to support business continuity, stakeholder trust, and long-term growth.\n\nWhat Training Programs does IIRIS offer?\n\nIIRIS offers specialised, expert-led training programs for security and risk professionals that go beyond compliance to build real capability. Programs cover leadership and soft skills, POSH and workplace safety, cybersecurity and digital risk, corporate security and investigations, and sector-specific training. Advanced certifications include the ISO 31000-aligned Certified Risk Leader program and the globally recognised REID Investigative Interviewing Certification. All training modules are designed for immediate application, regulatory alignment, and long-term impact.\n\nWhy should organizations choose IIRIS for risk management, security design, and training?",
-    "text_hash": "f872cc705aa699697c175f0350f7fbff57bf80630266f4cd4f0239ba304df5ae",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
-  },
-  {
-    "chunk_id": "4980adcf7cf860fcf718f22a9d49ece8ea29aa3f2a178876900964ced3428b10",
-    "source": "iiris_services.txt",
-    "chunk_index": 13,
-    "text": "te application, regulatory alignment, and long-term impact.\n\nWhy should organizations choose IIRIS for risk management, security design, and training?\n\nOrganizations choose IIRIS for its intelligence-driven approach, certified experts, and ability to integrate strategy, technology, and execution. With global experience, regulatory alignment, and hands-on delivery, IIRIS enables proactive risk mitigation, rapid incident response, secure environments, and skilled teams capable of leading confidently in complex and evolving risk landscapes.",
-    "text_hash": "a4a75670bc12188cd2c58bcb62edccb6331210aca03b05abe5ca5e9023caee00",
-    "file_hash": "965058d0724306a0d88322cc2a7c7ae7b0ac81546624abb6d536b687b9d93f97"
-  },
-  {
-    "chunk_id": "c410816b61af9750a8bdaee2a376334746514f14d54d7061e0ab57796db486b4",
-    "source": "iiris_socials.txt",
+    "chunk_id": "07e24a5379c3e4823be2ca416420a705f40334391bc3aff76cf29d7f760937b6",
+    "source": "csr.md",
     "chunk_index": 0,
-    "text": "IIRIS Official Social Media Channels\n\nFacebook\nhttps://www.facebook.com/iirisconsulting/\n\nX\nhttps://x.com/ConsultingIiris\n\nInstagram\nhttps://www.instagram.com/iirisconsulting/\n\nLinkedIn\nhttps://www.linkedin.com/company/iirisconsultingindia/posts/?feedView=all\n\nYouTube\nhttps://www.youtube.com/@iirisconsulting",
-    "text_hash": "4da7dcd5b3ed61cf19268853a6743ec5b38a7db11bd99494e1d1186129642958",
-    "file_hash": "4da7dcd5b3ed61cf19268853a6743ec5b38a7db11bd99494e1d1186129642958"
+    "text": "# IIRIS CSR\n\nIIRIS CSR reflects the organization's commitment to creating meaningful impact beyond business operations. The initiative focuses on community welfare, education, mental health, senior care, humanitarian relief, environmental sustainability, and social resilience.\n\n## Support for senior citizens and vulnerable communities\n\nIIRIS supports senior citizens and vulnerable groups through partnerships with credible charitable institutions. This includes support for dignified living, care access, and social inclusion for people who need long-term assistance.\n\n## Social welfare and humanitarian initiatives\n\nThe organization contributes to humanitarian causes, relief support, and community-focused programs that align with empathy, dignity, and long-term social value.\n\n## Education, awareness, and resilience\n\nIIRIS CSR also supports awareness-building, education-led impact, and resilience-oriented social programs designed to create practical and sustainable change.",
+    "text_hash": "13d2d1ac0695789888f2dcc8978deb81de418bf77f3d422fd5aef6f5d18965aa",
+    "file_hash": "13d2d1ac0695789888f2dcc8978deb81de418bf77f3d422fd5aef6f5d18965aa"
   },
   {
-    "chunk_id": "5e5769a97f468c3e9044f8423c6285622e65811059d07db4c9735b487f9bb3be",
-    "source": "iiris_teamfaq.txt",
+    "chunk_id": "83ae1f64a6a32bc9a91dca92e53fe298f7c5c2dc753dd462cadbaf9fc5523e47",
+    "source": "faq.md",
     "chunk_index": 0,
-    "text": "1. IntelliRisk\n\nQ1. Who are the board members of IntelliRisk?\nCol Praveen Sharma (Retd) – AVP, IntelliRisk\nMaj Dhrubajit Das (Retd) – AVP, IntelliRisk\n\nQ2. Who are the senior leadership team members at IntelliRisk?\nMahesh Deshpande – Senior Manager, Security Risk & Design Consulting\nNaveendas K V – Senior Manager, Security & Risk Management\n\nQ3. Who are the military veterans in IntelliRisk leadership?\nCol Praveen Sharma (Retd) – AVP\nMaj Dhrubajit Das (Retd) – AVP\nMahesh Deshpande – Senior Manager (ex-Indian Air Force)\nNaveendas K V – Senior Manager (Indian Navy veteran)\n\nQ4. Who handles technology, legal, and cyber risk at IntelliRisk?\nAkash Wigh – AVP, legal advisory and IPR enforcement\nParamveer Singh – VP, Technology Risk Management\n\n2. IIRIS Knowledge\n\nQ5. Who are the board members of IIRIS Knowledge?\nPaul Devassy, CEO – IIRIS Knowledge\n\nQ6. What is the focus of IIRIS Knowledge?\nRisk awareness, resilience, soft skill development, and thought leadership across sectors.",
-    "text_hash": "f368c27ccf25958b0d4082357beb83ef4272f1b710ba66d164c082709f1f01ce",
-    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
+    "text": "# IIRIS Frequently Asked Questions\n\n## What is IIRIS Consulting?\n\nIIRIS Consulting is a global risk, security, and intelligence consulting firm that helps organizations protect people, assets, reputation, and operations across complex and changing environments.\n\n## What kind of organizations does IIRIS support?\n\nIIRIS works with corporates, multinational companies, regulated industries, public institutions, and organizations operating in high-risk or high-complexity sectors.\n\n## What services does IIRIS provide?\n\nIIRIS offers advisory and consultation, risk management, forensics and diligence, business continuity, emergency response, brand protection, security design, training, and related resilience services.\n\n## Is IIRIS active globally?\n\nYes. IIRIS supports clients through offices in multiple regions, regional leadership presence, and a wider global partner network.\n\n## Does IIRIS have leadership across multiple business units?",
+    "text_hash": "92199657b8238201bcaa9b4609383c1c342c6aef606ec328a58872ae9c0c85e1",
+    "file_hash": "44d41fb78c972765f4e252a32392268ef1fc8c6b6b1e5178eb5f1c3aa121e8d2"
   },
   {
-    "chunk_id": "1f07350e6a0204223d9c6eb368941304c1251a89da1524ccf46ba6c2d14aadf2",
-    "source": "iiris_teamfaq.txt",
+    "chunk_id": "3c26c15fd814a23028e67f3fe099a1e133b4b49fd412b64a2b943494c633c6e1",
+    "source": "faq.md",
     "chunk_index": 1,
-    "text": "IIRIS Knowledge\n\nQ6. What is the focus of IIRIS Knowledge?\nRisk awareness, resilience, soft skill development, and thought leadership across sectors.\n\nQ7. Who are the team members or key contributors?\nPaul Devassy leads the innovation, coaching, and global speaking initiatives.\n\n3. IntelliFuture (assuming implied sub-branch for strategy or consultancy)\n\n(Based on available data, roles related to strategy, governance, and advisory could fall under IntelliFuture)\n\nQ8. Who are the board members or leaders of IntelliFuture?\nSatyagopal Bhanja – CEO, Africa & Gulf (regional strategy & governance)\nPramod Panda – Advisory Leader, Financial Regulation\nAsitav Sinha – VP, Strategy & Infrastructure\nPartha Roy Chowdhury – VP, Strategy & Marketing, Gulf & Africa\n\nQ9. Who handles cross-border strategy and M&A in IntelliFuture?\nAsitav Sinha, VP – Strategy & Infrastructure",
-    "text_hash": "edf6080cba54fa3d75b3daad9c7f3bef47e2fde3bde42799fb04a6ae24075f10",
-    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
+    "text": "in multiple regions, regional leadership presence, and a wider global partner network.\n\n## Does IIRIS have leadership across multiple business units?\n\nYes. IIRIS has leadership across core operations, IntelliRisk, IntelliFuture, IIRIS Knowledge, and its Board of Advisory.\n\n## How can I contact IIRIS?\n\nIIRIS can be reached through business enquiries, HR and partnership channels, regional office contacts, and the official contact form on the website.\n\n## What can this chatbot help with?\n\nThe chatbot is designed to answer questions about IIRIS, its leadership, services, locations, media coverage, press releases, official channels, and other supported knowledge-base topics.",
+    "text_hash": "b8b114bab24e3b47c925dfd6e024ddd330439f21e401dd47487a27ef32e7dad9",
+    "file_hash": "44d41fb78c972765f4e252a32392268ef1fc8c6b6b1e5178eb5f1c3aa121e8d2"
   },
   {
-    "chunk_id": "9c88520646ed16b3b65fc3eb9bd4f0f3c357075d5711f0ba4434a3a90da67b03",
-    "source": "iiris_teamfaq.txt",
+    "chunk_id": "f0d462e1818de101810454ae737e28e3c043241ef8257d9994827ac42955361b",
+    "source": "global_presence.json",
+    "chunk_index": 0,
+    "text": "IIRIS Global Presence\nSource Page: https://iirisconsulting.com/contact/\nSummary: IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.",
+    "text_hash": "af9ae5b26f23edd6cb522988e555cbea8e985f56e661f27c341b17b8fb4498fe",
+    "file_hash": "4b8555121de29fe29bbf23a60268288a92d58e49f42a60fdedcc600344049954"
+  },
+  {
+    "chunk_id": "03028d732d805349b7a854dbc60c4ff70f8cd737ae8797aee1cf1ac31922338f",
+    "source": "global_presence.json",
+    "chunk_index": 1,
+    "text": "IIRIS Global Presence\nSource Page: https://iirisconsulting.com/contact/\nSummary: IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.\n\nRegion: India\nPresence Type: Core operating base\nCoverage: Gurugram, Mumbai, and Bangalore",
+    "text_hash": "431fcc459b9df1c9eb86707a43c688c87c9efbce2c1d23a07eec79b1634e8de6",
+    "file_hash": "4b8555121de29fe29bbf23a60268288a92d58e49f42a60fdedcc600344049954"
+  },
+  {
+    "chunk_id": "0dfaa6d8c92a61b89f52c489d091fc3c533dc2da0f02e12818f0e83675607d1d",
+    "source": "global_presence.json",
     "chunk_index": 2,
-    "text": "VP, Strategy & Marketing, Gulf & Africa\n\nQ9. Who handles cross-border strategy and M&A in IntelliFuture?\nAsitav Sinha, VP – Strategy & Infrastructure\n\nQ10. Who leads regional business development and market expansion?\nPartha Roy Chowdhury, VP – Strategy & Marketing\nNurudeen Abubakar, VP – Nigeria, Business Development & Strategy\n\n4. IIRIS Main Operations (India & Gulf)\n\nQ11. Who are the board members of IIRIS India & Gulf?\nSagarika Chakraborty, CEO – India & Gulf\nKunal Bhogal, COO\n\nQ12. Who leads technology and infrastructure at IIRIS India & Gulf?\nAshok Kumar – CEO IntelliFuture, Technology Strategist, Enterprise Infrastructure & Automation\nKunal Bhogal – COO, Security Infrastructure & Technology\n\nQ13. Who leads investigations, compliance, and fraud detection at IIRIS India & Gulf?\nSagarika Chakraborty – CEO, legal and investigative oversight\nSunil Sood – AVP, Investigations & Compliance\n\nQ14. Who leads HR, talent, and people operations?\nVishakha Poras – HR Strategist, India & Gulf",
-    "text_hash": "4a75057e15bf12dfbe9ac2970941b2d195e83725f4294af458675e43c2c1c0b5",
-    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
+    "text": "IIRIS Global Presence\nSource Page: https://iirisconsulting.com/contact/\nSummary: IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.\n\nRegion: Singapore\nPresence Type: Southeast Asia hub\nFocus: Security risk consulting, investigations, due diligence, crisis management, and business continuity.",
+    "text_hash": "6a4b119ddb3b8443352ad8bc0bf4b14c8fb19c119f0c68d98d8d254762c78aee",
+    "file_hash": "4b8555121de29fe29bbf23a60268288a92d58e49f42a60fdedcc600344049954"
   },
   {
-    "chunk_id": "a9122d8c1437ab1a1f033274a5440f018e53b071b46df09aecfc19433829dff9",
-    "source": "iiris_teamfaq.txt",
+    "chunk_id": "e57259452794a895f78f89b809760052ff918042a574ca9584409292fda5f80f",
+    "source": "global_presence.json",
     "chunk_index": 3,
-    "text": "versight\nSunil Sood – AVP, Investigations & Compliance\n\nQ14. Who leads HR, talent, and people operations?\nVishakha Poras – HR Strategist, India & Gulf\n\nQ15. Who is responsible for Quality & Compliance Governance?\nSangeeta Singh, Head – Quality & Compliance\n\nQ16. Who manages TVET, policy, and business development initiatives?\nGurpreet Singh, AVP – Strategy & Business Development\n\n5. Other Key Cross-Functional Leaders\n\nQ17. Who handles financial crime, AML, and blockchain compliance initiatives?\nRanjit Mallik, Senior Consultant – Business Development\n\nQ18. Who is responsible for central banking and financial regulation advisory?\nPramod Panda, Advisory Leader\n\nQ19. Who drives cybersecurity, SOC operations, and digital risk advisory?\nParamveer Singh, VP – Technology Risk Management\nNaveendas K V, Senior Manager – Security & Risk Management (SOC lead)",
-    "text_hash": "db1cff40db13a9ef581ed67da873a983bd9e06c3261d2e818e12249d9b2a8ab9",
-    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
+    "text": "IIRIS Global Presence\nSource Page: https://iirisconsulting.com/contact/\nSummary: IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.\n\nRegion: UAE and Gulf\nPresence Type: Regional presence\nFocus: Risk consulting, security solutions, investigations, and advisory support for Gulf operations.",
+    "text_hash": "17de593eefc862a273adccb35fb3565c351776b63cf301072bab5e4f6ef0ad21",
+    "file_hash": "4b8555121de29fe29bbf23a60268288a92d58e49f42a60fdedcc600344049954"
   },
   {
-    "chunk_id": "fcf329589f56547c1dd2c4595cd193a1d0a4751403b73605eb97d18231e7cf90",
-    "source": "iiris_teamfaq.txt",
+    "chunk_id": "4ff549e6df3a2ebe43c6a3265550ca51857b53a35e496aee15c7516dd3ac4f15",
+    "source": "global_presence.json",
     "chunk_index": 4,
-    "text": "ons, and digital risk advisory?\nParamveer Singh, VP – Technology Risk Management\nNaveendas K V, Senior Manager – Security & Risk Management (SOC lead)\n\nQ20. Who are the thought leaders and policy contributors for women empowerment and youth leadership?\nSagarika Chakraborty, CEO – India & Gulf\n\nQ21. Who is the President of IIRIS ?\nGarry Singh, President of IIRIS, Strategic Risk & Intelligence   \n\nQ22. Who is Gurpawan Singh ? \nMainly known as Garry Singh, President, Strategic Risk & Intelligence\n20+ years in enterprise risk, intelligence, and compliance. Led high-threat operations, advisor to global organizations, Six Sigma Green Belt, anti-terror & anti-extortion specialist.",
-    "text_hash": "042b7cc603ca91361fcdd219e7bd35a1c3a3d6ed02b8335094394edf96588411",
-    "file_hash": "25eb2e8aec860957eae0eb4e35e06e446df1c8f5e863d6c840989fa69ab96ff6"
+    "text": "IIRIS Global Presence\nSource Page: https://iirisconsulting.com/contact/\nSummary: IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.\n\nRegion: Nigeria\nPresence Type: Africa operations\nFocus: Security consulting, forensic analysis, due diligence, and market-facing business development.",
+    "text_hash": "f51ba4f428296cf234fec9b3058c208005d40bb2d2b03bda7522111d655a531d",
+    "file_hash": "4b8555121de29fe29bbf23a60268288a92d58e49f42a60fdedcc600344049954"
+  },
+  {
+    "chunk_id": "bfe83a1c7eb08a48d5e4eecd7357adfdd5251578c5f218fc5c7d7ab77b2dfa07",
+    "source": "global_presence.json",
+    "chunk_index": 5,
+    "text": "IIRIS Global Presence\nSource Page: https://iirisconsulting.com/contact/\nSummary: IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.\n\nRegion: Oman and Bahrain\nPresence Type: Regional market presence\nFocus: Part of the wider Gulf operating footprint.",
+    "text_hash": "eef61f7e220e17ae3bca360fdc878379991779a8a613e5d0cda99b236099af90",
+    "file_hash": "4b8555121de29fe29bbf23a60268288a92d58e49f42a60fdedcc600344049954"
+  },
+  {
+    "chunk_id": "66176aad103c4ddcebd7c01588d82677aa8fa9816fdd8b2621bc112384614139",
+    "source": "global_presence.json",
+    "chunk_index": 6,
+    "text": "IIRIS Global Presence\nSource Page: https://iirisconsulting.com/contact/\nSummary: IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.\n\nRegion: United States, United Kingdom, and Australia\nPresence Type: Extended international reach\nFocus: Supported through international teams and partner relationships.",
+    "text_hash": "d45c4435c5baf5322055cdc5505eb319772bfbeef2b30b82f4ffee06e0fa27c8",
+    "file_hash": "4b8555121de29fe29bbf23a60268288a92d58e49f42a60fdedcc600344049954"
+  },
+  {
+    "chunk_id": "92da8266a34721a435e547e6b25626c45935aea937395110732c619fddb87e88",
+    "source": "global_presence.json",
+    "chunk_index": 7,
+    "text": "IIRIS Global Presence\nSource Page: https://iirisconsulting.com/contact/\nSummary: IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.\n\nRegion: Global network\nPresence Type: Partner-supported expansion\nFocus: Trusted partner network across 150+ locations worldwide.",
+    "text_hash": "bd1c24797876167b92112a523f2463214beecb2d26eca3229efb56147d7bd656",
+    "file_hash": "4b8555121de29fe29bbf23a60268288a92d58e49f42a60fdedcc600344049954"
+  },
+  {
+    "chunk_id": "dd551e1a846f563b44f1d5c927449506189a7bcf01f7146535f1f3236f7c1195",
+    "source": "leaders.json",
+    "chunk_index": 0,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/",
+    "text_hash": "ff2b75889135d0aeb4df4e8a3545e5b145799f29a7e53765a9c50fe0baea4e0c",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "5eec5d2c72c5b88d305aeee3ef586da0f98feaeb9879c43f0b637459d385243b",
+    "source": "leaders.json",
+    "chunk_index": 1,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Garry Singh\nAliases: Gurpawan Singh\nRole: President, Strategic Risk and Intelligence\nCategories: president\nUnit: IIRIS Main Operations\nGroup: Executive Leadership\nSummary: Brings over 20 years of experience in enterprise risk, intelligence, compliance, anti-terror operations, and anti-extortion strategy.",
+    "text_hash": "0821c153d3216071685f5baa6ba63e06ab220c0f4d2d3d4b65d7a3c72214bd24",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "9c350740b313bab059cc02bea3c164ab65cf5a7328c70ba1b87388cb6ff63987",
+    "source": "leaders.json",
+    "chunk_index": 2,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Sagarika Chakraborty\nRole: CEO - India and Gulf\nCategories: ceo\nUnit: IIRIS Main Operations\nGroup: Executive Leadership\nSummary: Leads legal and investigative oversight with experience in forensic investigations, NPA management, insider threat analysis, and policy contribution.",
+    "text_hash": "2417d59a377f2968d780c2400da4b7d7cdd0bf9fca5f57155ae913cadb04dd15",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "027d2f22f450c61d21c13c506ebcf4f8fcad04e159183dd7ee2c985f8f70bfb1",
+    "source": "leaders.json",
+    "chunk_index": 3,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Kunal Bhogal\nRole: COO - Security Infrastructure and Technology\nCategories: coo\nUnit: IIRIS Main Operations\nGroup: Executive Leadership\nSummary: Focuses on risk-based design, digital transformation, command center security, and infrastructure-linked protection programs.",
+    "text_hash": "3d359a74331b40897af710ae27096691d52d16f92ab4336b52719de709dc643c",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "6504f5e87a2ebc26f142ea7ddaa968465520b4cacdee551b68af5a02725acb47",
+    "source": "leaders.json",
+    "chunk_index": 4,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Ashok Kumar\nRole: CEO - IntelliFuture\nCategories: ceo\nUnit: IntelliFuture\nGroup: Leadership\nSummary: Technology strategist with experience in digital transformation, automation, multicloud infrastructure, DevOps, service resilience, and compliance.",
+    "text_hash": "2d02f1bf4a872255803b4ba2b552d98e23b0cda976826df5e37409b6212c0ca8",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "2035f39c3f3121a883623bee7a01b3c1f79b6c4c2c7063aa5968bd3576f68eff",
+    "source": "leaders.json",
+    "chunk_index": 5,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Prashant Nayak\nRole: Corporate Security Strategist | Crisis and Risk Intelligence\nUnit: IIRIS Main Operations\nGroup: Leadership\nSummary: Brings more than 30 years of experience in corporate security, crisis management, emergency preparedness, and intelligence-led security operations.",
+    "text_hash": "58bdc41f48797d663875c2f3844fbb9ded823bd2d255a746b2497e6c59a58d29",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "a04d75007d9143c4bff05a68cb19ebac478338677667683fefe1faa554a563a9",
+    "source": "leaders.json",
+    "chunk_index": 6,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Satyagopal Bhanja\nRole: CEO - Africa and Gulf\nCategories: ceo\nUnit: IntelliFuture\nGroup: Leadership\nSummary: Risk and governance leader with experience in internal audit, manufacturing, hospitality, and oil and gas sectors.",
+    "text_hash": "c1201b733e54b35e327fb17d8bdb80fa7577866e6a018364722c7c953f2d5d19",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "c16e8ad2a669befe141d12c6ab676286885fa75c264287ee2f36390cb33103eb",
+    "source": "leaders.json",
+    "chunk_index": 7,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Paul Devassy\nRole: CEO - IIRIS Knowledge\nCategories: ceo\nUnit: IIRIS Knowledge\nGroup: Leadership\nSummary: Leads innovation, coaching, thought leadership, and global speaking initiatives across resilience and capability-building themes.",
+    "text_hash": "dae327c63471e632c1f1ce1432910334e1dfe159d121629111bd6c66365bc201",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "81292f9715b854c215a4b35d2507f0e54a32658845f28977809933d46474fc56",
+    "source": "leaders.json",
+    "chunk_index": 8,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Asitav Sinha\nRole: VP - Strategy and Infrastructure\nCategories: vice president\nUnit: IntelliFuture\nGroup: Leadership\nSummary: Supports cross-border strategy, infrastructure growth, market entry, corporate governance, and M and A-related initiatives.",
+    "text_hash": "9d6165aa6691410dfa7dca11d4c53b2a578b77d487421fd4329623ebdcca7eeb",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "faceac7e83cdee1231f7a364d408d45a8ccfe383c70407b70e6049556104bcde",
+    "source": "leaders.json",
+    "chunk_index": 9,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Rajeev Sharad\nRole: VP - Sales\nCategories: vice president\nUnit: IIRIS Main Operations\nGroup: Leadership\nSummary: Experienced in infrastructure automation, AI-enabled surveillance, transport systems, smart city security, and modernization programs.",
+    "text_hash": "1dd4683e94c97ae86bcfef09adc3a7b8c8fbd82c5d08d25bd92d3fa9f88a7353",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "c641452e5a56e727b20a56fe4d28498aa705c2ab97328d23e02b1a9fd038cb0a",
+    "source": "leaders.json",
+    "chunk_index": 10,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Ranjit Mallik\nRole: Senior Consultant - Business Development\nUnit: IIRIS Main Operations\nGroup: Cross-Functional Leadership\nSummary: Has extensive background in global banking, AML, financial crime compliance, and business development.",
+    "text_hash": "9863935d75c10bebe77066a9141f7f386affa745421003f9d7e343a4b98eff9e",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "a3f1437e76dd79963e35aad0ae4d0da1c812371bcbb1b62cc4c1bd98217c855c",
+    "source": "leaders.json",
+    "chunk_index": 11,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Partha Roy Chowdhury\nRole: VP - Strategy and Marketing, Gulf and Africa\nCategories: vice president\nUnit: IntelliFuture\nGroup: Leadership\nSummary: Focuses on brand, strategy, growth, cross-market positioning, and business development across the Gulf and Africa regions.",
+    "text_hash": "809b5ab45dbbfd388474c4805446d51ab5cff2e18e098ba898f645b6be2bd902",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "2f3b0ef6979b974e138eeb9a27875041bef1ea41ff0287eb8deecacb38fda95e",
+    "source": "leaders.json",
+    "chunk_index": 12,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Nurudeen Abubakar\nRole: VP - Business Development and Strategy, Nigeria\nCategories: vice president\nUnit: IntelliFuture\nGroup: Leadership\nSummary: Supports regional business development, communications, and strategy expansion in Nigeria.",
+    "text_hash": "b7b2d814011e535dd7ddaca83db58d39d2d8b3918b682cdc1562a477dc246c72",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "9af4e66bf4bc13a2181e4d0b3a372b14054ea0b0fc9b561889840ee4aa4a1146",
+    "source": "leaders.json",
+    "chunk_index": 13,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Col. Praveen Sharma (Retd.)\nRole: AVP - IntelliRisk | Security Intelligence and Business Continuity\nCategories: assistant vice president\nUnit: IntelliRisk\nGroup: Leadership\nSummary: Former Indian Army officer with expertise in risk management, crisis response, cybersecurity, forensic investigations, and regulatory compliance.",
+    "text_hash": "be2ff51fabaa92662c233c0fdca39b4465c98de1262f9fba9104be6ad9c5ac6f",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "815f62b09a2cf1241e409500b64b6f98c8477b115e4116a2c66c2cda6a52d53b",
+    "source": "leaders.json",
+    "chunk_index": 14,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Maj. Dhrubajit Das (Retd.)\nRole: AVP - IntelliRisk | Security and Business Continuity\nCategories: assistant vice president\nUnit: IntelliRisk\nGroup: Leadership\nSummary: Former Army officer with experience in frontline and corporate security, threat assessment, crisis management, and information security.",
+    "text_hash": "9df331651673bfbb4e812759998007529a479624974e91e87f207dc3edca91d4",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "213d9fca6345544dda99bab9411f9d9d94a0944724a81582877644e66571a4b7",
+    "source": "leaders.json",
+    "chunk_index": 15,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Sunil Sood\nRole: AVP - IntelliSense | Investigations and Compliance\nCategories: assistant vice president\nUnit: IIRIS Main Operations\nGroup: Cross-Functional Leadership\nSummary: Specializes in fraud investigations, AML, KYC, compliance, forensic audits, and complex investigations.",
+    "text_hash": "2ff0dd1fe8ed2086c3b0c4f635f0ca5dd0a0904a256267be3a29991a9c15398d",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "9d4543367b08d00d859b8dd484bab84b4d10691d6a96539ed6d470875acff6fd",
+    "source": "leaders.json",
+    "chunk_index": 16,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Gurpreet Singh\nRole: AVP - Strategy and Business Development\nCategories: assistant vice president\nUnit: IIRIS Main Operations\nGroup: Cross-Functional Leadership\nSummary: Supports TVET, policy-linked development, public programs, education reform, and strategic business initiatives.",
+    "text_hash": "87a6f98aeedc8dade76d911c508ce46695757b7db2727c65cadcf00562c6fec7",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "fe89985c7b22b445db68ae0f6c46ab10061097aba08005b9a4a73ddfe49ff024",
+    "source": "leaders.json",
+    "chunk_index": 17,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Akash Wigh\nRole: AVP - IntelliRisk | Legal Advisory and IPR Enforcement\nCategories: assistant vice president\nUnit: IntelliRisk\nGroup: Leadership\nSummary: Works across legal advisory, cyber law, brand protection, IPR enforcement, and law-enforcement coordination.",
+    "text_hash": "e4335d803604699a7123672b70b68ca89d7cc10421b7e746762ba9a8f9bfa952",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "92bb61af327275e9ec3d061804e07d43f9cdd4883799ea20299fc4a4d06e0139",
+    "source": "leaders.json",
+    "chunk_index": 18,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Paramveer Singh\nRole: VP - Technology Risk Management\nCategories: vice president\nUnit: IntelliRisk\nGroup: Leadership\nSummary: Cybersecurity leader focused on SOC operations, digital risk governance, cyber resilience, and enterprise security architecture.",
+    "text_hash": "07b7b3f2f5bbad14ca4dcd49dc1d53081cccb22658ddead8cc2faa41852ab09e",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "543c18842ed634659eddad89851d84cf2ee12001d25a7c038b54c2bb27532418",
+    "source": "leaders.json",
+    "chunk_index": 19,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Pramod Panda\nRole: Advisory Leader - Financial Regulation\nUnit: IntelliFuture\nGroup: Leadership\nSummary: Known for central banking, financial regulation, governance, and fraud monitoring expertise.",
+    "text_hash": "242a12dafa29f1270521e886e600f5e02b519c9d619b9da81c5aa0a53958925d",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "c2b76bb9a11fc88675a51189c3232005a1ebc93e4ae9ec1926cece174af10e71",
+    "source": "leaders.json",
+    "chunk_index": 20,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Vishakha Poras\nRole: HR Strategist - India and Gulf\nUnit: IIRIS Main Operations\nGroup: Cross-Functional Leadership\nSummary: Leads people and culture, employee engagement, HR compliance, talent acquisition, and learning initiatives.",
+    "text_hash": "a33550460020105d6c1529e7a8206841350d5869bfde5770fc15b5ae4db9d416",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "2d94dd7b18bf549873693ceefe1634f64356aa0006c567230fcda266e8d00714",
+    "source": "leaders.json",
+    "chunk_index": 21,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Sangeeta Singh\nRole: Head - Quality and Compliance\nUnit: IIRIS Main Operations\nGroup: Cross-Functional Leadership\nSummary: Supports quality assurance, audits, compliance governance, ISO-related work, and risk oversight.",
+    "text_hash": "452aecfef69701cb507a7e94c3a4a1a13dcaaed98bb31162f512c28d8aeb5c3c",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "0c3a1d8533e26a1c3b2bb54a5beacad93cb2218f3906f11a42dca1e1505f6b7d",
+    "source": "leaders.json",
+    "chunk_index": 22,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Mahesh Deshpande\nRole: Senior Manager - Security Risk and Design Consulting\nUnit: IntelliRisk\nGroup: Leadership\nSummary: Leads security risk and design consulting work with background in physical security engineering, fire safety, and enterprise consulting.",
+    "text_hash": "f21f46586530abd00815e74676a49f5b5c082db33eab80205bcc801cdc171278",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "b1d14ba6c023783890a9e086c4eaa9480665184040f0cbe29f57613e154c20ae",
+    "source": "leaders.json",
+    "chunk_index": 23,
+    "text": "IIRIS Leaders\nSource Page: https://iirisconsulting.com/team/\n\nName: Naveendas K V\nRole: Senior Manager - Security and Risk Management\nUnit: IntelliRisk\nGroup: Leadership\nSummary: Supports security and risk management, SOC-linked operations, crisis handling, and enterprise risk governance.",
+    "text_hash": "f7ddad76bad22857ae120af45f66cfb6aea444cd8d1f85891b4b30d791a900c4",
+    "file_hash": "7f767d39e493821e913684fb43fb8b78f91317a27a70784bacda12bed3ecef41"
+  },
+  {
+    "chunk_id": "431ed798b23050e8633ad26d3da57b68822866b6eb6081d0be9e0989b06031cb",
+    "source": "media.json",
+    "chunk_index": 0,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting",
+    "text_hash": "9fed7506656a28e6cb1b7a6ca621dda7fc1541f979f1fc6f83c57a432b636b86",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "ede54411ced8f9e70560ca90deb15cc10cfd90553b2c66168dcbec94bb16762c",
+    "source": "media.json",
+    "chunk_index": 1,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Featured Coverage\nOutlet: Bar and Bench\nDate: 2026-03-24\nTitle: What every legal counsel advising banks today must know about tracking cases and staying RBI FMR ready\nSummary: The article discusses the growing complexity of fraud-case tracking and the need for better operational visibility across investigative, legal, and regulatory stakeholders.",
+    "text_hash": "240dea79f4aab6ba865b384540f873b5aed04daa87b7c99f769ced1d0adbec9d",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "ba732f94b24e84f3fc179d3340ac7f57d07b4404ae526625819192ec7e4c389b",
+    "source": "media.json",
+    "chunk_index": 2,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Featured Coverage\nOutlet: Elets eGov\nDate: 2026-03-05\nTitle: Public-Private Partnership To Solve Crime And Speed Up Judicial Process - Gurgaon Creates An Iconic Model\nSummary: The coverage highlights the role of forensic capability and public-private collaboration in reducing investigative delays and improving criminal justice responsiveness.",
+    "text_hash": "cdd89c94438491832f66baeb4f42f88aef8c487163282f7bc542d45d5953843f",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "979b551b16fbc48c604c1fd9e6d74f9034ac2d4357c9064b6e0e26b40dc3177a",
+    "source": "media.json",
+    "chunk_index": 3,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Media Interview\nOutlet: Times Tech\nDate: 2026-03-03\nTitle: Garry Singh on Cyber Risks, 5G Security and Infrastructure Resilience\nPeople: Garry Singh\nSummary: In this interview, Garry Singh discusses cyber risk, infrastructure security, 5G-related vulnerabilities, industrial IoT exposure, and the need to treat cyber threats as business-interruption risks.",
+    "text_hash": "885d57c39edc771f49ebb4d9478838749792dededd1b2cd4f11e26863426c300",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "4c52a1a06db86598645ccc00a34c08eee47ed0563f7a1dcd3bbe26b124d42b64",
+    "source": "media.json",
+    "chunk_index": 4,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Featured Coverage\nOutlet: Restaurant India\nDate: 2026-02-27\nTitle: Rethinking Restaurant Security: Beyond Cameras and Compliance\nSummary: The article explores operational security gaps in restaurants and the limitations of surveillance-first approaches without broader risk design.",
+    "text_hash": "6fb57b058873793fd399303e3b79a3cf5ebcd64ae1248bcd90e0a54d93560e2e",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "31447f667a8c36db6d94bce30f299483c6d52dc43db0f1fba41832ef521b6083",
+    "source": "media.json",
+    "chunk_index": 5,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Product Launch Coverage\nOutlet: Lokmat Times\nDate: 2026-02-25\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring and RBI Reporting for Banks\nSummary: Coverage of the IntelliTracker launch focused on structured case lifecycle visibility and reporting readiness for banks and financial institutions.",
+    "text_hash": "821e2b4a29938218126853fc0e05a6c6fd4279925d5c3a727f792bb531281ba5",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "73ca16ee4633ded258ced31a07d0dc3d1d369d05b23a027006a93617cdb6f43d",
+    "source": "media.json",
+    "chunk_index": 6,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Product Launch Coverage\nOutlet: NewsVoir\nDate: 2026-02-25\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring and RBI Reporting for Banks\nSummary: NewsVoir reported on the launch of IntelliTracker and its use in fraud-related monitoring and regulatory reporting readiness.",
+    "text_hash": "441938eed8c555a1231772bd0ba67062d3dbe8466e24996003140f00fcf9c437",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "7789e1bed88c22d7e392ebf4056a98bce9e13a368aad9d8013fb17d49826195d",
+    "source": "media.json",
+    "chunk_index": 7,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Academic Collaboration Coverage\nOutlet: ANI and syndicated platforms\nDate: 2026-02-24\nTitle: IIRIS signs MoU with NLU, Jodhpur to form IIRIS Chair of Infosec and Forensic Society\nSummary: The coverage highlights IIRIS's collaboration with National Law University, Jodhpur to promote research, innovation, and industry-academia engagement in information security and forensic science.",
+    "text_hash": "883ea65d965116fac2115ee963d5602e2b1d8dbb43bfefa432d01b22579dbc36",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "5b2db740acb02a1082b783b915d2b96e19f001738d5d18d872956fa24c031226",
+    "source": "media.json",
+    "chunk_index": 8,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Featured Coverage\nOutlet: Times of India\nDate: 2026-02-23\nTitle: India AI Impact Summit: Indian AI startups showcase solutions for education, smart security and train safety\nSummary: The article mentions AI-led solutions and showcases relevant innovation themes associated with smart security and practical applications.",
+    "text_hash": "bebac637b5a55bbe205313597f130d551be683a80943be9f7d645712765df248",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "11c3db65954bbac4a4413a219331464ae19223a822fa71c38d42fe7dd9f6d25d",
+    "source": "media.json",
+    "chunk_index": 9,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Thought Leadership\nOutlet: PolicyCircle\nDate: 2026-02-20\nTitle: Crowd safety at places of worship: Why India needs a resilience-first shift\nSummary: The piece argues for a resilience-first approach to crowd safety in highly sensitive and densely populated religious environments.",
+    "text_hash": "6f013092630b928ef9699b39fc03fd760a92af1644ff5edba8d219ee74bd3e4a",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "d09a0d50a2d36884950217f7a5afe8a56f7a5fad53db91699354f1c736bc98b6",
+    "source": "media.json",
+    "chunk_index": 10,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Media Interview\nOutlet: The Compliance Digest\nDate: 2026-01-08\nTitle: The Evolution of Compliance in Financial Crime: An Interview with Sagarika Chakraborty, Global Head of Investigations, IIRIS Consulting\nPeople: Sagarika Chakraborty\nSummary: The interview discusses why effective detection has become central to modern financial crime programs beyond traditional preventive compliance controls.",
+    "text_hash": "88dd5f8da4cb4e782ac745f212156681188d1fccbed9c112e1145b97a5325ee4",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "fd01da8eec94ae1f5a4cfaa9976330619b8983e17a06996063529d02bcf77990",
+    "source": "media.json",
+    "chunk_index": 11,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Thought Leadership\nOutlet: BW Legal World\nDate: 2025-12-21\nTitle: Evolving Financial Crimes Demand Stronger Forensic, Legal Collaboration: Experts\nPeople: Garry Singh\nSummary: Garry Singh writes about the need for integrated cultural intelligence, HUMINT, and legal-investigative precision to respond to complex fraud networks.",
+    "text_hash": "8cf845eeb02705b1545cb19bc438cbdb35ea29541480c8df4a283bdc842629fa",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "e9d289dacfd2c92a8357a120024f5611669414faa078e6b8ca56576c85343291",
+    "source": "media.json",
+    "chunk_index": 12,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Thought Leadership\nOutlet: ETLegalWorld\nDate: 2025-12-12\nTitle: Expert's Take: Steering the Cross-Border Fraud: The Essential Strategic Playbook for 2026 and Beyond\nPeople: Garry Singh\nSummary: The article focuses on strategic approaches to cross-border fraud and the importance of coordinated legal, intelligence, and compliance responses.",
+    "text_hash": "733a1505d7d6b17fb51e4d3267315fd2773d3be36185d25d8243f016f68cc523",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "4e730466632db139d1e189c238a11175946c28f6ccbedbc9c6ade4770ce73a16",
+    "source": "media.json",
+    "chunk_index": 13,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Thought Leadership\nOutlet: Bar and Bench\nDate: 2025-11-25\nTitle: The two halves of trust: Why DPDP compliance is more than a legal puzzle\nSummary: The article examines the relationship between legal interpretation and operational execution in building meaningful data trust.",
+    "text_hash": "511cc941ffbdb17236f490cfd05bf0323b9059ca242c11c6e9066fbb78810768",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "da0fc57ff06c4bf8567ae238b051ec586d68a88fa0249afadb449ecfeba794ca",
+    "source": "media.json",
+    "chunk_index": 14,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Expansion Coverage\nOutlet: TechAfricaNews\nDate: 2024-09-26\nTitle: IIRIS Launches Nigeria Office, Expands Security Solutions Across Africa\nSummary: TechAfricaNews covered the Nigeria office launch and IIRIS's broader African expansion in risk management and security solutions.",
+    "text_hash": "853f687380eb3c054afd2a70a2720c34f459cf9d8f69ffdd48febbe27fc46252",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "fb032e19a52587f19bec567500888ed183d36686d86cb696be46c7bff54c7d21",
+    "source": "media.json",
+    "chunk_index": 15,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Expansion Coverage\nOutlet: Guardian Nigeria\nDate: 2024-09-25\nTitle: IIRIS brings AI-powered risk mitigation solutions to Nigeria\nSummary: The article highlights the Nigeria launch, AI-powered risk mitigation positioning, and IIRIS's global operating footprint.",
+    "text_hash": "51171d304249116468cdbc0b6d84d2291369d18b8c7fadb9f9411cbcc6bb0769",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "8a31a4d14df83bca97029965410994271de1355b9c16b10d8df7b78330cdeb99",
+    "source": "media.json",
+    "chunk_index": 16,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Publication\nOutlet: BW Businessworld\nTitle: TREATMENT FOR CYBERCRIME - INDIA'S NEW PANDEMIC\nPeople: Garry Singh\nSummary: Garry Singh authored a piece on cybercrime in India and the need for practical systemic treatment.",
+    "text_hash": "f2b651a1624daf317ddb3d39540470997fddf63826798cae43163b819eba6188",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "d1d65f93ecebc8c2bb2c255295e8f465a0a9a6bfd4bd1e73f797b33825165230",
+    "source": "media.json",
+    "chunk_index": 17,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Media Mention\nOutlet: The Economic Times\nTitle: Secure India Summit 2025 featured coverage\nPeople: Sagarika Chakraborty\nSummary: Sagarika Chakraborty shared that the Secure India Summit 2025 was featured in The Economic Times.",
+    "text_hash": "527f75f18229824dd083882e9fb4bbd60716ad7c4a8f9860d15f62e85d302275",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "41c00910b0a1d07179600e01f83a6f785419b823ba6f30c04725669b5547c42e",
+    "source": "media.json",
+    "chunk_index": 18,
+    "text": "IIRIS Media and Featured Coverage\nSource Page: https://iirisconsulting.com/articles/\nYoutube Channel: https://www.youtube.com/@iirisconsulting\n\nCategory: Video Conversations\nOutlet: IIRIS YouTube\nTitle: Official IIRIS video conversations, interviews, podcasts, and media appearances\nSummary: The official IIRIS YouTube channel hosts video conversations, interviews, podcasts, and media appearances.",
+    "text_hash": "ffbc177dbc4c03145fc02a0b219d5b541169ec1e75edba72f8f528ca3f0f2656",
+    "file_hash": "c786856ad22177a7ce69128b1d457d0fd503e6f5e87883f48d59846c90a325f0"
+  },
+  {
+    "chunk_id": "c9d9d242d1f85890c96880a046428d72de97d257b04e46d533c276cdc4f1f00e",
+    "source": "press_release.json",
+    "chunk_index": 0,
+    "text": "IIRIS Press Releases\nSource Page: https://iirisconsulting.com/press-release/",
+    "text_hash": "acf3b6f5d37d450b6d5b77fb7a2931f25bc0a4c757812adde68cc1a2d3c957ee",
+    "file_hash": "4fcdbae0c87afdfc349c3f5f60d28673046e371429d49e33aef5db09cfbbe554"
+  },
+  {
+    "chunk_id": "a3858d8053be6cefa6d873381e162e509d9756e175b8f93366a10d378d395b24",
+    "source": "press_release.json",
+    "chunk_index": 1,
+    "text": "IIRIS Press Releases\nSource Page: https://iirisconsulting.com/press-release/\n\nCategory: Press Release\nTitle: IIRIS Mourns the Passing of Veteran Strategic Affairs Expert Maroof Raza\nDate: 2026-02-26\nLocation: Gurgaon\nSummary: IIRIS Consulting expressed profound sorrow at the passing of Maroof Raza, a distinguished strategic affairs expert and national voice on defense and security issues.",
+    "text_hash": "bec718c739399c1cdc6265b642fe82f792f0f2edcf27562a550fa051628f08d2",
+    "file_hash": "4fcdbae0c87afdfc349c3f5f60d28673046e371429d49e33aef5db09cfbbe554"
+  },
+  {
+    "chunk_id": "7978c9cb5a5fd404da738a400b1ed20490d34e458aad5424f6cf3a8aa376d4cf",
+    "source": "press_release.json",
+    "chunk_index": 2,
+    "text": "IIRIS Press Releases\nSource Page: https://iirisconsulting.com/press-release/\n\nCategory: Press Release\nTitle: IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring and RBI Reporting for BFSI Sector\nDate: 2026-02-25\nSummary: IIRIS launched IntelliTracker, a purpose-built monitoring platform designed to support fraud-case visibility and RBI FMR 1-4 aligned reporting readiness for financial institutions.",
+    "text_hash": "109670af5136b746a489f9cd18d9db905f5ca61cbeaceb6394c661753859065c",
+    "file_hash": "4fcdbae0c87afdfc349c3f5f60d28673046e371429d49e33aef5db09cfbbe554"
+  },
+  {
+    "chunk_id": "39af8f438a5fdac724a2c0535c3dcd5aad8ec03df2af8b31ee9cd4370775d68c",
+    "source": "press_release.json",
+    "chunk_index": 3,
+    "text": "IIRIS Press Releases\nSource Page: https://iirisconsulting.com/press-release/\n\nCategory: Press Release\nTitle: IIRIS Signs MoU with NLU, Jodhpur to Form IIRIS Chair of Infosec and Forensic Society\nDate: 2026-02-24\nSummary: IIRIS formalized an academic collaboration with National Law University, Jodhpur to establish a center of excellence focused on information security and forensic science.",
+    "text_hash": "4e68fd916067df865c2ef0704a36f07d695d52b96d8b0f1e705fe5ad868d0d55",
+    "file_hash": "4fcdbae0c87afdfc349c3f5f60d28673046e371429d49e33aef5db09cfbbe554"
+  },
+  {
+    "chunk_id": "71daa98aa272452bba226c9f8a170346cf6bdc01d72784288321908e63894ed6",
+    "source": "services.md",
+    "chunk_index": 0,
+    "text": "# IIRIS Services\n\n## What services does IIRIS provide?\n\nIIRIS provides a comprehensive suite of risk, security, and intelligence services including advisory and consultation, risk management, forensic investigations and diligence, brand protection, business continuity management, emergency response, security design and solutions, resource and skills provisioning, and specialized training programs.\n\n## Advisory and Consultation\n\nIIRIS delivers intelligence-driven guidance aligned with an organization's risk profile, regulatory environment, and operational realities. Advisory work includes enterprise risk management, crisis management planning, emergency response readiness, governance risk and compliance support, and security strategy across physical, digital, and operational environments.\n\n## Risk Management",
+    "text_hash": "cb320eabf798f28493dd49b89ca1b339ead845f97ac7c95daceec29b64ced1d5",
+    "file_hash": "9b9e9f6549894e60fa8a8831fd29021ef15076ccd3518bf9898c1ab1799b262f"
+  },
+  {
+    "chunk_id": "e9c0c49f74a7feb0b3e444d8feeb502420bedfc080363ad6fb0249b2891c89df",
+    "source": "services.md",
+    "chunk_index": 1,
+    "text": "e readiness, governance risk and compliance support, and security strategy across physical, digital, and operational environments.\n\n## Risk Management\n\nRisk management services are designed to protect people, assets, and operations in uncertain environments. They cover governance, compliance frameworks, fire safety audits, crisis management, security risk assessments, executive protection, alert and advisory services, and technical surveillance countermeasures.\n\n## Forensics and Diligence\n\nIIRIS supports forensic investigations, fraud reviews, due diligence, investigative fact-finding, legal coordination, and evidence-led reporting. These capabilities help organizations detect issues early, manage complex cases, and strengthen trust and accountability.\n\n## Brand Protection",
+    "text_hash": "72734573e7869d84d8f6b084ebc2ff32bb4b45e805633e5ee81cd81aade7cfec",
+    "file_hash": "9b9e9f6549894e60fa8a8831fd29021ef15076ccd3518bf9898c1ab1799b262f"
+  },
+  {
+    "chunk_id": "a195c968e8846afa7010f44d31d4ee2a577bc54bed96b54b019d42802931b5d9",
+    "source": "services.md",
+    "chunk_index": 2,
+    "text": "orting. These capabilities help organizations detect issues early, manage complex cases, and strengthen trust and accountability.\n\n## Brand Protection\n\nBrand protection services focus on intellectual property enforcement, anti-counterfeiting support, online and offline infringement response, investigative coordination, and legal support designed to protect reputation and business value.\n\n## Security Design and Solutions\n\nIIRIS supports security architecture, command center strategy, infrastructure security, surveillance planning, integrated security design, and technology-enabled protection frameworks for business-critical environments.\n\n## Business Continuity and Emergency Response\n\nIIRIS helps clients prepare for disruption through business continuity planning, continuity program design, crisis playbooks, emergency response frameworks, and resilience-focused operating models.\n\n## Training and Capability Development",
+    "text_hash": "d88f8f322942c7d4204e1e7bf96435f990928377a32ed84e2c07cc435b26f537",
+    "file_hash": "9b9e9f6549894e60fa8a8831fd29021ef15076ccd3518bf9898c1ab1799b262f"
+  },
+  {
+    "chunk_id": "335aeabafac71a357b6be818d28fd8f631edfbdb5d0a0aad7c85dce756da918d",
+    "source": "services.md",
+    "chunk_index": 3,
+    "text": "uity program design, crisis playbooks, emergency response frameworks, and resilience-focused operating models.\n\n## Training and Capability Development\n\nTraining programs cover security awareness, resilience, operational readiness, leadership development, compliance-linked capability building, and sector-specific risk education.",
+    "text_hash": "104aa96a03a3fe756aba61d6ed488489c17b27464423da9a5eaccb9561be43e7",
+    "file_hash": "9b9e9f6549894e60fa8a8831fd29021ef15076ccd3518bf9898c1ab1799b262f"
+  },
+  {
+    "chunk_id": "22627771c5ae21e5434fc13a0ddfdcbdb5d3022d44df3bcc69efec38dac45ed6",
+    "source": "socials.json",
+    "chunk_index": 0,
+    "text": "IIRIS Official Social Media Channels\nSource Page: https://iirisconsulting.com/",
+    "text_hash": "9e54716e40629eb68190f30547941cbbce5812d3c71ec9b0ad38c7c84fdef1f9",
+    "file_hash": "481c201ec2e02e4eed68616590933a312bbb071749798374cf7377c5297b5691"
+  },
+  {
+    "chunk_id": "ecbb1e03a291017e6b33987f04f0a01d2e6fec5fda946320f5b40eded90b5545",
+    "source": "socials.json",
+    "chunk_index": 1,
+    "text": "IIRIS Official Social Media Channels\nSource Page: https://iirisconsulting.com/\n\nPlatform: Facebook\nUrl: https://www.facebook.com/iirisconsulting/\nDescription: Official IIRIS Facebook presence.",
+    "text_hash": "7f09d0732792db795b68aa8bf9807eaae14c946ce6b9dc9c305aa9201983f9cc",
+    "file_hash": "481c201ec2e02e4eed68616590933a312bbb071749798374cf7377c5297b5691"
+  },
+  {
+    "chunk_id": "8f8bda5fdef87641004eaa8f913711379fb40799795c2c71e056f000c9375759",
+    "source": "socials.json",
+    "chunk_index": 2,
+    "text": "IIRIS Official Social Media Channels\nSource Page: https://iirisconsulting.com/\n\nPlatform: X\nUrl: https://x.com/ConsultingIiris\nDescription: Official IIRIS handle on X.",
+    "text_hash": "33c9d6993b4450f8aba4de9f6f3ee88e1c7a3268353a3180e0140c0e370b6fce",
+    "file_hash": "481c201ec2e02e4eed68616590933a312bbb071749798374cf7377c5297b5691"
+  },
+  {
+    "chunk_id": "439aea774062127158962103898b3dc0f7bf0052b89484ef64f4e9412473df26",
+    "source": "socials.json",
+    "chunk_index": 3,
+    "text": "IIRIS Official Social Media Channels\nSource Page: https://iirisconsulting.com/\n\nPlatform: Instagram\nUrl: https://www.instagram.com/iirisconsulting/\nDescription: Official IIRIS Instagram account.",
+    "text_hash": "d5fd47bd88e7d4aabf78f5edcd3520e34db60b0233217bd2d5fc72d973e1b326",
+    "file_hash": "481c201ec2e02e4eed68616590933a312bbb071749798374cf7377c5297b5691"
+  },
+  {
+    "chunk_id": "f8a1d9f8acb6a1e2f00e9a45d84913a6aec1ce27828879c93531c146aa9f8395",
+    "source": "socials.json",
+    "chunk_index": 4,
+    "text": "IIRIS Official Social Media Channels\nSource Page: https://iirisconsulting.com/\n\nPlatform: LinkedIn\nUrl: https://www.linkedin.com/company/iirisconsultingindia/posts/?feedView=all\nDescription: Official IIRIS LinkedIn posts feed.",
+    "text_hash": "035301a2f84ca348651e445519093164470d7c4369c20e4d1919c6bd5e3b4b10",
+    "file_hash": "481c201ec2e02e4eed68616590933a312bbb071749798374cf7377c5297b5691"
+  },
+  {
+    "chunk_id": "237ab041df99a4e9a4f16b220def8998cce288df51efcf667041a709eefcc95f",
+    "source": "socials.json",
+    "chunk_index": 5,
+    "text": "IIRIS Official Social Media Channels\nSource Page: https://iirisconsulting.com/\n\nPlatform: YouTube\nUrl: https://www.youtube.com/@iirisconsulting\nDescription: Official IIRIS YouTube channel.",
+    "text_hash": "08ffbef2e593692d85050682ad738388ea8f8934c1e40737c1b29bab0a623b29",
+    "file_hash": "481c201ec2e02e4eed68616590933a312bbb071749798374cf7377c5297b5691"
   }
 ]

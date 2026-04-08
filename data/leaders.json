@@ -1,0 +1,218 @@
+{
+  "title": "IIRIS Leaders",
+  "source_page": "https://iirisconsulting.com/team/",
+  "records": [
+    {
+      "name": "Garry Singh",
+      "aliases": [
+        "Gurpawan Singh"
+      ],
+      "role": "President, Strategic Risk and Intelligence",
+      "categories": [
+        "president"
+      ],
+      "unit": "IIRIS Main Operations",
+      "group": "Executive Leadership",
+      "summary": "Brings over 20 years of experience in enterprise risk, intelligence, compliance, anti-terror operations, and anti-extortion strategy."
+    },
+    {
+      "name": "Sagarika Chakraborty",
+      "role": "CEO - India and Gulf",
+      "categories": [
+        "ceo"
+      ],
+      "unit": "IIRIS Main Operations",
+      "group": "Executive Leadership",
+      "summary": "Leads legal and investigative oversight with experience in forensic investigations, NPA management, insider threat analysis, and policy contribution."
+    },
+    {
+      "name": "Kunal Bhogal",
+      "role": "COO - Security Infrastructure and Technology",
+      "categories": [
+        "coo"
+      ],
+      "unit": "IIRIS Main Operations",
+      "group": "Executive Leadership",
+      "summary": "Focuses on risk-based design, digital transformation, command center security, and infrastructure-linked protection programs."
+    },
+    {
+      "name": "Ashok Kumar",
+      "role": "CEO - IntelliFuture",
+      "categories": [
+        "ceo"
+      ],
+      "unit": "IntelliFuture",
+      "group": "Leadership",
+      "summary": "Technology strategist with experience in digital transformation, automation, multicloud infrastructure, DevOps, service resilience, and compliance."
+    },
+    {
+      "name": "Prashant Nayak",
+      "role": "Corporate Security Strategist | Crisis and Risk Intelligence",
+      "unit": "IIRIS Main Operations",
+      "group": "Leadership",
+      "summary": "Brings more than 30 years of experience in corporate security, crisis management, emergency preparedness, and intelligence-led security operations."
+    },
+    {
+      "name": "Satyagopal Bhanja",
+      "role": "CEO - Africa and Gulf",
+      "categories": [
+        "ceo"
+      ],
+      "unit": "IntelliFuture",
+      "group": "Leadership",
+      "summary": "Risk and governance leader with experience in internal audit, manufacturing, hospitality, and oil and gas sectors."
+    },
+    {
+      "name": "Paul Devassy",
+      "role": "CEO - IIRIS Knowledge",
+      "categories": [
+        "ceo"
+      ],
+      "unit": "IIRIS Knowledge",
+      "group": "Leadership",
+      "summary": "Leads innovation, coaching, thought leadership, and global speaking initiatives across resilience and capability-building themes."
+    },
+    {
+      "name": "Asitav Sinha",
+      "role": "VP - Strategy and Infrastructure",
+      "categories": [
+        "vice president"
+      ],
+      "unit": "IntelliFuture",
+      "group": "Leadership",
+      "summary": "Supports cross-border strategy, infrastructure growth, market entry, corporate governance, and M and A-related initiatives."
+    },
+    {
+      "name": "Rajeev Sharad",
+      "role": "VP - Sales",
+      "categories": [
+        "vice president"
+      ],
+      "unit": "IIRIS Main Operations",
+      "group": "Leadership",
+      "summary": "Experienced in infrastructure automation, AI-enabled surveillance, transport systems, smart city security, and modernization programs."
+    },
+    {
+      "name": "Ranjit Mallik",
+      "role": "Senior Consultant - Business Development",
+      "unit": "IIRIS Main Operations",
+      "group": "Cross-Functional Leadership",
+      "summary": "Has extensive background in global banking, AML, financial crime compliance, and business development."
+    },
+    {
+      "name": "Partha Roy Chowdhury",
+      "role": "VP - Strategy and Marketing, Gulf and Africa",
+      "categories": [
+        "vice president"
+      ],
+      "unit": "IntelliFuture",
+      "group": "Leadership",
+      "summary": "Focuses on brand, strategy, growth, cross-market positioning, and business development across the Gulf and Africa regions."
+    },
+    {
+      "name": "Nurudeen Abubakar",
+      "role": "VP - Business Development and Strategy, Nigeria",
+      "categories": [
+        "vice president"
+      ],
+      "unit": "IntelliFuture",
+      "group": "Leadership",
+      "summary": "Supports regional business development, communications, and strategy expansion in Nigeria."
+    },
+    {
+      "name": "Col. Praveen Sharma (Retd.)",
+      "role": "AVP - IntelliRisk | Security Intelligence and Business Continuity",
+      "categories": [
+        "assistant vice president"
+      ],
+      "unit": "IntelliRisk",
+      "group": "Leadership",
+      "summary": "Former Indian Army officer with expertise in risk management, crisis response, cybersecurity, forensic investigations, and regulatory compliance."
+    },
+    {
+      "name": "Maj. Dhrubajit Das (Retd.)",
+      "role": "AVP - IntelliRisk | Security and Business Continuity",
+      "categories": [
+        "assistant vice president"
+      ],
+      "unit": "IntelliRisk",
+      "group": "Leadership",
+      "summary": "Former Army officer with experience in frontline and corporate security, threat assessment, crisis management, and information security."
+    },
+    {
+      "name": "Sunil Sood",
+      "role": "AVP - IntelliSense | Investigations and Compliance",
+      "categories": [
+        "assistant vice president"
+      ],
+      "unit": "IIRIS Main Operations",
+      "group": "Cross-Functional Leadership",
+      "summary": "Specializes in fraud investigations, AML, KYC, compliance, forensic audits, and complex investigations."
+    },
+    {
+      "name": "Gurpreet Singh",
+      "role": "AVP - Strategy and Business Development",
+      "categories": [
+        "assistant vice president"
+      ],
+      "unit": "IIRIS Main Operations",
+      "group": "Cross-Functional Leadership",
+      "summary": "Supports TVET, policy-linked development, public programs, education reform, and strategic business initiatives."
+    },
+    {
+      "name": "Akash Wigh",
+      "role": "AVP - IntelliRisk | Legal Advisory and IPR Enforcement",
+      "categories": [
+        "assistant vice president"
+      ],
+      "unit": "IntelliRisk",
+      "group": "Leadership",
+      "summary": "Works across legal advisory, cyber law, brand protection, IPR enforcement, and law-enforcement coordination."
+    },
+    {
+      "name": "Paramveer Singh",
+      "role": "VP - Technology Risk Management",
+      "categories": [
+        "vice president"
+      ],
+      "unit": "IntelliRisk",
+      "group": "Leadership",
+      "summary": "Cybersecurity leader focused on SOC operations, digital risk governance, cyber resilience, and enterprise security architecture."
+    },
+    {
+      "name": "Pramod Panda",
+      "role": "Advisory Leader - Financial Regulation",
+      "unit": "IntelliFuture",
+      "group": "Leadership",
+      "summary": "Known for central banking, financial regulation, governance, and fraud monitoring expertise."
+    },
+    {
+      "name": "Vishakha Poras",
+      "role": "HR Strategist - India and Gulf",
+      "unit": "IIRIS Main Operations",
+      "group": "Cross-Functional Leadership",
+      "summary": "Leads people and culture, employee engagement, HR compliance, talent acquisition, and learning initiatives."
+    },
+    {
+      "name": "Sangeeta Singh",
+      "role": "Head - Quality and Compliance",
+      "unit": "IIRIS Main Operations",
+      "group": "Cross-Functional Leadership",
+      "summary": "Supports quality assurance, audits, compliance governance, ISO-related work, and risk oversight."
+    },
+    {
+      "name": "Mahesh Deshpande",
+      "role": "Senior Manager - Security Risk and Design Consulting",
+      "unit": "IntelliRisk",
+      "group": "Leadership",
+      "summary": "Leads security risk and design consulting work with background in physical security engineering, fire safety, and enterprise consulting."
+    },
+    {
+      "name": "Naveendas K V",
+      "role": "Senior Manager - Security and Risk Management",
+      "unit": "IntelliRisk",
+      "group": "Leadership",
+      "summary": "Supports security and risk management, SOC-linked operations, crisis handling, and enterprise risk governance."
+    }
+  ]
+}

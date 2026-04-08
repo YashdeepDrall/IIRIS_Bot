@@ -1,0 +1,65 @@
+{
+  "title": "IIRIS Contact Information",
+  "source_page": "https://iirisconsulting.com/contact/",
+  "records": [
+    {
+      "category": "Head Office",
+      "city": "Gurugram",
+      "country": "India",
+      "address": "Unit No. 1105 & 1106, Tower B, Unitech Cyber Park, Sector 39, Gurugram, Haryana - 122003"
+    },
+    {
+      "category": "Business Enquiries",
+      "phone": "+91 9205595358",
+      "email": "contactus@iirisconsulting.com",
+      "purpose": "Consultations, service discussions, proposals, and general business-related queries."
+    },
+    {
+      "category": "HR Queries and Partnership Opportunities",
+      "phone": "+91 7065051900",
+      "email": "hr@iirisconsulting.com",
+      "purpose": "Recruitment-related queries, career opportunities, vendor associations, and strategic partnerships."
+    },
+    {
+      "category": "India Office",
+      "office": "Gurgaon (NCR)",
+      "address": "Unit No. 1105-1106, 11th Floor, Tower-B, Unitech Cyber Park, Sector-39, Gurgaon, Haryana - 122001",
+      "phone": "+91 9205595358"
+    },
+    {
+      "category": "India Office",
+      "office": "Mumbai",
+      "address": "B-310, Andheri-Kurla Road, Chakala, Andheri East, Mumbai, Maharashtra - 400093",
+      "phone": "+91 8448654927"
+    },
+    {
+      "category": "India Office",
+      "office": "Bangalore",
+      "address": "Indiqube Edge, Khata No. 571/630/6/4, SY No. 6/4, Ambalipura Village, Outer Ring Road, Varthur Hobli, Bengaluru - 560103",
+      "phone": "+91 9319534072"
+    },
+    {
+      "category": "International Office",
+      "office": "Singapore",
+      "address": "36 Robinson Road, #20-01, City House, Singapore - 068877",
+      "phone": "+971 586719284"
+    },
+    {
+      "category": "International Office",
+      "office": "Dubai, UAE",
+      "address": "Unit No. 4618, DMCC Business Centre, Level 1, Jewellery and Gemplex 3, Dubai, UAE",
+      "phone": "+971 586719284"
+    },
+    {
+      "category": "International Office",
+      "office": "Nigeria",
+      "address": "7th Floor, Mulliner Towers, 39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria",
+      "phone": "+234 8070990921"
+    },
+    {
+      "category": "Contact Form",
+      "url": "https://iirisconsulting.com/contact/",
+      "purpose": "Online enquiry submission for clients, partners, and stakeholders."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "IIRIS Press Releases",
+  "source_page": "https://iirisconsulting.com/press-release/",
+  "records": [
+    {
+      "category": "Press Release",
+      "title": "IIRIS Mourns the Passing of Veteran Strategic Affairs Expert Maroof Raza",
+      "date": "2026-02-26",
+      "location": "Gurgaon",
+      "summary": "IIRIS Consulting expressed profound sorrow at the passing of Maroof Raza, a distinguished strategic affairs expert and national voice on defense and security issues."
+    },
+    {
+      "category": "Press Release",
+      "title": "IIRIS Launches IntelliTracker to Strengthen Police Case Monitoring and RBI Reporting for BFSI Sector",
+      "date": "2026-02-25",
+      "summary": "IIRIS launched IntelliTracker, a purpose-built monitoring platform designed to support fraud-case visibility and RBI FMR 1-4 aligned reporting readiness for financial institutions."
+    },
+    {
+      "category": "Press Release",
+      "title": "IIRIS Signs MoU with NLU, Jodhpur to Form IIRIS Chair of Infosec and Forensic Society",
+      "date": "2026-02-24",
+      "summary": "IIRIS formalized an academic collaboration with National Law University, Jodhpur to establish a center of excellence focused on information security and forensic science."
+    }
+  ]
+}

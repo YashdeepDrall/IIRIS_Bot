@@ -6,7 +6,7 @@ import re
 from collections import Counter
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Dict, List
+from typing import Any, Dict, List
 
 import faiss
 import numpy as np
@@ -62,11 +62,13 @@ TITLE_TOKENS = {
 }
 
 LEADERSHIP_SOURCE_HINTS = (
-    "board_of_advisory",
+    "advisory",
     "faq",
     "leaders",
-    "teamfaq",
 )
+
+SUPPORTED_TEXT_EXTENSIONS = {".md"}
+SUPPORTED_STRUCTURED_EXTENSIONS = {".json"}
 
 
 @dataclass
@@ -124,6 +126,142 @@ class GeminiVectorStore:
             for token in re.findall(r"[a-z0-9]+", text.lower())
             if token and token not in STOPWORDS
         ]
+
+    @staticmethod
+    def _format_field_name(name: str) -> str:
+        return name.replace("_", " ").strip().title()
+
+    @classmethod
+    def _append_rendered_value(
+        cls,
+        lines: List[str],
+        label: str | None,
+        value: Any,
+        indent: int = 0,
+    ) -> None:
+        if value in (None, "", [], {}):
+            return
+
+        prefix = " " * indent
+        rendered_label = cls._format_field_name(label) if label else ""
+
+        if isinstance(value, dict):
+            if rendered_label:
+                lines.append(f"{prefix}{rendered_label}:")
+                child_indent = indent + 2
+            else:
+                child_indent = indent
+
+            for key, child_value in value.items():
+                cls._append_rendered_value(lines, str(key), child_value, child_indent)
+            return
+
+        if isinstance(value, list):
+            cleaned_items = [item for item in value if item not in (None, "", [], {})]
+            if not cleaned_items:
+                return
+
+            if all(not isinstance(item, (dict, list)) for item in cleaned_items):
+                joined_items = ", ".join(str(item) for item in cleaned_items)
+                if rendered_label:
+                    lines.append(f"{prefix}{rendered_label}: {joined_items}")
+                else:
+                    lines.append(f"{prefix}{joined_items}")
+                return
+
+            if rendered_label:
+                lines.append(f"{prefix}{rendered_label}:")
+
+            bullet_prefix = " " * (indent + (2 if rendered_label else 0))
+            for item in cleaned_items:
+                if isinstance(item, dict):
+                    item_lines: List[str] = []
+                    for key, child_value in item.items():
+                        cls._append_rendered_value(item_lines, str(key), child_value, 0)
+                    if item_lines:
+                        lines.append(f"{bullet_prefix}- {item_lines[0]}")
+                        for continuation in item_lines[1:]:
+                            lines.append(f"{bullet_prefix}  {continuation}")
+                else:
+                    lines.append(f"{bullet_prefix}- {item}")
+            return
+
+        if rendered_label:
+            lines.append(f"{prefix}{rendered_label}: {value}")
+        else:
+            lines.append(f"{prefix}{value}")
+
+    @classmethod
+    def _render_structured_document(
+        cls,
+        file_name: str,
+        payload: Dict[str, Any],
+        record: Dict[str, Any] | None = None,
+    ) -> str:
+        lines: List[str] = []
+
+        title = str(payload.get("title", "")).strip()
+        if title:
+            lines.append(title)
+
+        shared_fields = {
+            key: value
+            for key, value in payload.items()
+            if key != "records" and key != "title"
+        }
+        for key, value in shared_fields.items():
+            cls._append_rendered_value(lines, key, value, 0)
+
+        if record is not None:
+            if lines:
+                lines.append("")
+            for key, value in record.items():
+                cls._append_rendered_value(lines, key, value, 0)
+
+        return "\n".join(line for line in lines if line is not None).strip()
+
+    @classmethod
+    def _load_documents_from_path(cls, path: Path) -> List[str]:
+        suffix = path.suffix.lower()
+        if suffix in SUPPORTED_TEXT_EXTENSIONS:
+            text = path.read_text(encoding="utf-8").strip()
+            return [text] if text else []
+
+        if suffix not in SUPPORTED_STRUCTURED_EXTENSIONS:
+            return []
+
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return []
+        if isinstance(payload, dict) and isinstance(payload.get("records"), list):
+            documents: List[str] = []
+            intro_document = cls._render_structured_document(path.name, payload)
+            if intro_document:
+                documents.append(intro_document)
+
+            for record in payload["records"]:
+                if not isinstance(record, dict):
+                    continue
+                rendered_record = cls._render_structured_document(path.name, payload, record)
+                if rendered_record:
+                    documents.append(rendered_record)
+            return documents
+
+        if isinstance(payload, list):
+            documents = []
+            for record in payload:
+                if isinstance(record, dict):
+                    rendered_record = cls._render_structured_document(path.name, {}, record)
+                    if rendered_record:
+                        documents.append(rendered_record)
+            return documents
+
+        if isinstance(payload, dict):
+            rendered_document = cls._render_structured_document(path.name, payload)
+            return [rendered_document] if rendered_document else []
+
+        return []
 
     def _build_lexical_index(self) -> None:
         self._normalized_record_texts = []
@@ -230,30 +368,39 @@ class GeminiVectorStore:
             raise FileNotFoundError(f"Data directory not found: {self.data_dir}")
 
         records: List[ChunkRecord] = []
-        for path in sorted(self.data_dir.glob("*.txt")):
-            text = path.read_text(encoding="utf-8").strip()
-            if not text:
+        supported_paths = sorted(
+            path
+            for path in self.data_dir.iterdir()
+            if path.is_file() and path.suffix.lower() in (SUPPORTED_TEXT_EXTENSIONS | SUPPORTED_STRUCTURED_EXTENSIONS)
+        )
+
+        for path in supported_paths:
+            documents = self._load_documents_from_path(path)
+            if not documents:
                 continue
 
             relative_source = path.relative_to(self.data_dir).as_posix()
-            file_hash = self._hash_text(text)
+            file_hash = self._hash_text("\n\n".join(documents))
+            chunk_index = 0
 
-            for chunk_index, chunk in enumerate(self._chunk_text(text)):
-                text_hash = self._hash_text(chunk)
-                chunk_id = self._hash_text(f"{relative_source}:{chunk_index}:{text_hash}")
-                records.append(
-                    ChunkRecord(
-                        chunk_id=chunk_id,
-                        source=relative_source,
-                        chunk_index=chunk_index,
-                        text=chunk,
-                        text_hash=text_hash,
-                        file_hash=file_hash,
+            for document in documents:
+                for chunk in self._chunk_text(document):
+                    text_hash = self._hash_text(chunk)
+                    chunk_id = self._hash_text(f"{relative_source}:{chunk_index}:{text_hash}")
+                    records.append(
+                        ChunkRecord(
+                            chunk_id=chunk_id,
+                            source=relative_source,
+                            chunk_index=chunk_index,
+                            text=chunk,
+                            text_hash=text_hash,
+                            file_hash=file_hash,
+                        )
                     )
-                )
+                    chunk_index += 1
 
         if not records:
-            raise RuntimeError("No usable .txt content found in the data directory.")
+            raise RuntimeError("No usable .md or .json content found in the data directory.")
 
         return records
 

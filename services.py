@@ -1,8 +1,9 @@
 import difflib
+import json
 import re
 import traceback
 from pathlib import Path
-from typing import Dict, List
+from typing import Any, Dict, List
 
 from dotenv import load_dotenv
 
@@ -70,6 +71,13 @@ SOCIAL_RESOURCE_LINES = [
     f"- [LinkedIn]({LINKEDIN_URL})",
     f"- [YouTube]({YOUTUBE_CHANNEL_URL})",
 ]
+
+LEADERS_FILE_NAME = "leaders.json"
+ADVISORY_FILE_NAME = "advisory.json"
+CONTACTS_FILE_NAME = "contacts.json"
+SOCIALS_FILE_NAME = "socials.json"
+MEDIA_FILE_NAME = "media.json"
+PRESS_RELEASE_FILE_NAME = "press_release.json"
 
 
 ANSWER_SYSTEM_PROMPT = f"""
@@ -155,20 +163,18 @@ LEADERSHIP_ROSTER_TOKENS = {
 }
 
 LEADERSHIP_SOURCE_HINTS = [
-    "our_leaders",
-    "teamfaq",
-    "board_of_advisory",
+    "leaders",
+    "advisory",
     "faq",
 ]
 
 LEADERSHIP_ROSTER_SOURCE_HINTS = [
-    "our_leaders",
-    "board_of_advisory",
+    "leaders",
+    "advisory",
 ]
 
 TITLE_LOOKUP_SOURCE_HINTS = [
-    "our_leaders",
-    "teamfaq",
+    "leaders",
 ]
 
 MEDIA_SOURCE_HINTS = [
@@ -304,6 +310,8 @@ def _linkify_email(match: re.Match[str]) -> str:
 
 def _linkify_phone(match: re.Match[str]) -> str:
     raw_phone = match.group(0).strip()
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", raw_phone):
+        return raw_phone
     digits_only = re.sub(r"[^\d+]", "", raw_phone)
     digit_count = sum(character.isdigit() for character in digits_only)
 
@@ -546,15 +554,113 @@ class RagSystem:
         context = "\n\n".join(
             f"Source: {doc['metadata']['source']}\n{doc['page_content']}" for doc in docs
         )
+        social_records = self._load_structured_records(vector_store.data_dir, SOCIALS_FILE_NAME)
+        social_lines = []
+        for record in social_records:
+            platform = str(record.get("platform", "")).strip()
+            url = str(record.get("url", "")).strip()
+            if not platform or not url:
+                continue
+            social_lines.append(f"- [{platform}]({url})")
+
+        if not social_lines:
+            social_lines = SOCIAL_RESOURCE_LINES[1:]
+
         answer = (
             "You can connect with IIRIS and stay updated through these official social media channels:\n\n"
-            + "\n".join(SOCIAL_RESOURCE_LINES[1:])
+            + "\n".join(social_lines)
             + f"\n\nFor featured articles and media coverage, you can also visit "
             f"[{MEDIA_PAGE_LABEL}]({MEDIA_PAGE_URL})."
         )
         return {
             "answer": answer,
             "context": context,
+            "docs": docs,
+        }
+
+    def _build_unit_leadership_response(
+        self,
+        question: str,
+        vector_store: GeminiVectorStore,
+    ) -> Dict | None:
+        if not self._is_leadership_query(question):
+            return None
+
+        normalized_question = question.lower()
+        leadership_terms = {"board", "member", "members", "leader", "leaders", "leadership", "team", "executive", "executives"}
+        if not (self._question_tokens(question) & leadership_terms):
+            return None
+
+        entries = [
+            {
+                "name": self._normalize_person_name(str(record.get("name", "")).strip()),
+                "role": re.sub(r"\s+", " ", str(record.get("role", "")).strip()),
+                "source": LEADERS_FILE_NAME,
+                "line_index": index,
+                "unit": str(record.get("unit", "")).strip(),
+            }
+            for index, record in enumerate(self._load_structured_records(vector_store.data_dir, LEADERS_FILE_NAME))
+            if self._looks_like_person_name(str(record.get("name", "")).strip()) and str(record.get("role", "")).strip()
+        ]
+        if not entries:
+            return None
+
+        unit_alias_map: Dict[str, set[str]] = {}
+        for entry in entries:
+            unit = entry.get("unit", "").strip()
+            if not unit:
+                continue
+            normalized_aliases = unit_alias_map.setdefault(unit, set())
+            normalized_aliases.add(unit.lower())
+            normalized_aliases.add(re.sub(r"[^a-z0-9]+", " ", unit.lower()).strip())
+            normalized_aliases.add(re.sub(r"[^a-z0-9]+", "", unit.lower()).strip())
+
+            if unit.lower() == "iiris main operations":
+                normalized_aliases.update({"iiris india gulf", "india gulf", "iiris main operations"})
+
+        matched_units = [
+            unit
+            for unit, aliases in unit_alias_map.items()
+            if any(alias and alias in normalized_question.replace("&", "and") for alias in aliases)
+        ]
+        if not matched_units:
+            return None
+
+        preferred_entries = [
+            entry
+            for entry in entries
+            if any(entry.get("unit", "").strip().lower() == unit.lower() for unit in matched_units)
+        ]
+        if not preferred_entries:
+            return None
+
+        preferred_entries.sort(key=lambda entry: (entry.get("unit", "").lower(), entry["line_index"], entry["name"].lower()))
+        unit_label = preferred_entries[0].get("unit", matched_units[0]).strip()
+
+        answer_lines = [
+            f"Based on the available IIRIS knowledge base, these are the identified {unit_label} leaders:",
+            "",
+        ]
+        context_lines: List[str] = []
+        docs: List[Dict] = []
+
+        for entry in preferred_entries:
+            answer_lines.append(f"- {entry['name']}: {entry['role']}")
+            context_lines.append(f"Source: {entry['source']}\n{entry['name']}: {entry['role']}")
+            docs.append(
+                {
+                    "page_content": f"{entry['name']}: {entry['role']}",
+                    "metadata": {
+                        "source": entry["source"],
+                        "chunk_index": entry["line_index"],
+                    },
+                    "score": 1.0,
+                }
+            )
+
+        return {
+            "answer": "\n".join(answer_lines).strip(),
+            "context": "\n\n".join(context_lines),
             "docs": docs,
         }
 
@@ -720,6 +826,59 @@ class RagSystem:
         return any(re.search(pattern, normalized_question) for pattern in lookup_patterns)
 
     @staticmethod
+    def _load_structured_json_file(data_dir: Path, file_name: str) -> Dict[str, Any] | List[Any] | None:
+        path = data_dir / file_name
+        if not path.exists():
+            return None
+
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return None
+
+    @classmethod
+    def _load_structured_records(cls, data_dir: Path, file_name: str) -> List[Dict[str, Any]]:
+        payload = cls._load_structured_json_file(data_dir, file_name)
+        if payload is None:
+            return []
+        if isinstance(payload, list):
+            return [item for item in payload if isinstance(item, dict)]
+        if isinstance(payload, dict):
+            records = payload.get("records", [])
+            return [item for item in records if isinstance(item, dict)]
+        return []
+
+    @classmethod
+    def _structured_title_entry(cls, record: Dict[str, Any], source: str, index: int) -> Dict | None:
+        name = cls._normalize_person_name(str(record.get("name", "")).strip())
+        if not cls._looks_like_person_name(name):
+            return None
+
+        role = re.sub(r"\s+", " ", str(record.get("role", "")).strip())
+        if not role:
+            return None
+
+        raw_categories = record.get("categories", [])
+        categories = {
+            str(category).strip().lower()
+            for category in raw_categories
+            if str(category).strip()
+        } or cls._role_categories(role)
+        if not categories:
+            return None
+
+        return {
+            "name": name,
+            "role": role,
+            "source": source,
+            "line_index": index,
+            "categories": categories,
+            "unit": str(record.get("unit", "")).strip(),
+            "group": str(record.get("group", "")).strip(),
+            "aliases": [str(alias).strip() for alias in record.get("aliases", []) if str(alias).strip()],
+        }
+
+    @staticmethod
     def _load_title_lookup_texts(data_dir: Path) -> List[Dict[str, str]]:
         documents: List[Dict[str, str]] = []
         for path in sorted(data_dir.glob("*.txt")):
@@ -869,16 +1028,39 @@ class RagSystem:
         return None
 
     def _extract_title_entries(self, vector_store: GeminiVectorStore) -> List[Dict]:
-        documents = self._load_title_lookup_texts(vector_store.data_dir)
+        data_dir = vector_store.data_dir
+
         def preferred_source_rank(source: str) -> int:
             normalized_source = source.lower()
-            if "our_leaders" in normalized_source:
+            if "leaders" in normalized_source:
                 return 0
-            if "teamfaq" in normalized_source:
+            if "faq" in normalized_source:
                 return 1
             return 99
 
         deduped_entries: Dict[tuple[str, str], Dict] = {}
+
+        structured_entries = [
+            entry
+            for index, record in enumerate(self._load_structured_records(data_dir, LEADERS_FILE_NAME))
+            if (entry := self._structured_title_entry(record, LEADERS_FILE_NAME, index)) is not None
+        ]
+
+        if structured_entries:
+            for entry in structured_entries:
+                key = (entry["name"].lower(), entry["role"].lower())
+                existing_entry = deduped_entries.get(key)
+                if existing_entry is None:
+                    deduped_entries[key] = entry
+                    continue
+
+                existing_rank = preferred_source_rank(existing_entry["source"])
+                current_rank = preferred_source_rank(entry["source"])
+                if current_rank < existing_rank or len(entry["role"]) > len(existing_entry["role"]):
+                    deduped_entries[key] = entry
+            return list(deduped_entries.values())
+
+        documents = self._load_title_lookup_texts(data_dir)
 
         for document in documents:
             for line_index, line in enumerate(document["text"].splitlines()):
@@ -902,9 +1084,9 @@ class RagSystem:
     @staticmethod
     def _source_rank(source: str) -> int:
         normalized_source = source.lower()
-        if "our_leaders" in normalized_source:
+        if "leaders" in normalized_source:
             return 0
-        if "teamfaq" in normalized_source:
+        if "faq" in normalized_source:
             return 1
         return 99
 
@@ -1091,6 +1273,23 @@ class RagSystem:
                     "answer": response,
                     "context": title_lookup_response["context"],
                     "docs": title_lookup_response["docs"],
+                    "chat_id": chat_id,
+                    "usage": total_usage,
+                }
+            unit_leadership_response = self._build_unit_leadership_response(search_query, vector_store)
+            if unit_leadership_response is not None:
+                response = format_clickable_links(unit_leadership_response["answer"])
+                chat_id = store_chat(
+                    request.question,
+                    response,
+                    unit_leadership_response["context"],
+                    flags=[],
+                    token_usage=total_usage,
+                )
+                return {
+                    "answer": response,
+                    "context": unit_leadership_response["context"],
+                    "docs": unit_leadership_response["docs"],
                     "chat_id": chat_id,
                     "usage": total_usage,
                 }

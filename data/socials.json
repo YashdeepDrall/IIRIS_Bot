@@ -1,0 +1,31 @@
+{
+  "title": "IIRIS Official Social Media Channels",
+  "source_page": "https://iirisconsulting.com/",
+  "records": [
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/iirisconsulting/",
+      "description": "Official IIRIS Facebook presence."
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/ConsultingIiris",
+      "description": "Official IIRIS handle on X."
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/iirisconsulting/",
+      "description": "Official IIRIS Instagram account."
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/company/iirisconsultingindia/posts/?feedView=all",
+      "description": "Official IIRIS LinkedIn posts feed."
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/@iirisconsulting",
+      "description": "Official IIRIS YouTube channel."
+    }
+  ]
+}

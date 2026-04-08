@@ -1,0 +1,42 @@
+{
+  "title": "IIRIS Global Presence",
+  "source_page": "https://iirisconsulting.com/contact/",
+  "summary": "IIRIS operates through regional offices, country-level leadership presence, and a broader global partner network to deliver locally relevant risk, security, and intelligence support.",
+  "records": [
+    {
+      "region": "India",
+      "presence_type": "Core operating base",
+      "coverage": "Gurugram, Mumbai, and Bangalore"
+    },
+    {
+      "region": "Singapore",
+      "presence_type": "Southeast Asia hub",
+      "focus": "Security risk consulting, investigations, due diligence, crisis management, and business continuity."
+    },
+    {
+      "region": "UAE and Gulf",
+      "presence_type": "Regional presence",
+      "focus": "Risk consulting, security solutions, investigations, and advisory support for Gulf operations."
+    },
+    {
+      "region": "Nigeria",
+      "presence_type": "Africa operations",
+      "focus": "Security consulting, forensic analysis, due diligence, and market-facing business development."
+    },
+    {
+      "region": "Oman and Bahrain",
+      "presence_type": "Regional market presence",
+      "focus": "Part of the wider Gulf operating footprint."
+    },
+    {
+      "region": "United States, United Kingdom, and Australia",
+      "presence_type": "Extended international reach",
+      "focus": "Supported through international teams and partner relationships."
+    },
+    {
+      "region": "Global network",
+      "presence_type": "Partner-supported expansion",
+      "focus": "Trusted partner network across 150+ locations worldwide."
+    }
+  ]
+}
