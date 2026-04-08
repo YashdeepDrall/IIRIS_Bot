@@ -78,6 +78,7 @@ CONTACTS_FILE_NAME = "contacts.json"
 SOCIALS_FILE_NAME = "socials.json"
 MEDIA_FILE_NAME = "media.json"
 PRESS_RELEASE_FILE_NAME = "press_release.json"
+GLOBAL_PRESENCE_FILE_NAME = "global_presence.json"
 
 
 ANSWER_SYSTEM_PROMPT = f"""
@@ -151,6 +152,20 @@ SOCIAL_QUERY_TOKENS = {
     "youtube",
 }
 
+LOCATION_QUERY_TOKENS = {
+    "footprint",
+    "global",
+    "location",
+    "locations",
+    "located",
+    "office",
+    "offices",
+    "operate",
+    "operates",
+    "operating",
+    "presence",
+}
+
 LEADERSHIP_ROSTER_TOKENS = {
     "advisory",
     "board",
@@ -184,6 +199,10 @@ MEDIA_SOURCE_HINTS = [
 
 SOCIAL_SOURCE_HINTS = [
     "socials",
+]
+
+LOCATION_SOURCE_HINTS = [
+    "global_presence",
 ]
 
 TITLE_CATEGORY_PATTERNS = {
@@ -498,6 +517,33 @@ class RagSystem:
             return True
         return bool(tokens & {"handle", "handles"}) and bool(tokens & {"iiris", "official"})
 
+    def _is_location_query(self, question: str) -> bool:
+        normalized_question = re.sub(r"\s+", " ", question.lower()).strip()
+        tokens = self._question_tokens(question)
+        core_location_tokens = {"footprint", "location", "locations", "located", "office", "offices", "presence"}
+
+        explicit_patterns = (
+            r"\bglobal presence\b",
+            r"\bglobal footprint\b",
+            r"\blocations?\s+of\s+iiris\b",
+            r"\blocation\s+of\s+iiris\b",
+            r"\boffices?\s+of\s+iiris\b",
+            r"\bwhere is iiris located\b",
+            r"\bwhere does iiris operate\b",
+            r"\bpresence of iiris\b",
+        )
+        if any(re.search(pattern, normalized_question) for pattern in explicit_patterns):
+            return True
+
+        if "iiris" not in tokens:
+            return (
+                len(tokens) <= 3
+                and bool(tokens & core_location_tokens)
+                and tokens.issubset(LOCATION_QUERY_TOKENS)
+            )
+
+        return bool(tokens & LOCATION_QUERY_TOKENS) and not bool(tokens & {"contact", "phone", "email"})
+
     @staticmethod
     def _merge_docs(primary_docs: List[Dict], secondary_docs: List[Dict]) -> List[Dict]:
         merged: List[Dict] = []
@@ -541,6 +587,87 @@ class RagSystem:
 
         media_docs = vector_store.get_chunks_by_source_hints(MEDIA_SOURCE_HINTS)
         return self._merge_docs(docs, media_docs[:8])
+
+    @staticmethod
+    def _format_global_presence_record(record: Dict[str, Any]) -> str | None:
+        region = str(record.get("region", "")).strip()
+        presence_type = str(record.get("presence_type", "")).strip()
+        coverage = str(record.get("coverage", "")).strip()
+        focus = str(record.get("focus", "")).strip()
+
+        if not region:
+            return None
+
+        details = [detail for detail in (presence_type, coverage, focus) if detail]
+        if not details:
+            return f"- {region}"
+        return f"- {region}: {' | '.join(details)}"
+
+    def _build_global_presence_response(
+        self,
+        question: str,
+        vector_store: GeminiVectorStore,
+    ) -> Dict | None:
+        if not self._is_location_query(question):
+            return None
+
+        payload = self._load_structured_json_file(vector_store.data_dir, GLOBAL_PRESENCE_FILE_NAME)
+        records = self._load_structured_records(vector_store.data_dir, GLOBAL_PRESENCE_FILE_NAME)
+        if not records:
+            return None
+
+        docs = vector_store.get_chunks_by_source_hints(LOCATION_SOURCE_HINTS)
+        if not docs:
+            docs = []
+            for index, record in enumerate(records):
+                formatted_record = self._format_global_presence_record(record)
+                if not formatted_record:
+                    continue
+                docs.append(
+                    {
+                        "page_content": formatted_record.lstrip("- ").strip(),
+                        "metadata": {
+                            "source": GLOBAL_PRESENCE_FILE_NAME,
+                            "chunk_index": index,
+                        },
+                        "score": 1.0,
+                    }
+                )
+
+        context = "\n\n".join(
+            f"Source: {doc['metadata']['source']}\n{doc['page_content']}" for doc in docs
+        )
+        summary = ""
+        source_page = ""
+        if isinstance(payload, dict):
+            summary = str(payload.get("summary", "")).strip()
+            source_page = str(payload.get("source_page", "")).strip()
+
+        location_lines = [
+            formatted_record
+            for record in records
+            if (formatted_record := self._format_global_presence_record(record)) is not None
+        ]
+        if not location_lines:
+            return None
+
+        answer_lines = [
+            "Based on the available IIRIS knowledge base, IIRIS operates across the following locations and regional footprints:",
+            "",
+        ]
+        if summary:
+            answer_lines.append(summary)
+            answer_lines.append("")
+        answer_lines.extend(location_lines)
+        if source_page:
+            answer_lines.append("")
+            answer_lines.append(f"For more details, you can visit [{CONTACT_PAGE_LABEL}]({source_page}).")
+
+        return {
+            "answer": "\n".join(answer_lines).strip(),
+            "context": context,
+            "docs": docs,
+        }
 
     def _build_social_resource_response(
         self,
@@ -1290,6 +1417,23 @@ class RagSystem:
                     "answer": response,
                     "context": unit_leadership_response["context"],
                     "docs": unit_leadership_response["docs"],
+                    "chat_id": chat_id,
+                    "usage": total_usage,
+                }
+            global_presence_response = self._build_global_presence_response(search_query, vector_store)
+            if global_presence_response is not None:
+                response = format_clickable_links(global_presence_response["answer"])
+                chat_id = store_chat(
+                    request.question,
+                    response,
+                    global_presence_response["context"],
+                    flags=[],
+                    token_usage=total_usage,
+                )
+                return {
+                    "answer": response,
+                    "context": global_presence_response["context"],
+                    "docs": global_presence_response["docs"],
                     "chat_id": chat_id,
                     "usage": total_usage,
                 }
