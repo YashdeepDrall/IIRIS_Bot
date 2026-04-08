@@ -11,7 +11,10 @@ def analyze_response(question: str, answer: str) -> list[str]:
     unable_phrases = [
         "i don't know", "i cannot answer", "i can't answer",
         "i am unable to answer", "i'm unable to answer",
-        "i do not have enough information to answer"
+        "i do not have enough information to answer",
+        "i do not have enough information in the available iiris knowledge base to answer that",
+        "i couldn't find that information in the current iiris knowledge base",
+        "i could not find that information in the current iiris knowledge base",
     ]
     if any(phrase in answer_lower for phrase in unable_phrases):
         flags.append("unable_to_answer")
@@ -38,7 +41,8 @@ def analyze_response(question: str, answer: str) -> list[str]:
     # 5. Irrelevant Question
     irrelevant_phrases = [
         "unrelated to", "not related to", "outside of my scope",
-        "not my area of expertise", "specialize in cybersecurity"
+        "not my area of expertise", "specialize in cybersecurity",
+        "i can only answer questions based on the available iiris knowledge base",
     ]
     if any(phrase in answer_lower for phrase in irrelevant_phrases):
         flags.append("irrelevant_question")

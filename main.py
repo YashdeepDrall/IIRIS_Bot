@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from database import FeedbackRequest, QueryRequest, update_chat_feedback
+from gemini_api import GeminiAPIError
 from services import get_rag_system
 
 
@@ -39,6 +40,20 @@ async def ask(request: QueryRequest):
     try:
         rag = get_rag_system()
         return await rag.answer(request)
+    except GeminiAPIError as error:
+        print(f"Ask route Gemini API error: {error}")
+        answer = (
+            "The assistant is temporarily unavailable because the AI service is busy right now. "
+            "Please try again in a moment."
+            if error.retryable
+            else "The assistant is temporarily unavailable. Please try again shortly."
+        )
+        return {
+            "answer": answer,
+            "context": "",
+            "docs": [],
+            "chat_id": "",
+        }
     except Exception as error:
         print(f"Ask route failed: {repr(error)}")
         traceback.print_exc()

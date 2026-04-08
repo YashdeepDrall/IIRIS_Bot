@@ -1,4 +1,5 @@
 import os
+import time
 from typing import Dict, Iterable, List, Tuple
 
 import requests
@@ -11,6 +12,17 @@ load_dotenv()
 class GeminiAPIError(RuntimeError):
     """Raised when the Gemini API returns an error or malformed payload."""
 
+    def __init__(
+        self,
+        message: str,
+        *,
+        status_code: int | None = None,
+        retryable: bool = False,
+    ) -> None:
+        super().__init__(message)
+        self.status_code = status_code
+        self.retryable = retryable
+
 
 class GeminiClient:
     def __init__(
@@ -19,6 +31,8 @@ class GeminiClient:
         generation_model: str | None = None,
         embedding_model: str | None = None,
         timeout: int = 60,
+        max_retries: int | None = None,
+        retry_backoff_seconds: float | None = None,
     ) -> None:
         self.api_key = api_key or os.getenv("GEMINI_API_KEY")
         if not self.api_key:
@@ -31,33 +45,103 @@ class GeminiClient:
             "EMBEDDING_MODEL_NAME", "gemini-embedding-2-preview"
         )
         self.timeout = timeout
+        self.max_retries = max(0, int(max_retries or os.getenv("GEMINI_MAX_RETRIES", "2")))
+        self.retry_backoff_seconds = max(
+            0.1,
+            float(retry_backoff_seconds or os.getenv("GEMINI_RETRY_BACKOFF_SECONDS", "1.5")),
+        )
         self.base_url = os.getenv(
             "GEMINI_API_BASE_URL",
             "https://generativelanguage.googleapis.com/v1beta/models",
         ).rstrip("/")
         self.session = requests.Session()
 
+    @staticmethod
+    def _is_retryable_error(status_code: int | None, message: str) -> bool:
+        retryable_status_codes = {408, 429, 500, 502, 503, 504}
+        if status_code in retryable_status_codes:
+            return True
+
+        lowered = message.lower()
+        retryable_markers = [
+            "high demand",
+            "temporarily unavailable",
+            "unavailable",
+            "timed out",
+            "timeout",
+            "connection aborted",
+            "connection reset",
+        ]
+        return any(marker in lowered for marker in retryable_markers)
+
     def _post(self, endpoint: str, payload: Dict) -> Dict:
-        response = self.session.post(
-            f"{self.base_url}/{endpoint}",
-            headers={
-                "x-goog-api-key": self.api_key,
-                "Content-Type": "application/json",
-            },
-            json=payload,
-            timeout=self.timeout,
-        )
+        last_error: GeminiAPIError | None = None
 
-        if not response.ok:
-            message = response.text.strip() or response.reason
-            raise GeminiAPIError(
-                f"Gemini API request failed ({response.status_code}): {message}"
+        for attempt in range(self.max_retries + 1):
+            try:
+                response = self.session.post(
+                    f"{self.base_url}/{endpoint}",
+                    headers={
+                        "x-goog-api-key": self.api_key,
+                        "Content-Type": "application/json",
+                    },
+                    json=payload,
+                    timeout=self.timeout,
+                )
+            except requests.RequestException as error:
+                message = f"Gemini API request failed: {error}"
+                last_error = GeminiAPIError(
+                    message,
+                    retryable=True,
+                )
+            else:
+                if not response.ok:
+                    message = response.text.strip() or response.reason
+                    last_error = GeminiAPIError(
+                        f"Gemini API request failed ({response.status_code}): {message}",
+                        status_code=response.status_code,
+                        retryable=self._is_retryable_error(response.status_code, message),
+                    )
+                else:
+                    try:
+                        data = response.json()
+                    except ValueError as error:
+                        last_error = GeminiAPIError(
+                            f"Gemini API returned invalid JSON: {error}",
+                            status_code=response.status_code,
+                        )
+                    else:
+                        if "error" in data:
+                            error_payload = data["error"]
+                            error_message = str(error_payload)
+                            error_status = (
+                                error_payload.get("code")
+                                if isinstance(error_payload, dict)
+                                else response.status_code
+                            )
+                            last_error = GeminiAPIError(
+                                error_message,
+                                status_code=error_status,
+                                retryable=self._is_retryable_error(error_status, error_message),
+                            )
+                        else:
+                            return data
+
+            if last_error is None:
+                break
+
+            should_retry = attempt < self.max_retries and last_error.retryable
+            if not should_retry:
+                raise last_error
+
+            delay_seconds = self.retry_backoff_seconds * (2**attempt)
+            print(
+                f"Gemini API request issue on attempt {attempt + 1}/{self.max_retries + 1}: "
+                f"{last_error}. Retrying in {delay_seconds:.1f}s..."
             )
+            time.sleep(delay_seconds)
 
-        data = response.json()
-        if "error" in data:
-            raise GeminiAPIError(str(data["error"]))
-        return data
+        raise last_error or GeminiAPIError("Gemini API request failed unexpectedly.")
 
     @staticmethod
     def _extract_usage(data: Dict) -> Dict[str, int]:

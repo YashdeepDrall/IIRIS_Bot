@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 from analysis import analyze_response
 from database import QueryRequest, store_chat
-from gemini_api import GeminiClient
+from gemini_api import GeminiAPIError, GeminiClient
 from vector_store import GeminiVectorStore
 
 
@@ -26,13 +26,60 @@ Rules:
 """.strip()
 
 
-ANSWER_SYSTEM_PROMPT = """
+BUSINESS_CONTACT_PHONE_DISPLAY = "+91 9205595358"
+BUSINESS_CONTACT_PHONE_URI = "+919205595358"
+BUSINESS_CONTACT_EMAIL = "contactus@iirisconsulting.com"
+CONTACT_PAGE_URL = "https://iirisconsulting.com/contact/"
+CONTACT_PAGE_LABEL = "IIRIS Contact Us page"
+MEDIA_PAGE_URL = "https://iirisconsulting.com/articles/"
+MEDIA_PAGE_LABEL = "IIRIS Media and Featured Coverage"
+YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@iirisconsulting"
+YOUTUBE_CHANNEL_LABEL = "IIRIS YouTube channel"
+BLOG_PAGE_URL = "https://iirisconsulting.com/blog/"
+FACEBOOK_URL = "https://www.facebook.com/iirisconsulting/"
+X_URL = "https://x.com/ConsultingIiris"
+INSTAGRAM_URL = "https://www.instagram.com/iirisconsulting/"
+LINKEDIN_URL = "https://www.linkedin.com/company/iirisconsultingindia/posts/?feedView=all"
+
+STANDARD_FALLBACK_RESPONSE = (
+    "I couldn't find that information in the current IIRIS knowledge base.\n\n"
+    "You can try rephrasing your question or ask about IIRIS leadership, services, "
+    "offices, media coverage, press releases, or contact details.\n\n"
+    f"For further assistance, contact [{BUSINESS_CONTACT_PHONE_DISPLAY}](tel:{BUSINESS_CONTACT_PHONE_URI}) "
+    f"or [{BUSINESS_CONTACT_EMAIL}](mailto:{BUSINESS_CONTACT_EMAIL}). "
+    f"You can also use the [{CONTACT_PAGE_LABEL}]({CONTACT_PAGE_URL})."
+)
+
+SUPPORT_CONTACT_LINE = (
+    f"For further assistance, contact [{BUSINESS_CONTACT_PHONE_DISPLAY}](tel:{BUSINESS_CONTACT_PHONE_URI}) "
+    f"or [{BUSINESS_CONTACT_EMAIL}](mailto:{BUSINESS_CONTACT_EMAIL}). "
+    f"You can also use the [{CONTACT_PAGE_LABEL}]({CONTACT_PAGE_URL})."
+)
+
+MEDIA_RESOURCE_LINES = [
+    "Official IIRIS media resources:",
+    f"- [{MEDIA_PAGE_LABEL}]({MEDIA_PAGE_URL})",
+    f"- [{YOUTUBE_CHANNEL_LABEL}]({YOUTUBE_CHANNEL_URL})",
+]
+
+SOCIAL_RESOURCE_LINES = [
+    "IIRIS Official Social Media Channels:",
+    f"- [Facebook]({FACEBOOK_URL})",
+    f"- [X]({X_URL})",
+    f"- [Instagram]({INSTAGRAM_URL})",
+    f"- [LinkedIn]({LINKEDIN_URL})",
+    f"- [YouTube]({YOUTUBE_CHANNEL_URL})",
+]
+
+
+ANSWER_SYSTEM_PROMPT = f"""
 You are a professional consultant at IIRIS Consulting.
 
 Rules:
 - Answer strictly from the provided Knowledge Base Context.
 - Use only the information present in the context. Do not use outside knowledge.
-- If the context does not support the answer, say: "I do not have enough information in the available IIRIS knowledge base to answer that."
+- If the context does not support the answer, respond with this exact message:
+{STANDARD_FALLBACK_RESPONSE}
 - If the user asks something outside the available IIRIS knowledge base, say: "I can only answer questions based on the available IIRIS knowledge base."
 - Do not guess or hallucinate.
 - Do not mention internal chunk numbers, similarity scores, or implementation details.
@@ -67,6 +114,35 @@ LEADERSHIP_QUERY_TOKENS = {
     "vp",
 }
 
+MEDIA_QUERY_TOKENS = {
+    "article",
+    "articles",
+    "coverage",
+    "featured",
+    "interview",
+    "interviews",
+    "media",
+    "podcast",
+    "podcasts",
+    "video",
+    "videos",
+    "youtube",
+}
+
+SOCIAL_QUERY_TOKENS = {
+    "facebook",
+    "follow",
+    "handle",
+    "handles",
+    "instagram",
+    "linkedin",
+    "social",
+    "socials",
+    "twitter",
+    "x",
+    "youtube",
+}
+
 LEADERSHIP_ROSTER_TOKENS = {
     "advisory",
     "board",
@@ -93,6 +169,15 @@ LEADERSHIP_ROSTER_SOURCE_HINTS = [
 TITLE_LOOKUP_SOURCE_HINTS = [
     "our_leaders",
     "teamfaq",
+]
+
+MEDIA_SOURCE_HINTS = [
+    "media",
+    "socials",
+]
+
+SOCIAL_SOURCE_HINTS = [
+    "socials",
 ]
 
 TITLE_CATEGORY_PATTERNS = {
@@ -262,12 +347,22 @@ def format_clickable_links(text: str) -> str:
             formatted_parts.append(part)
             continue
 
-        part = re.sub(r"https?://[^\s)]+", _linkify_url, part)
+        part = re.sub(r"https?://[^\s\]\[()<>]+", _linkify_url, part)
         part = re.sub(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b", _linkify_email, part)
         part = re.sub(r"(?<!\w)\+?\d[\d ()-]{7,}\d", _linkify_phone, part)
         formatted_parts.append(part)
 
     return "".join(formatted_parts)
+
+
+def is_standard_fallback_response(answer: str) -> bool:
+    normalized_answer = " ".join(answer.lower().split())
+    fallback_phrases = [
+        "i couldn't find that information in the current iiris knowledge base.",
+        "i could not find that information in the current iiris knowledge base.",
+        "i do not have enough information in the available iiris knowledge base to answer that.",
+    ]
+    return any(phrase in normalized_answer for phrase in fallback_phrases)
 
 
 class RagSystem:
@@ -370,6 +465,31 @@ class RagSystem:
         }
         return not bool(tokens & person_indicators)
 
+    def _is_media_query(self, question: str) -> bool:
+        tokens = self._question_tokens(question)
+        if tokens & MEDIA_QUERY_TOKENS:
+            return True
+
+        normalized_question = question.lower()
+        media_patterns = (
+            r"\bmedia presence\b",
+            r"\bmedia coverage\b",
+            r"\bfeatured coverage\b",
+            r"\bwhere can i see\b.*\b(media|interviews?|articles?|videos?)\b",
+            r"\bshow me\b.*\b(media|interviews?|articles?|videos?)\b",
+        )
+        return any(re.search(pattern, normalized_question) for pattern in media_patterns)
+
+    def _is_social_query(self, question: str) -> bool:
+        tokens = self._question_tokens(question)
+        if "social" in tokens or "socials" in tokens:
+            return True
+        if tokens & {"facebook", "instagram", "linkedin", "twitter", "youtube"}:
+            return True
+        if "x" in tokens and any(token in tokens for token in {"handle", "handles", "channel", "channels", "follow"}):
+            return True
+        return bool(tokens & {"handle", "handles"}) and bool(tokens & {"iiris", "official"})
+
     @staticmethod
     def _merge_docs(primary_docs: List[Dict], secondary_docs: List[Dict]) -> List[Dict]:
         merged: List[Dict] = []
@@ -401,6 +521,154 @@ class RagSystem:
             roster_docs = vector_store.get_chunks_by_source_hints(LEADERSHIP_ROSTER_SOURCE_HINTS)
             return roster_docs or docs
         return self._merge_docs(docs, leadership_docs[:6])
+
+    def _expand_docs_for_media_query(
+        self,
+        question: str,
+        vector_store: GeminiVectorStore,
+        docs: List[Dict],
+    ) -> List[Dict]:
+        if not self._is_media_query(question):
+            return docs
+
+        media_docs = vector_store.get_chunks_by_source_hints(MEDIA_SOURCE_HINTS)
+        return self._merge_docs(docs, media_docs[:8])
+
+    def _build_social_resource_response(
+        self,
+        question: str,
+        vector_store: GeminiVectorStore,
+    ) -> Dict | None:
+        if not self._is_social_query(question):
+            return None
+
+        docs = vector_store.get_chunks_by_source_hints(SOCIAL_SOURCE_HINTS)
+        context = "\n\n".join(
+            f"Source: {doc['metadata']['source']}\n{doc['page_content']}" for doc in docs
+        )
+        answer = (
+            "You can connect with IIRIS and stay updated through these official social media channels:\n\n"
+            + "\n".join(SOCIAL_RESOURCE_LINES[1:])
+            + f"\n\nFor featured articles and media coverage, you can also visit "
+            f"[{MEDIA_PAGE_LABEL}]({MEDIA_PAGE_URL})."
+        )
+        return {
+            "answer": answer,
+            "context": context,
+            "docs": docs,
+        }
+
+    @staticmethod
+    def _append_unique_section(response: str, section_lines: List[str]) -> str:
+        stripped_response = response.strip()
+        normalized_response = stripped_response.lower()
+        if all(line.lower() in normalized_response for line in section_lines):
+            return stripped_response
+
+        support_index = stripped_response.find(SUPPORT_CONTACT_LINE)
+        section = "\n".join(section_lines)
+        if support_index == -1:
+            return f"{stripped_response}\n\n{section}".strip()
+
+        body = stripped_response[:support_index].rstrip()
+        support = stripped_response[support_index:].strip()
+        return f"{body}\n\n{section}\n\n{support}".strip()
+
+    @staticmethod
+    def _strip_existing_media_resource_lines(response: str) -> str:
+        lines = response.splitlines()
+        filtered_lines: List[str] = []
+        skip_prefixes = (
+            "official media page:",
+            "video conversations:",
+            "social media:",
+            "official iiris media resources:",
+            "articles and features:",
+            "company news:",
+            "if you are looking for specific insights",
+        )
+        skip_exact_lines = {
+            MEDIA_PAGE_LABEL.lower(),
+            YOUTUBE_CHANNEL_LABEL.lower(),
+            "linkedin",
+            "facebook",
+            "instagram",
+            "x",
+            "x (formerly twitter)",
+        }
+        skip_url_markers = (
+            MEDIA_PAGE_URL,
+            YOUTUBE_CHANNEL_URL,
+            BLOG_PAGE_URL,
+            "linkedin.com/company/iirisconsultingindia",
+            "x.com/consultingiiris",
+            "facebook.com/iirisconsulting",
+            "instagram.com/iirisconsulting",
+        )
+
+        for line in lines:
+            stripped = line.strip()
+            lowered = stripped.lower()
+            if not stripped:
+                filtered_lines.append(line)
+                continue
+
+            if lowered.startswith(skip_prefixes):
+                continue
+            if lowered in skip_exact_lines:
+                continue
+            if any(marker in lowered for marker in skip_url_markers):
+                continue
+            if lowered.startswith(("linkedin", "facebook", "instagram")) and ")" in lowered:
+                continue
+            if lowered.startswith("x (formerly twitter)") or lowered == "social media":
+                continue
+            if lowered.endswith("/)") or lowered.endswith("g)") or lowered.endswith("l)") or lowered.endswith("s)"):
+                if any(keyword in lowered for keyword in ("media", "youtube", "linkedin", "facebook", "instagram", "twitter", "blogs", "page")):
+                    continue
+
+            filtered_lines.append(line)
+
+        cleaned_response = "\n".join(filtered_lines)
+        cleaned_response = re.sub(r"\n{3,}", "\n\n", cleaned_response)
+        return cleaned_response.strip()
+
+    @staticmethod
+    def _strip_existing_support_lines(response: str) -> str:
+        support_markers = (
+            BUSINESS_CONTACT_PHONE_DISPLAY.lower(),
+            BUSINESS_CONTACT_EMAIL.lower(),
+            CONTACT_PAGE_URL.lower(),
+            CONTACT_PAGE_LABEL.lower(),
+            "contact us page",
+        )
+        filtered_lines = [
+            line for line in response.splitlines() if not any(marker in line.lower() for marker in support_markers)
+        ]
+        cleaned_response = "\n".join(filtered_lines)
+        cleaned_response = re.sub(r"\n{3,}", "\n\n", cleaned_response)
+        return cleaned_response.strip()
+
+    def _augment_response_for_media_query(self, question: str, response: str) -> str:
+        if not self._is_media_query(question):
+            return response
+        normalized_response = response.lower()
+        has_support_reference = any(
+            marker in normalized_response
+            for marker in (
+                BUSINESS_CONTACT_PHONE_DISPLAY.lower(),
+                BUSINESS_CONTACT_EMAIL.lower(),
+                CONTACT_PAGE_URL.lower(),
+                CONTACT_PAGE_LABEL.lower(),
+                "contact us page",
+            )
+        )
+        cleaned_response = self._strip_existing_media_resource_lines(response)
+        if has_support_reference:
+            cleaned_response = self._strip_existing_support_lines(cleaned_response)
+            if SUPPORT_CONTACT_LINE.lower() not in cleaned_response.lower():
+                cleaned_response = f"{cleaned_response}\n\n{SUPPORT_CONTACT_LINE}".strip()
+        return self._append_unique_section(cleaned_response, MEDIA_RESOURCE_LINES)
 
     @staticmethod
     def _normalize_title_query_text(question: str) -> str:
@@ -826,15 +1094,29 @@ class RagSystem:
                     "chat_id": chat_id,
                     "usage": total_usage,
                 }
+            social_resource_response = self._build_social_resource_response(search_query, vector_store)
+            if social_resource_response is not None:
+                response = format_clickable_links(social_resource_response["answer"])
+                chat_id = store_chat(
+                    request.question,
+                    response,
+                    social_resource_response["context"],
+                    flags=[],
+                    token_usage=total_usage,
+                )
+                return {
+                    "answer": response,
+                    "context": social_resource_response["context"],
+                    "docs": social_resource_response["docs"],
+                    "chat_id": chat_id,
+                    "usage": total_usage,
+                }
             docs = vector_store.search(search_query, k=request.k)
             docs = self._expand_docs_for_leadership_query(search_query, vector_store, docs)
+            docs = self._expand_docs_for_media_query(search_query, vector_store, docs)
 
             if not docs or docs[0]["score"] < vector_store.score_threshold:
-                response = (
-                    "I do not have enough information in the available IIRIS knowledge base "
-                    "to answer that. Please ask about IIRIS, its services, leadership, "
-                    "locations, or related topics covered in the data."
-                )
+                response = self._augment_response_for_media_query(search_query, STANDARD_FALLBACK_RESPONSE)
                 flags = ["irrelevant_question"]
                 chat_id = store_chat(
                     request.question,
@@ -864,6 +1146,13 @@ class RagSystem:
                     "- Group the answer by business unit, region, or advisory board when possible.\n"
                     "- Do not omit names in favor of summaries.\n\n"
                 )
+            elif self._is_media_query(search_query):
+                question_guidance = (
+                    "Special Instruction:\n"
+                    "- This is a media-related query.\n"
+                    "- When relevant, mention the official IIRIS media page and official IIRIS YouTube channel.\n"
+                    "- Prefer direct, practical guidance for where the user can view interviews, articles, or media coverage.\n\n"
+                )
             prompt = (
                 f"Chat History:\n{history_text or 'None'}\n\n"
                 f"{question_guidance}"
@@ -880,10 +1169,18 @@ class RagSystem:
             self._update_usage(total_usage, usage)
 
             flags = analyze_response(corrected_question, response)
-            if "irrelevant_question" not in flags and "greeting" not in flags and "signoff" not in flags:
+            if (
+                "irrelevant_question" not in flags
+                and "greeting" not in flags
+                and "signoff" not in flags
+                and not is_standard_fallback_response(response)
+                and BUSINESS_CONTACT_EMAIL not in response
+                and BUSINESS_CONTACT_PHONE_DISPLAY not in response
+            ):
                 if list(set(flags)):
-                    response += "\n\nFor further assistance, please contact support at: contactus@iirisconsulting.com"
+                    response += f"\n\n{SUPPORT_CONTACT_LINE}"
 
+            response = self._augment_response_for_media_query(search_query, response)
             response = format_clickable_links(response)
 
             serialized_docs = [
@@ -909,6 +1206,8 @@ class RagSystem:
                 "usage": total_usage,
             }
 
+        except GeminiAPIError:
+            raise
         except Exception as error:
             print(f"Error in Gemini RAG handler: {error}\n{traceback.format_exc()}")
             raise
