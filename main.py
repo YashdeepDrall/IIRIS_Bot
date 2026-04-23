@@ -12,6 +12,8 @@ from services import get_rag_system
 
 load_dotenv()
 
+APP_VERSION = "person-context-v2"
+
 
 def get_allowed_origins():
     raw_value = os.getenv("CORS_ALLOWED_ORIGINS", "*").strip()
@@ -32,7 +34,11 @@ app.add_middleware(
 
 @app.get("/")
 def health():
-    return {"status": "running", "message": "IIRIS Gemini RAG API is active"}
+    return {
+        "status": "running",
+        "message": "IIRIS Gemini RAG API is active",
+        "version": APP_VERSION,
+    }
 
 
 @app.post("/ask")

@@ -15,7 +15,8 @@ class QueryRequest(BaseModel):
     k: int = 15
     temperature: float = 0.7
     max_tokens: int = 512
-    history: List[Dict[str, str]] = []
+    user_id: Optional[str] = None
+    history: List[Dict[str, str]] = Field(default_factory=list)
 
 
 class FeedbackRequest(BaseModel):
@@ -31,7 +32,7 @@ class ChatRecord(BaseModel):
     question: str
     answer: str
     context: str
-    flags: List[str] = []
+    flags: List[str] = Field(default_factory=list)
     user_feedback: Optional[str] = None
     token_usage: Optional[Dict[str, int]] = None
     timestamp: datetime = Field(default_factory=datetime.utcnow)

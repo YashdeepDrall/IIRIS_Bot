@@ -152,6 +152,71 @@ SOCIAL_QUERY_TOKENS = {
     "youtube",
 }
 
+SOCIAL_CONTEXT_TOKENS = {
+    "channel",
+    "channels",
+    "facebook",
+    "follow",
+    "handle",
+    "handles",
+    "instagram",
+    "link",
+    "links",
+    "linkedin",
+    "profile",
+    "profiles",
+    "social",
+    "socials",
+    "twitter",
+    "url",
+    "urls",
+    "x",
+    "youtube",
+}
+
+PERSON_PRONOUN_TOKENS = {
+    "he",
+    "her",
+    "him",
+    "his",
+    "she",
+}
+
+PERSON_RESPONSIBILITY_TOKENS = {
+    "department",
+    "do",
+    "does",
+    "function",
+    "handle",
+    "handled",
+    "handles",
+    "handling",
+    "lead",
+    "leads",
+    "manage",
+    "manages",
+    "oversee",
+    "oversees",
+    "portfolio",
+    "responsibilities",
+    "responsibility",
+    "role",
+    "roles",
+    "work",
+    "works",
+}
+
+PERSON_PROFILE_TOKENS = {
+    "about",
+    "bio",
+    "biography",
+    "details",
+    "more",
+    "profile",
+    "tell",
+    "who",
+}
+
 LOCATION_QUERY_TOKENS = {
     "footprint",
     "global",
@@ -397,6 +462,7 @@ class RagSystem:
         print("Initializing Gemini RAG system...")
         self.client = None
         self.vector_store = None
+        self.session_histories: Dict[str, List[Dict[str, str]]] = {}
 
     def _get_client(self) -> GeminiClient:
         if self.client is None:
@@ -423,6 +489,45 @@ class RagSystem:
             role = "User" if message.get("role") == "user" else "Consultant"
             formatted.append(f"{role}: {message.get('content', '')}")
         return "\n".join(formatted)
+
+    @staticmethod
+    def _session_key(request: QueryRequest) -> str | None:
+        user_id = str(getattr(request, "user_id", "") or "").strip()
+        return user_id or None
+
+    def _effective_history(self, request: QueryRequest) -> List[Dict[str, str]]:
+        session_key = self._session_key(request)
+        stored_history = self.session_histories.get(session_key, []) if session_key else []
+        request_history = request.history or []
+
+        combined_history: List[Dict[str, str]] = []
+        seen_messages: set[tuple[str, str]] = set()
+        for message in stored_history + request_history:
+            role = str(message.get("role", "")).strip()
+            content = str(message.get("content", "")).strip()
+            if role not in {"user", "assistant"} or not content:
+                continue
+            key = (role, content)
+            if key in seen_messages:
+                continue
+            seen_messages.add(key)
+            combined_history.append({"role": role, "content": content})
+
+        return combined_history[-16:]
+
+    def _remember_turn(self, request: QueryRequest, answer: str) -> None:
+        session_key = self._session_key(request)
+        if not session_key:
+            return
+
+        history = self.session_histories.setdefault(session_key, [])
+        question = str(request.question).strip()
+        clean_answer = str(answer).strip()
+        if question:
+            history.append({"role": "user", "content": question})
+        if clean_answer:
+            history.append({"role": "assistant", "content": clean_answer})
+        self.session_histories[session_key] = history[-16:]
 
     def _rewrite_question(
         self,
@@ -509,13 +614,29 @@ class RagSystem:
 
     def _is_social_query(self, question: str) -> bool:
         tokens = self._question_tokens(question)
+        normalized_question = re.sub(r"\s+", " ", question.lower()).strip()
+
+        responsibility_patterns = (
+            r"\bwhat\s+(?:does|do|did)\b.*\b(?:handles?|manages?|leads?|oversees?|responsibilit(?:y|ies)|roles?|work)\b",
+            r"\b(?:handles?|manages?|leads?|oversees?)\s+(?:at|in|for)\s+iiris\b",
+        )
+        has_explicit_social_context = bool(tokens & SOCIAL_CONTEXT_TOKENS)
+        has_responsibility_context = any(
+            re.search(pattern, normalized_question) for pattern in responsibility_patterns
+        )
+        if has_responsibility_context and not bool(tokens & {"social", "socials"}):
+            return False
+
+        if self._is_media_query(question) and not bool(tokens & {"channel", "channels", "follow", "handle", "handles", "social", "socials"}):
+            return False
+
         if "social" in tokens or "socials" in tokens:
             return True
         if tokens & {"facebook", "instagram", "linkedin", "twitter", "youtube"}:
             return True
         if "x" in tokens and any(token in tokens for token in {"handle", "handles", "channel", "channels", "follow"}):
             return True
-        return bool(tokens & {"handle", "handles"}) and bool(tokens & {"iiris", "official"})
+        return bool(tokens & {"handle", "handles"}) and bool(tokens & {"iiris", "official"}) and has_explicit_social_context
 
     def _is_location_query(self, question: str) -> bool:
         normalized_question = re.sub(r"\s+", " ", question.lower()).strip()
@@ -703,6 +824,356 @@ class RagSystem:
             "answer": answer,
             "context": context,
             "docs": docs,
+        }
+
+    @staticmethod
+    def _normalized_phrase(text: str) -> str:
+        return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", text.lower())).strip()
+
+    @classmethod
+    def _leader_first_name(cls, name: str) -> str:
+        canonical_name = cls._canonical_name_key(name)
+        return canonical_name.split()[0] if canonical_name.split() else ""
+
+    def _load_leader_records(self, vector_store: GeminiVectorStore) -> List[Dict[str, Any]]:
+        records: List[Dict[str, Any]] = []
+        for index, record in enumerate(self._load_structured_records(vector_store.data_dir, LEADERS_FILE_NAME)):
+            name = self._normalize_person_name(str(record.get("name", "")).strip())
+            role = re.sub(r"\s+", " ", str(record.get("role", "")).strip())
+            if not self._looks_like_person_name(name) or not role:
+                continue
+
+            records.append(
+                {
+                    "name": name,
+                    "aliases": [str(alias).strip() for alias in record.get("aliases", []) if str(alias).strip()],
+                    "role": role,
+                    "unit": str(record.get("unit", "")).strip(),
+                    "group": str(record.get("group", "")).strip(),
+                    "summary": str(record.get("summary", "")).strip(),
+                    "source": LEADERS_FILE_NAME,
+                    "line_index": index,
+                }
+            )
+        return records
+
+    def _is_explicit_person_lookup_query(
+        self,
+        question: str,
+        vector_store: GeminiVectorStore,
+    ) -> bool:
+        records = self._load_leader_records(vector_store)
+        if not self._find_leader_records_in_text(question, records):
+            return False
+
+        tokens = self._question_tokens(question)
+        return (
+            self._is_person_responsibility_query(question)
+            or self._is_person_profile_query(question)
+            or len(tokens) <= 4
+        )
+
+    def _load_person_media_mentions(
+        self,
+        vector_store: GeminiVectorStore,
+        person_name: str,
+    ) -> List[Dict[str, Any]]:
+        mentions: List[Dict[str, Any]] = []
+        for index, record in enumerate(self._load_structured_records(vector_store.data_dir, MEDIA_FILE_NAME)):
+            people = record.get("people", [])
+            if not isinstance(people, list):
+                people = [people]
+
+            if not any(self._same_person_name(str(person), person_name) for person in people):
+                continue
+
+            mentions.append(
+                {
+                    "category": str(record.get("category", "")).strip(),
+                    "outlet": str(record.get("outlet", "")).strip(),
+                    "date": str(record.get("date", "")).strip(),
+                    "title": str(record.get("title", "")).strip(),
+                    "summary": str(record.get("summary", "")).strip(),
+                    "source": MEDIA_FILE_NAME,
+                    "line_index": index,
+                }
+            )
+        return mentions
+
+    @staticmethod
+    def _lower_first(text: str) -> str:
+        return text[:1].lower() + text[1:] if text else text
+
+    def _leader_summary_sentence(self, record: Dict[str, Any]) -> str:
+        name = record["name"]
+        summary = str(record.get("summary", "")).strip()
+        if not summary:
+            return ""
+
+        summary = summary.rstrip(".")
+        lead_match = re.match(r"^leads?\s+(.+)$", summary, flags=re.IGNORECASE)
+        if lead_match:
+            focus = re.sub(r"\s+with\s+", ", with ", lead_match.group(1), count=1, flags=re.IGNORECASE)
+            return f"In this role, the focus includes {focus}."
+        if re.match(r"^known\s+for\b", summary, flags=re.IGNORECASE):
+            return f"{name} is {self._lower_first(summary)}."
+        if re.match(r"^(leads?|brings?|focuses?|supports?|works?|specializes?|has|serves?)\b", summary, flags=re.IGNORECASE):
+            return f"{name} {self._lower_first(summary)}."
+        return f"{summary}."
+
+    def _format_media_reference(self, mention: Dict[str, Any]) -> str:
+        outlet = mention.get("outlet") or "a media outlet"
+        title = mention.get("title", "")
+        category = mention.get("category", "")
+
+        if "interview" in category.lower():
+            label = f"an interview with {outlet}"
+        elif "mention" in category.lower() or "coverage" in category.lower():
+            label = f"coverage in {outlet}"
+        elif category:
+            label = f"{category.lower()} in {outlet}"
+        else:
+            label = f"coverage in {outlet}"
+
+        if title:
+            return f"{label}, \"{title}\""
+        return label
+
+    def _leader_reference_phrases(self, records: List[Dict[str, Any]]) -> Dict[str, List[str]]:
+        first_name_counts: Dict[str, int] = {}
+        for record in records:
+            first_name = self._leader_first_name(record["name"])
+            if first_name:
+                first_name_counts[first_name] = first_name_counts.get(first_name, 0) + 1
+
+        phrases_by_name: Dict[str, List[str]] = {}
+        for record in records:
+            phrases = [record["name"], *record.get("aliases", [])]
+            first_name = self._leader_first_name(record["name"])
+            if first_name and first_name_counts.get(first_name) == 1:
+                phrases.append(first_name)
+
+            normalized_phrases = []
+            for phrase in phrases:
+                normalized_phrase = self._normalized_phrase(phrase)
+                if normalized_phrase and normalized_phrase not in normalized_phrases:
+                    normalized_phrases.append(normalized_phrase)
+            phrases_by_name[record["name"]] = normalized_phrases
+        return phrases_by_name
+
+    def _find_leader_records_in_text(
+        self,
+        text: str,
+        records: List[Dict[str, Any]],
+    ) -> List[Dict[str, Any]]:
+        normalized_text = f" {self._normalized_phrase(text)} "
+        if not normalized_text.strip():
+            return []
+
+        phrases_by_name = self._leader_reference_phrases(records)
+        matches: List[tuple[int, int, Dict[str, Any]]] = []
+        for index, record in enumerate(records):
+            record_phrases = phrases_by_name.get(record["name"], [])
+            matched_lengths = [
+                len(phrase)
+                for phrase in record_phrases
+                if phrase and f" {phrase} " in normalized_text
+            ]
+            if matched_lengths:
+                matches.append((max(matched_lengths), -index, record))
+
+        matches.sort(reverse=True)
+        return [record for _, _, record in matches]
+
+    def _recent_leader_from_history(
+        self,
+        history: List[Dict[str, str]],
+        vector_store: GeminiVectorStore,
+    ) -> Dict[str, Any] | None:
+        records = self._load_leader_records(vector_store)
+        if not records:
+            return None
+
+        for message in reversed(history[-8:]):
+            content = str(message.get("content", "")).strip()
+            if not content:
+                continue
+            matches = self._find_leader_records_in_text(content, records)
+            unique_matches: Dict[str, Dict[str, Any]] = {
+                self._canonical_name_key(match["name"]): match for match in matches
+            }
+            if len(unique_matches) == 1:
+                return next(iter(unique_matches.values()))
+            if len(unique_matches) > 1:
+                return None
+        return None
+
+    def _resolve_person_pronoun_follow_up(
+        self,
+        history: List[Dict[str, str]],
+        question: str,
+        vector_store: GeminiVectorStore,
+    ) -> str | None:
+        tokens = self._question_tokens(question)
+        if not tokens & PERSON_PRONOUN_TOKENS:
+            return None
+
+        recent_leader = self._recent_leader_from_history(history, vector_store)
+        if recent_leader is None:
+            return None
+
+        normalized_question = re.sub(r"\s+", " ", question.lower()).strip()
+        if re.search(r"\bwhat\s+does\s+(?:he|she)\s+handles?\b", normalized_question):
+            return f"What does {recent_leader['name']} handle at IIRIS?"
+        if re.search(r"\bwhat\s+does\s+(?:he|she)\s+do\b", normalized_question):
+            return f"What does {recent_leader['name']} do at IIRIS?"
+        if re.search(r"\b(?:his|her)\s+(?:role|responsibilit(?:y|ies)|work)\b", normalized_question):
+            return f"What is {recent_leader['name']}'s role and responsibilities at IIRIS?"
+
+        return re.sub(
+            r"\b(he|she|him|her|his)\b",
+            recent_leader["name"],
+            question,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+
+    def _is_person_responsibility_query(self, question: str) -> bool:
+        tokens = self._question_tokens(question)
+        normalized_question = re.sub(r"\s+", " ", question.lower()).strip()
+        if tokens & PERSON_RESPONSIBILITY_TOKENS:
+            return True
+        responsibility_patterns = (
+            r"\bwhat\s+(?:does|do)\b",
+            r"\bresponsible\s+for\b",
+            r"\brole\s+(?:at|in)\s+iiris\b",
+        )
+        return any(re.search(pattern, normalized_question) for pattern in responsibility_patterns)
+
+    def _is_person_profile_query(self, question: str) -> bool:
+        tokens = self._question_tokens(question)
+        normalized_question = re.sub(r"\s+", " ", question.lower()).strip()
+        if tokens & PERSON_PROFILE_TOKENS:
+            return True
+        return bool(re.search(r"\btell me (?:more )?about\b|\bdetails?\s+(?:of|about)\b", normalized_question))
+
+    def _build_person_profile_response(
+        self,
+        question: str,
+        vector_store: GeminiVectorStore,
+    ) -> Dict | None:
+        leader_records = self._load_leader_records(vector_store)
+        matched_records = self._find_leader_records_in_text(question, leader_records)
+        if not matched_records:
+            return None
+
+        is_responsibility_query = self._is_person_responsibility_query(question)
+        is_profile_query = self._is_person_profile_query(question)
+        if self._is_media_query(question) and not is_responsibility_query:
+            return None
+        if not (is_responsibility_query or is_profile_query or len(self._question_tokens(question)) <= 3):
+            return None
+
+        record = matched_records[0]
+        media_mentions = self._load_person_media_mentions(vector_store, record["name"])
+        answer_lines: List[str]
+        if is_responsibility_query:
+            answer_lines = [
+                f"Based on the available IIRIS knowledge base, {record['name']} handles responsibilities aligned with this role at IIRIS:",
+                "",
+                f"- Role: {record['role']}",
+            ]
+            if record.get("unit"):
+                answer_lines.append(f"- Unit: {record['unit']}")
+            if record.get("summary"):
+                answer_lines.append(f"- Key focus: {record['summary']}")
+        else:
+            group = record.get("group") or "the leadership team"
+            unit_clause = f" within {record['unit']}" if record.get("unit") else ""
+            affiliation = f" and is part of the {group} team{unit_clause}" if group else ""
+            profile_parts = [
+                f"{record['name']} is the {record['role']} at IIRIS Consulting{affiliation}.",
+            ]
+            summary_sentence = self._leader_summary_sentence(record)
+            if summary_sentence:
+                profile_parts.append(summary_sentence)
+
+            answer_lines = [
+                " ".join(profile_parts),
+            ]
+
+            if media_mentions:
+                formatted_mentions = [
+                    self._format_media_reference(mention)
+                    for mention in media_mentions[:2]
+                ]
+                answer_lines.extend(
+                    [
+                        "",
+                        f"Additionally, {record['name']} has been featured in media coverage, including "
+                        + ", and ".join(formatted_mentions)
+                        + ".",
+                    ]
+                )
+
+        context_lines = [
+            f"Source: {record['source']}\n"
+            f"Name: {record['name']}\n"
+            f"Role: {record['role']}\n"
+            f"Unit: {record.get('unit', '')}\n"
+            f"Summary: {record.get('summary', '')}"
+        ]
+        for mention in media_mentions:
+            context_lines.append(
+                f"Source: {mention['source']}\n"
+                f"Person: {record['name']}\n"
+                f"Outlet: {mention.get('outlet', '')}\n"
+                f"Category: {mention.get('category', '')}\n"
+                f"Title: {mention.get('title', '')}\n"
+                f"Summary: {mention.get('summary', '')}"
+            )
+        docs = [
+            {
+                "page_content": f"{record['name']}: {record['role']}\n{record.get('summary', '')}".strip(),
+                "metadata": {
+                    "source": record["source"],
+                    "chunk_index": record["line_index"],
+                },
+                "score": 1.0,
+            }
+        ]
+        docs.extend(
+            {
+                "page_content": (
+                    f"{record['name']} media coverage\n"
+                    f"{mention.get('outlet', '')}: {mention.get('title', '')}\n"
+                    f"{mention.get('summary', '')}"
+                ).strip(),
+                "metadata": {
+                    "source": mention["source"],
+                    "chunk_index": mention["line_index"],
+                },
+                "score": 1.0,
+            }
+            for mention in media_mentions
+        )
+
+        return {
+            "answer": "\n".join(answer_lines).strip(),
+            "context": "\n\n".join(context_lines),
+            "docs": docs,
+        }
+
+    def _build_person_clarification_response(self, question: str) -> Dict | None:
+        tokens = self._question_tokens(question)
+        if not tokens & PERSON_PRONOUN_TOKENS:
+            return None
+        if not (self._is_person_responsibility_query(question) or self._is_person_profile_query(question)):
+            return None
+        return {
+            "answer": "Could you please clarify which IIRIS leader you are asking about?",
+            "context": "",
+            "docs": [],
         }
 
     def _build_unit_leadership_response(
@@ -1356,6 +1827,7 @@ class RagSystem:
                     flags=["greeting"],
                     token_usage=total_usage,
                 )
+                self._remember_turn(request, response)
                 return {
                     "answer": response,
                     "context": "",
@@ -1373,6 +1845,7 @@ class RagSystem:
                     flags=["signoff"],
                     token_usage=total_usage,
                 )
+                self._remember_turn(request, response)
                 return {
                     "answer": response,
                     "context": "",
@@ -1381,11 +1854,61 @@ class RagSystem:
                     "usage": total_usage,
                 }
 
-            history_text = self._format_history(request.history)
+            effective_history = self._effective_history(request)
+            history_text = self._format_history(effective_history)
             search_query = corrected_question
-            if self._should_rewrite_question(request.history, corrected_question):
-                search_query = self._rewrite_question(history_text, corrected_question, total_usage)
             vector_store = self._get_vector_store()
+            resolved_person_query = self._resolve_person_pronoun_follow_up(
+                effective_history,
+                corrected_question,
+                vector_store,
+            )
+            if resolved_person_query:
+                search_query = resolved_person_query
+            elif (
+                self._should_rewrite_question(effective_history, corrected_question)
+                and not self._is_explicit_person_lookup_query(corrected_question, vector_store)
+            ):
+                search_query = self._rewrite_question(history_text, corrected_question, total_usage)
+
+            person_profile_response = self._build_person_profile_response(search_query, vector_store)
+            if person_profile_response is not None:
+                response = format_clickable_links(person_profile_response["answer"])
+                chat_id = store_chat(
+                    request.question,
+                    response,
+                    person_profile_response["context"],
+                    flags=[],
+                    token_usage=total_usage,
+                )
+                self._remember_turn(request, response)
+                return {
+                    "answer": response,
+                    "context": person_profile_response["context"],
+                    "docs": person_profile_response["docs"],
+                    "chat_id": chat_id,
+                    "usage": total_usage,
+                }
+
+            person_clarification_response = self._build_person_clarification_response(search_query)
+            if person_clarification_response is not None:
+                response = person_clarification_response["answer"]
+                chat_id = store_chat(
+                    request.question,
+                    response,
+                    person_clarification_response["context"],
+                    flags=["clarification_needed"],
+                    token_usage=total_usage,
+                )
+                self._remember_turn(request, response)
+                return {
+                    "answer": response,
+                    "context": person_clarification_response["context"],
+                    "docs": person_clarification_response["docs"],
+                    "chat_id": chat_id,
+                    "usage": total_usage,
+                }
+
             title_lookup_response = self._build_title_lookup_response(search_query, vector_store)
             if title_lookup_response is not None:
                 response = format_clickable_links(title_lookup_response["answer"])
@@ -1396,6 +1919,7 @@ class RagSystem:
                     flags=[],
                     token_usage=total_usage,
                 )
+                self._remember_turn(request, response)
                 return {
                     "answer": response,
                     "context": title_lookup_response["context"],
@@ -1413,6 +1937,7 @@ class RagSystem:
                     flags=[],
                     token_usage=total_usage,
                 )
+                self._remember_turn(request, response)
                 return {
                     "answer": response,
                     "context": unit_leadership_response["context"],
@@ -1430,6 +1955,7 @@ class RagSystem:
                     flags=[],
                     token_usage=total_usage,
                 )
+                self._remember_turn(request, response)
                 return {
                     "answer": response,
                     "context": global_presence_response["context"],
@@ -1447,6 +1973,7 @@ class RagSystem:
                     flags=[],
                     token_usage=total_usage,
                 )
+                self._remember_turn(request, response)
                 return {
                     "answer": response,
                     "context": social_resource_response["context"],
@@ -1468,6 +1995,7 @@ class RagSystem:
                     flags=flags,
                     token_usage=total_usage,
                 )
+                self._remember_turn(request, response)
                 return {
                     "answer": response,
                     "context": "",
@@ -1541,6 +2069,7 @@ class RagSystem:
                 flags=flags,
                 token_usage=total_usage,
             )
+            self._remember_turn(request, response)
             return {
                 "answer": response,
                 "context": context,
